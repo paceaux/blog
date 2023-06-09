@@ -1,0 +1,29 @@
+name: Deploy Wordpress Theme
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  dev-deploy:
+    name: Deploy it
+    runs-on: ubuntu-latest
+    environment: development
+    
+    steps:
+    - name: Get Latest code
+      uses: actions/checkout@v2
+    
+    - name: Sync Files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{secrets.SITE_SERVER}}
+        username: ${{secrets.SITE_USERNAME}}
+        password: ${{secrets.SITE_PASS}}
+        local-dir: .
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/** 
