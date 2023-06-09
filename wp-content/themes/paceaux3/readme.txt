@@ -1,14 +1,14 @@
-/*========= Drop Shipping=========*/
+/*========= Paceaux 3=========*/
 
 Theme Name: Paceaux 3
-Theme URI: http://fireincome.com/drop-shipping
+Theme URI: https://blog.frankmtaylor.com
 
 Author: Frank M Taylor
 Author URI: http://frankmtaylor.com/
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 -------------------------------------------------------
-Paceaux 3 WordPress theme, Copyright (C) 2016 FireIncome.com
+Paceaux 3 WordPress theme, Copyright (C) 2023
 Paceaux 3 WordPress theme is licensed under the GNU General Public License v2.0.
 -------------------------------------------------------
 
