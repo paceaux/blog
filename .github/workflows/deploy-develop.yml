@@ -2,15 +2,15 @@ name: Deploy Wordpress
 
 on:
   push:
-    branches: [main]
+    branches: [develop]
   pull_request:
-    branches: [main]
+    branches: [develop]
 
 jobs:
   dev-deploy:
-    name: Deploy to Production
+    name: Deploy to Development
     runs-on: ubuntu-latest
-    environment: production
+    environment: development
     
     steps:
     - name: Get Latest code
