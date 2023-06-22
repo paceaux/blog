@@ -2494,7 +2494,7 @@ tr:nth-child(even) {
    right: 0;
    width: 2em;
    height: 2.6em;
-   margin: 0 0.618rem;
+   margin: -7px 0.618rem 0 0.618rem;
    border: 1px solid var(--themeActiveAccentColor);
    font-size: var(--smallTextSize);
  }
@@ -2504,7 +2504,8 @@ tr:nth-child(even) {
 }
 
 .theme--dark .themeToggler__wrapper {
-    --themeIndicator: '\2600'; 
+    --themeIndicator: '\2600';
+    border-color: transparent;
 }
  
  .themeToggler {
