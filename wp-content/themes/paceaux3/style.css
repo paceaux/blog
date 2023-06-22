@@ -1420,10 +1420,9 @@ tr:nth-child(even) {
  }
  
  .entry-title {
-   padding-bottom: 20px;
+   padding-bottom: .1em;
    margin: 0;
-   font-size: 2.5rem;
-   line-height: 2.5rem;
+   font-size: var(--biggestTitleSize);
  }
 
 .entry-title a {
@@ -1683,11 +1682,6 @@ tr:nth-child(even) {
    text-transform: uppercase;
  }
  
- #respond p {
-   margin: 0 0 0.5rem;
-   font-size: 0.9rem;
- }
- 
  #respond input {
    border-radius: 3px;
  }
@@ -1844,15 +1838,6 @@ tr:nth-child(even) {
    .colum {
      flex-direction: column;
    }
- }
- 
- .entry-header-archive .entry-title.entry-title.entry-title {
-   padding: 0 0 10px;
-   font-size: 1rem;
-   line-height: 1.2;
-   font-weight: 200;
-   text-align: left;
-   letter-spacing: -1px;
  }
  
  .entry-header-archive {
@@ -2068,13 +2053,6 @@ tr:nth-child(even) {
  }
  
  /* === Post Header === */
- 
- .entry-title {
-   padding-bottom: 20px;
-   margin: 0;
-   font-size: 2.5rem;
-   line-height: 2.5rem;
- }
 
  span.entry-terms {
      display: inline-block;
@@ -2335,11 +2313,6 @@ tr:nth-child(even) {
  /* ====== RESPOND (COMMENT FORM) ====== */
  #respond {
    margin-top: 30px;
- }
- 
- #respond p {
-   margin: 0 0 0.5rem;
-   font-size: 0.9rem;
  }
  
  #respond input {
