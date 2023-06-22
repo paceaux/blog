@@ -2075,7 +2075,7 @@ tr:nth-child(even) {
    padding: 0.618em .618rem;
    border-bottom: none;
    border-radius: 2px;
-   font-size: 0.8rem;
+   font-size: var(--smallerTextSize);
    color: #fefefe;
    text-align: center;
    letter-spacing: 1px;
@@ -2496,6 +2496,7 @@ tr:nth-child(even) {
   =============== */
 
 .rt-reading-time {
+    font-size: var(--smallerTextSize);
     margin-bottom: .2em;
     font-style: italic;
 }
