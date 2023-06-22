@@ -104,7 +104,7 @@ function hybrid_base_enqueue_scripts() {
 function hybrid_base_enqueue_styles() {
 
 	// Load one-five base style.
-	wp_enqueue_style( 'hybrid-one-five' );
+	//wp_enqueue_style( 'hybrid-one-five' );
 
 	// Load gallery style if 'cleaner-gallery' is active.
 	if ( current_theme_supports( 'cleaner-gallery' ) )
