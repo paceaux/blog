@@ -911,6 +911,7 @@ tr:nth-child(even) {
  /* Top Bar */
  
  .topBar {
+   grid-area: tools;
    display: flex;
    flex-direction: row;
    justify-content: flex-end;
@@ -949,10 +950,11 @@ tr:nth-child(even) {
   =============== */
   body {
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 0% 1fr 0%;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
-        '. header tools'
+        '. tools .'
+        '. header .'
         '. main .'
         '. footer .';
     min-height: 100vh;
@@ -960,7 +962,13 @@ tr:nth-child(even) {
   }
 
   @media screen and (min-width: 768px) {
-
+    body {
+      grid-template-columns: 10% 1fr 10%;
+      grid-template-areas:
+        '. header tools'
+        '. main .'
+        '. footer .';
+    }
   }
  
  .layout-1c .pageContainer__contentWrapper {
@@ -1426,11 +1434,6 @@ tr:nth-child(even) {
      #CONTENT #ENTRY #EMBEDDED 
   =============== */
  
- .featuredimg {
-   float: left;
-   padding: 0 20px 20px 0;
-   max-width: 40%;
- }
  
  /* ===============
      #CONTENT #ENTRY #BODY 
@@ -1672,8 +1675,7 @@ tr:nth-child(even) {
  }
  
  #respond label {
-   display: inline-block;
-   width: 100px;
+   display: block;
    font-size: 0.9rem;
    text-transform: uppercase;
  }
@@ -1702,7 +1704,6 @@ tr:nth-child(even) {
  }
  
  #respond textarea {
-   width: 97.4%;
    border-radius: 3px;
  }
  
@@ -2094,12 +2095,6 @@ tr:nth-child(even) {
  
  /* === Post content and excerpts === */
  
- .featuredimg {
-   float: left;
-   padding: 0 20px 20px 0;
-   max-width: 40%;
- }
- 
  .more-link {
    margin-top: .618em;
  }
@@ -2337,13 +2332,6 @@ tr:nth-child(even) {
  /* ====== RESPOND (COMMENT FORM) ====== */
  #respond {
    margin-top: 30px;
- }
- 
- #respond label {
-   display: inline-block;
-   width: 100px;
-   font-size: 0.9rem;
-   text-transform: uppercase;
  }
  
  #respond p {
