@@ -1488,6 +1488,9 @@ tr:nth-child(even) {
     height: auto;
 }
  
+.enlighter-v-standard {
+  max-width: 92vw;
+}
  /* ===============
      #CONTENT #ENTRY #FOOTER 
   =============== */
