@@ -1067,23 +1067,16 @@ tr:nth-child(even) {
      background-color: var(--themeActiveAccentColor);
  }
  
- .entry-header-archive h2.entry-title {
+ .entry-header-archive .entry-title {
    padding: 0;
    padding-bottom: 10px;
-   font-size: 1.6rem;
    font-size: var(--bigTitleSize);
-   font-weight: thin;
+   font-weight: 300;
    letter-spacing: -1px;
  }
  
  .entry-header-archive {
-   font-size: 0.7rem;
    font-size: var(--smallerTextSize);
-   text-align: center;
- }
- 
- .entry-header-archive a {
-   color: #000;
  }
  
  /* ===============
@@ -1843,9 +1836,6 @@ tr:nth-child(even) {
  .entry-header-archive {
    flex-basis: 20%;
    margin-left: 1rem;
-   border-top: 1px dashed var(--themeActiveTrimColor);
-   font-size: 0.618rem;
-   text-align: left;
  }
  
  .entry-header-archive a {
