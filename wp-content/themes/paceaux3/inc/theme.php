@@ -108,7 +108,7 @@ function hybrid_base_enqueue_styles() {
 
 	// Load gallery style if 'cleaner-gallery' is active.
 	if ( current_theme_supports( 'cleaner-gallery' ) )
-		wp_enqueue_style( 'hybrid-gallery' );
+		// wp_enqueue_style( 'hybrid-gallery' );
 
 	// Load parent theme stylesheet if child theme is active.
 	if ( is_child_theme() )
