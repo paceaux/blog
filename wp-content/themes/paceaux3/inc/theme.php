@@ -116,7 +116,6 @@ function hybrid_base_enqueue_styles() {
 
 	// Load active theme stylesheet.
 	wp_enqueue_style( 'hybrid-style' );  
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css' );
 }
 
 function drop_shipping_customizer_css() {
