@@ -842,11 +842,221 @@ tr:nth-child(even) {
    box-sizing: border-box;
  }
 
+/*==========
+#Form #Variables
+==========*/
+form {
+    /*=====
+        #Text #Size
+    =====*/
+	--formBiggestTextSize: var(--biggerTextSize, 1.2em);
+	--formBaseTextSize: var(--baseTextSize, 1em);
+	--formSmallestTextSize: var(--smallTextSize, .8em);
+
+    /*=====
+        #Title #Size
+    =====*/
+    --formBiggestTitleSize: var(--baseTitleSize, 1.5em);
+    --formBaseTitleSize: var(--formBiggestTextSize);
+    --formSmallestTitleSize: var(--formBaseTextSize);
+
+	--formControlSize: var(--formBaseTextSize);
+    --formLabelSize: var(--formBaseTextSize);
+    --formTitleSize: var(--formBaseTitleSize);
+
+    /*===== 
+        #LineHeight 
+    =====*/
+    --formBaseLineHeight: var(--smallLineHeight, 1.2);
+    --formSmallLineHeight: 1;
+
+	/*=====
+        #Font #FontFamilies #Typeface
+    =====*/
+    --formBaseFontFamily: var(--baseFontFamily,  'Georgia','Times New Roman', 'serif');
+    --formTitleFontFamily: var(--titleFontFamily, 'Helvetica', 'Arial', 'sans-serif');
+
+    /*=====
+        #Border
+    =====*/
+    --controlBorderStyle: solid;
+    --controlBorderWidth: 1px;
+    --controlCornerSize: 0.25rem;
+
+    --controlGroupBorderColor: var(--colorNeutral, rgb(165,165,165));
+    --controlGroupBorderStyle: var(--controlBorderStyle);
+    --controlGroupBorderWidth: var(--controlBorderWidth);
+    --controlGroupCornerSize: calc(var(--controlCornerSize) / 2);
+    --controlGroupBorder: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+    
+
+    /*=====
+        #Spacing
+    =====*/
+    --controlVertPadding: .375em;
+    --controlHorzPadding: .75rem;
+    --controlPadding: var(--controlVertPadding) var(--controlHorzPadding);
+    --controlGroupPadding: .618em .618rem;
+
+    
+    /*=====
+        #Colors
+    =====*/
+    --controlColor:  var(--colorNeutralDark, rgb(165,165,165));
+    --controlGroupColor: var(--colorNeutralDark, rgb(110,110,110));
+    --controlBackgroundColor: rgb(255, 255, 255);
+    --controlGroupBackgroundColor: transparent;
+    --controlBorderColor: var(--controlColor);
+
+    /*=====
+        #Colors #Hover #Focus
+    =====*/
+    --controlColorInterest: var(--colorNeutralDarker);
+    --controlBackgroundColorInterest: var(--controlBackgroundColor);
+    --controlBorderColorInterest: var(--controlColorInterest);
+    
+    /*=====
+        #Colors #Active
+    =====*/
+    --controlColorActive: var(--colorNeutralDarker);
+    --controlBackgroundColorActive: var(--controlBackgroundColor);
+    --controlBorderColorActive: var(--controlBorderColorActive);
+      
+    /*=====
+        #Colors #Deactivated
+    =====*/
+    --controlColorDeactivated: var(--controlColor);
+    --controlBackgroundColorDeactivated: var(--colorNeutralLighter);
+    --controlBorderColorDeactivated: var(--controlBackgroundColorDeactivated);
+
+    /*=====
+        #Colors #Inform
+    =====*/
+    --controlColorAlert: var(--colorWarmest, rgb(168, 62, 0));
+    --controlColorAttention: var(--colorWarmer, rgb(168, 118, 0));
+}
+
+form {
+    font-family: var(--formBaseFontFamily);
+}
+
+fieldset {
+	padding: var(--controlGroupPadding);
+	background-color: var(--controlGroupBackgroundColor);
+	border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+	border-radius: var(--controlCornerSize);
+	margin: .618em .618rem;
+}
+
+fieldset:disabled {
+	--controlGroupBorderColor: var(--colorNeutralLighter);
+	--controlGroupBackgroundColor: rgba(220,220,220, .3);
+}
+
+legend {
+	display: block;
+	color: var(--controlGroupColor);
+	font-family: var(--formTitleFontFamily);
+	font-weight: bold;
+	font-size: var(--formLabelSize);
+	line-height: 1.2;
+	padding: .35em .5rem;
+	margin: .618em 0;
+	border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+	border-radius: var(--controlGroupCornerSize);
+	background-color: var(--controlGroupBackgroundColor);
+}
+
+label {
+    color: var(--controlGroupColor);
+    font-size: var(--formBaseTextSize);
+}
+
+input,
+button,
+select,
+textarea {
+	color: var(--controlColor);
+	font-size: var(--formControlSize);
+	padding-top: var(--controlVertPadding);
+	padding-bottom: var(--controlVertPadding);
+	border-width: var(--controlBorderWidth);
+	border-style: var(--controlBorderStyle);
+	border-color: var(--controlBorderColor);
+	border-radius: var(--controlCornerSize);
+	background-color: var(--controlBackgroundColor);
+	transition: all 0.3s ease-in-out;
+	outline: none;
+}
+
+input,
+button,
+textarea,
+option,
+label {
+	padding-left: var(--controlHorzPadding);
+	padding-right: calc(var(--controlHorzPadding) / 2);
+}
+
+optgroup {
+	font-style: normal;
+}
+
+input:hover,
+input:focus,
+button:hover,
+button:focus,
+select:hover,
+select:focus,
+textarea:hover,
+textarea:focus {
+	color: var(--controlColorInterest);
+	background-color: var(--controlBackgroundColorInterest);
+	border-color: var(--controlBorderColorInterest);
+}
+
+input:active,
+button:active,
+select:active,
+textarea:active {
+	color: var(--controlColorActive);
+	background-color: var(--controlBackgroundColorActive);
+	border-color: var(--controlBorderColorActive);
+}
+
+button:focus-visible,
+[type="button"]:focus-visible,
+[type="submit"]:focus-visible,
+[type="reset"]:focus-visible {
+	outline: none;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+	border-color: var(--controlColorAlert);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+	color: var(--controlColorDeactivated);
+	background-color: var(--controlBackgroundColorDeactivated);
+	border-color: var(--controlBorderColorDeactivated);
+}
+
+[type="range"] {
+    vertical-align: bottom;
+}
+
+[type="radio"], [type="checkbox"] {
+    vertical-align: text-top;
+}
+
  /* ===============
      #FORMS 
   =============== */
  input {
-   padding: 0.75em 0.75rem;
    border: 1px solid rgb(var(--themeActivePltNHighest));
    color: #767676;
  }
@@ -872,13 +1082,7 @@ tr:nth-child(even) {
    background: #333;
  }
  
- textarea {
-   padding: 14px;
-   border: 1px solid #ddd;
- }
- 
  select {
-   padding: 9px 7px;
    border: 1px solid rgb(var(--themeActivePltNHighest));
    color: #999;
  }
@@ -1633,15 +1837,18 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: column;
   margin-bottom: .618rem;
+  margin-left: .618rem;
 }
 
 
 .comment-respond__fieldName {
-  border-bottom: 3px solid transparent;
+  text-decoration-color:transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
 }
 
 .comment-respond__field:focus-within .comment-respond__fieldName {
-  border-color: var(--fieldActiveColor);
+  text-decoration-color: var(--fieldActiveColor);
 }
 
 .comment-respond__fieldInput {
@@ -1652,6 +1859,7 @@ tr:nth-child(even) {
   padding: 0;
   border: none;
   margin-top: .618em;
+  margin-left: .618rem;
 }
 
 .comment-respond__submit {
@@ -1664,18 +1872,24 @@ tr:nth-child(even) {
   text-transform: uppercase;
   border-width: 2px;
   border-color: var(--respondSubmitColor);
-  background-color: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .comment-respond__submit:hover,
-.comment-respond__submit:focus {
+.comment-respond__submit:focus, 
+.comment-respond__submit:active{
   --respondSubmitColor: hsl(150, 61%, 44%);
 }
 
 .comment-respond__field:has([required]) .comment-respond__fieldName::after {
   content: "*";
   color: hsl(5, 61%, 33%);
+
+}
+.akismet_comment_form_privacy_notice {
+  margin-left: .618rem;
+  font-size: var(--smallerTextSize);
 }
 
  /* ====== COMMENTS ======= */
@@ -1683,9 +1897,7 @@ tr:nth-child(even) {
  #comments-number {
    margin-bottom: 30px;
  }
-.akismet_comment_form_privacy_notice {
-    font-size: var(--smallerTextSize);
-}
+ 
  
  /* === Comment list === */
  
