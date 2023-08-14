@@ -1,0 +1,8 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-admin/admin-ajax.php
