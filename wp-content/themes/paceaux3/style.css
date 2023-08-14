@@ -1638,11 +1638,13 @@ tr:nth-child(even) {
 }
 
 .comment-respond__submitFields {
+  padding: 0;
   border: none;
 }
 
 .comment-respond__submit {
   font-size: var(--baseTextSize);
+  background-color: hsl(150, 20%, 33%);
   padding: .618em;
   border: none;
   border-radius: 3px;
@@ -1651,9 +1653,15 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
-.comment-respond__submit:hover {
+.comment-respond__submit:hover,
+.comment-respond__submit:focus {
   color: #fff;
-  background: #333;
+  background-color: hsl(150, 61%, 33%);
+}
+
+.comment-respond__field:has([required]) .comment-respond__fieldName::after {
+  content: "*";
+  color: hsl(5, 61%, 33%);
 }
 
  /* ====== COMMENTS ======= */

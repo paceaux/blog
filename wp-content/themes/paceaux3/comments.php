@@ -43,20 +43,20 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
     $comment_cookies_1 = ' By commenting you accept the';
     $comment_cookies_2 = ' Privacy Policy';
 
-    $comment_before = 'Leave a comment. Registration isn\'t required.';
+    $comment_before = 'You don\'t have to register to leave a comment. And your email address won\'t be published.';
     $comment_after = '';
 
     $comment_cancel = 'Cancel Reply'; 
     $comments_args = array(
       'fields' => array(
           //Author field
-          'author' => '<label class="comment-respond__field comment-respond__field--author"><span class="comment-respond__fieldName">' . $comment_author .'</span><input class="comment-respond__fieldInput" id="author" name="author" aria-required="true" required /></label>',
+          'author' => '<label class="comment-respond__field comment-respond__field--author"><span class="comment-respond__fieldName">' . $comment_author .'</span><input class="comment-respond__fieldInput" id="author" name="author" required /></label>',
           //Email Field
-          'email' => '<label class="comment-respond__field comment-respond__field--email"><span class="comment-respond__fieldName">' . $comment_email .'</span><input class="comment-respond__fieldInput" id="email" type="email" name="email"/></label>',
+          'email' => '<label class="comment-respond__field comment-respond__field--email"><span class="comment-respond__fieldName">' . $comment_email .'</span><input class="comment-respond__fieldInput" id="email" type="email" name="email" required /></label>',
           //URL Field
           'url' => '<label class="comment-respond__field comment-respond__field--url"><span class="comment-respond__fieldName">' . $comment_url .'</span><input class="comment-respond__fieldInput" id="url" type="url" name="url" /></label>',
         ),
-      'comment_field' => '<label class="comment-respond__field comment-respond__field--comment"><span class="comment-respond__fieldName">' . $comment_body .'</span><textarea id="comment" name="comment" aria-required="true" required></textarea></label>',
+      'comment_field' => '<label class="comment-respond__field comment-respond__field--comment"><span class="comment-respond__fieldName">' . $comment_body .'</span><textarea id="comment" name="comment" required></textarea></label>',
       'class_submit' => 'comment-respond',
       'class_form' => 'comment-respond__form',
       'class_submit' => 'comment-respond__submit',
