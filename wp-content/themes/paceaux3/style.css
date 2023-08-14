@@ -1828,8 +1828,10 @@ textarea:disabled {
 
 .comment-respond__notes {
   font-style: italic;
+  font-weight: normal;
   font-size: var(--smallestTitleSize);
   line-height: var(--smallLineHeight);
+  border: none;
   margin: 0 0 1.618em .618rem;
 }
 
@@ -1863,24 +1865,14 @@ textarea:disabled {
 }
 
 .comment-respond__submit {
-  --respondSubmitColor: hsl(150, 10%, 44%);
+  --controlColor: hsl(150, 10%, 44%);
+  --controlBorderColor: hsl(150, 10%, 44%);
+  --controlColorInterest: hsl(150, 61%, 44%);
+  --controlBorderColorInterest: hsl(150, 61%, 44%);
   font-size: var(--baseTextSize);
-  color: var(--respondSubmitColor);
   padding: .618em;
-  border-radius: 3px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-width: 2px;
-  border-color: var(--respondSubmitColor);
-  background-color: transparent;
-  cursor: pointer;
 }
 
-.comment-respond__submit:hover,
-.comment-respond__submit:focus, 
-.comment-respond__submit:active{
-  --respondSubmitColor: hsl(150, 61%, 44%);
-}
 
 .comment-respond__field:has([required]) .comment-respond__fieldName::after {
   content: "*";
