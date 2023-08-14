@@ -50,13 +50,13 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
     $comments_args = array(
       'fields' => array(
           //Author field
-          'author' => '<label class="comment-respond__field comment-respond__field--author"><span class="comment-respond__fieldName">' . $comment_author .'</span><input class="comment-respond__fieldInput" id="author" name="author" required /></label>',
+          'author' => '<label class="comment-respond__field comment-respond__field--author"><span class="comment-respond__fieldName">' . $comment_author .'</span><input class="comment-respond__fieldInput" id="author" name="author" aria-required="true" required /></label>',
           //Email Field
-          'email' => '<label class="comment-respond__field comment-respond__field--email"><span class="comment-respond__fieldName">' . $comment_email .'</span><input class="comment-respond__fieldInput" id="email" type="email" name="email" required /></label>',
+          'email' => '<label class="comment-respond__field comment-respond__field--email"><span class="comment-respond__fieldName">' . $comment_email .'</span><input class="comment-respond__fieldInput" id="email" type="email" name="email" aria-required="true" required /></label>',
           //URL Field
           'url' => '<label class="comment-respond__field comment-respond__field--url"><span class="comment-respond__fieldName">' . $comment_url .'</span><input class="comment-respond__fieldInput" id="url" type="url" name="url" /></label>',
         ),
-      'comment_field' => '<label class="comment-respond__field comment-respond__field--comment"><span class="comment-respond__fieldName">' . $comment_body .'</span><textarea id="comment" name="comment" required rows="10"></textarea></label>',
+      'comment_field' => '<label class="comment-respond__field comment-respond__field--comment"><span class="comment-respond__fieldName">' . $comment_body .'</span><textarea id="comment" name="comment" aria-required="true" required rows="10"></textarea></label>',
       'class_submit' => 'comment-respond',
       'class_form' => 'comment-respond__form',
       'class_submit' => 'comment-respond__submit',

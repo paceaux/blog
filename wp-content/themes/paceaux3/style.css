@@ -1031,9 +1031,9 @@ button:focus-visible,
 	outline: none;
 }
 
-input:invalid,
-select:invalid,
-textarea:invalid {
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
 	border-color: var(--controlColorAlert);
 }
 
@@ -1861,7 +1861,7 @@ textarea:disabled {
   padding: 0;
   border: none;
   margin-top: .618em;
-  margin-left: .618rem;
+  margin-left: 1.318rem;
 }
 
 .comment-respond__submit {
@@ -1869,7 +1869,9 @@ textarea:disabled {
   --controlBorderColor: hsl(150, 10%, 44%);
   --controlColorInterest: hsl(150, 61%, 44%);
   --controlBorderColorInterest: hsl(150, 61%, 44%);
+  --controlBorderWidth: 4px;
   font-size: var(--baseTextSize);
+  font-weight: bold;
   padding: .618em;
 }
 
@@ -1877,7 +1879,10 @@ textarea:disabled {
 .comment-respond__field:has([required]) .comment-respond__fieldName::after {
   content: "*";
   color: hsl(5, 61%, 33%);
+}
 
+.comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
+  color: hsl(150, 61%, 44%);
 }
 .akismet_comment_form_privacy_notice {
   margin-left: .618rem;
