@@ -1617,13 +1617,15 @@ tr:nth-child(even) {
 /* ====== RESPOND (COMMENT FORM) ====== */
 
 .comment-respond {
+  padding: 0 .618rem;
   margin-top: 2rem;
 }
 
 .comment-respond__notes {
-  font-size: var(--smallTitleSize);
+  font-style: italic;
+  font-size: var(--smallestTitleSize);
   line-height: var(--smallLineHeight);
-  margin-bottom: 1.618rem;
+  margin: 0 0 1.618em .618rem;
 }
 
 .comment-respond__field {
@@ -1643,20 +1645,22 @@ tr:nth-child(even) {
 }
 
 .comment-respond__submit {
+  --respondSubmitColor: hsl(150, 10%, 44%);
   font-size: var(--baseTextSize);
-  color: #fff;
-  background-color: hsl(150, 20%, 33%);
+  color: var(--respondSubmitColor);
   padding: .618em;
-  border: none;
   border-radius: 3px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--respondSubmitColor);
   cursor: pointer;
 }
 
 .comment-respond__submit:hover,
 .comment-respond__submit:focus {
-  background-color: hsl(150, 61%, 33%);
+  --respondSubmitColor: hsl(150, 61%, 44%);
 }
 
 .comment-respond__field:has([required]) .comment-respond__fieldName::after {
