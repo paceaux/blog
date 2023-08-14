@@ -1810,7 +1810,7 @@ textarea:disabled {
  .commentsTemplate {
 
    padding: .618rem;
-   margin: 3rem 0 1rem 0;
+   margin: 1rem 0 1rem 0;
  }
  
  .commentsTemplate {
@@ -1823,7 +1823,6 @@ textarea:disabled {
 .comment-respond {
   --fieldActiveColor: hsl(150, 61%, 44%);
   padding: 0 .618rem;
-  margin-top: 2rem;
 }
 
 .comment-respond__notes {
@@ -1832,7 +1831,7 @@ textarea:disabled {
   font-size: var(--smallestTitleSize);
   line-height: var(--smallLineHeight);
   border: none;
-  margin: 0 0 1.618em .618rem;
+  margin: 0 0 .618em .618rem;
 }
 
 .comment-respond__field {
