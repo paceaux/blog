@@ -1603,10 +1603,59 @@ tr:nth-child(even) {
   * Comments Template
   * --------------------------------------------------------------------------- */
  
- #comments-template.commentsTemplate{
+ .commentsTemplate {
+
+   padding: .618rem;
    margin: 3rem 0 1rem 0;
  }
  
+ .commentsTemplate {
+  border: 2px solid var(--themeActiveAccentColor);
+  border-radius: 2px;
+ }
+
+/* ====== RESPOND (COMMENT FORM) ====== */
+
+.comment-respond {
+  margin-top: 2rem;
+}
+
+.comment-respond__notes {
+  font-size: var(--smallTitleSize);
+  line-height: var(--smallLineHeight);
+  margin-bottom: 1.618rem;
+}
+
+.comment-respond__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .618rem;
+}
+
+
+.comment-respond__fieldInput {
+  border-radius: 3px;
+}
+
+.comment-respond__submitFields {
+  border: none;
+}
+
+.comment-respond__submit {
+  font-size: var(--baseTextSize);
+  padding: .618em;
+  border: none;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.comment-respond__submit:hover {
+  color: #fff;
+  background: #333;
+}
+
  /* ====== COMMENTS ======= */
  
  #comments-number {
@@ -1665,39 +1714,6 @@ tr:nth-child(even) {
    display: none;
  }
  
- /* ====== RESPOND (COMMENT FORM) ====== */
- 
- #respond {
-   margin-top: 30px;
- }
- 
- #respond label {
-   display: block;
-   font-size: 0.9rem;
-   text-transform: uppercase;
- }
- 
- #respond input {
-   border-radius: 3px;
- }
- 
- #respond input[type="submit"] {
-   padding: 12px 19px 14px;
-   border: none;
-   border-radius: 3px;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   cursor: pointer;
- }
- 
- #respond input[type="submit"]:hover {
-   color: #fff;
-   background: #333;
- }
- 
- #respond textarea {
-   border-radius: 3px;
- }
  
  /* Media Queries * --------------------------------------------------------------------------- */
  
@@ -2256,12 +2272,6 @@ tr:nth-child(even) {
    width: 100%;
  }
  
- /**
-    * Comments Template
-    * --------------------------------------------------------------------------- */
- #comments-template {
-   margin: 30px 0;
- }
  
  /* ====== COMMENTS ======= */
  
