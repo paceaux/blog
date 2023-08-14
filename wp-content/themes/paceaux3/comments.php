@@ -50,22 +50,22 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
     $comments_args = array(
       'fields' => array(
           //Author field
-          'author' => '<label class="comment-respond__field comment-respond__field--author"><span class="comment-respond__fieldName">' . $comment_author .'</span><br /><input class="comment-respond__fieldInput" id="author" name="author" aria-required="true" required /></label>',
+          'author' => '<label class="comment-respond__field comment-respond__field--author"><span class="comment-respond__fieldName">' . $comment_author .'</span><input class="comment-respond__fieldInput" id="author" name="author" aria-required="true" required /></label>',
           //Email Field
-          'email' => '<label class="comment-respond__field comment-respond__field--email"><span class="comment-respond__fieldName">' . $comment_email .'</span><br /><input class="comment-respond__fieldInput" id="email" type="email" name="email"/></label>',
+          'email' => '<label class="comment-respond__field comment-respond__field--email"><span class="comment-respond__fieldName">' . $comment_email .'</span><input class="comment-respond__fieldInput" id="email" type="email" name="email"/></label>',
           //URL Field
-          'url' => '<label class="comment-respond__field comment-respond__field--url"><span class="comment-respond__fieldName">' . $comment_url .'</span><br /><input class="comment-respond__fieldInput" id="url" type="url" name="url" /></label>',
+          'url' => '<label class="comment-respond__field comment-respond__field--url"><span class="comment-respond__fieldName">' . $comment_url .'</span><input class="comment-respond__fieldInput" id="url" type="url" name="url" /></label>',
         ),
-      'comment_field' => '<label class="comment-respond__field comment-respond__field--comment"><span class="comment-respond__fieldName">' . $comment_body .'</span><br /><textarea id="comment" name="comment" aria-required="true" required></textarea></label>',
+      'comment_field' => '<label class="comment-respond__field comment-respond__field--comment"><span class="comment-respond__fieldName">' . $comment_body .'</span><textarea id="comment" name="comment" aria-required="true" required></textarea></label>',
       'class_submit' => 'comment-respond',
       'class_form' => 'comment-respond__form',
       'class_submit' => 'comment-respond__submit',
       'title_reply_before' => '<h3 id="reply-title" class="comment-respond__title">',
       'title_reply_after' => '</h3>',
-      'comment_notes_before' => '<legend class="comment-notes">' . $comment_before . '</legend>',
+      'comment_notes_before' => '<legend class="comment-respond__notes">' . $comment_before . '</legend>',
       'comment_notes_after' =>  '',
       'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
-      'submit_field' => '<fieldset class="comment-respond__submit">%1$s %2$s</fieldset>',
+      'submit_field' => '<fieldset class="comment-respond__submitFields">%1$s %2$s</fieldset>',
       'format' => 'html5'
     );
 
