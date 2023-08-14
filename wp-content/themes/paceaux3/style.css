@@ -1617,6 +1617,7 @@ tr:nth-child(even) {
 /* ====== RESPOND (COMMENT FORM) ====== */
 
 .comment-respond {
+  --fieldActiveColor: hsl(150, 61%, 44%);
   padding: 0 .618rem;
   margin-top: 2rem;
 }
@@ -1635,6 +1636,14 @@ tr:nth-child(even) {
 }
 
 
+.comment-respond__fieldName {
+  border-bottom: 3px solid transparent;
+}
+
+.comment-respond__field:focus-within .comment-respond__fieldName {
+  border-color: var(--fieldActiveColor);
+}
+
 .comment-respond__fieldInput {
   border-radius: 3px;
 }
@@ -1642,6 +1651,7 @@ tr:nth-child(even) {
 .comment-respond__submitFields {
   padding: 0;
   border: none;
+  margin-top: .618em;
 }
 
 .comment-respond__submit {
@@ -1653,8 +1663,8 @@ tr:nth-child(even) {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-width: 2px;
-  border-style: solid;
   border-color: var(--respondSubmitColor);
+  background-color: none;
   cursor: pointer;
 }
 
@@ -2322,30 +2332,6 @@ tr:nth-child(even) {
  
  a.comment-permalink {
    display: none;
- }
- 
- /* ====== RESPOND (COMMENT FORM) ====== */
- #respond {
-   margin-top: 30px;
- }
- 
- #respond input {
-   border-radius: 3px;
- }
- 
- #respond input[type="submit"] {
-   padding: 12px 19px 14px;
-   border: none;
-   border-radius: 3px;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   background: var(--themeActiveTrimColor);
-   cursor: pointer;
- }
- 
- #respond input[type="submit"]:hover {
-   color: #fff;
-   background: rgb(var(--themeActivePltNLower));
  }
  
  
