@@ -1808,14 +1808,9 @@ textarea:disabled {
   * --------------------------------------------------------------------------- */
  
  .commentsTemplate {
-
-   padding: .618rem;
+   padding: .618em 0;
+   border-top: 6px solid var(--themeActiveAccentColor);
    margin: 1rem 0 1rem 0;
- }
- 
- .commentsTemplate {
-  border: 2px solid var(--themeActiveAccentColor);
-  border-radius: 2px;
  }
 
 /* ====== RESPOND (COMMENT FORM) ====== */
@@ -1831,14 +1826,13 @@ textarea:disabled {
   font-size: var(--smallestTitleSize);
   line-height: var(--smallLineHeight);
   border: none;
-  margin: 0 0 .618em .618rem;
+  margin: 0 0 .618em 0;
 }
 
 .comment-respond__field {
   display: flex;
   flex-direction: column;
   margin-bottom: .618rem;
-  margin-left: .618rem;
 }
 
 
@@ -1860,7 +1854,6 @@ textarea:disabled {
   padding: 0;
   border: none;
   margin-top: .618em;
-  margin-left: 1.318rem;
 }
 
 .comment-respond__submit {
