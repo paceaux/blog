@@ -1877,7 +1877,7 @@ textarea:disabled {
   color: hsl(150, 61%, 44%);
 }
 
-.comment-respond__field:has(:invalid:not(:focus)) {
+.comment-respond__field:has(:invalid:not(:focus)) input {
   color: var(--controlColorAlert);
 }
 
