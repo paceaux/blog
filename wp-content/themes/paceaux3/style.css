@@ -1876,6 +1876,11 @@ textarea:disabled {
 .comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
   color: hsl(150, 61%, 44%);
 }
+
+.comment-respond__field:has(:invalid:not(:focus)) {
+  color: var(--controlColorAlert);
+}
+
 .akismet_comment_form_privacy_notice {
   margin-left: .618rem;
   font-size: var(--smallerTextSize);
