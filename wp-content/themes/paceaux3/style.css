@@ -1886,6 +1886,22 @@ textarea:disabled {
   color: var(--controlColorAlert);
 }
 
+/*
+Firefox doesn't support :has so need to be more manual here. lame
+*/
+@supports not selector(:has(a,b)) {
+  .comment-respond__field--comment .comment-respond__fieldName::after,
+  .comment-respond__field--author .comment-respond__fieldName::after,
+  .comment-respond__field--email .comment-respond__fieldName::after {
+    content: "*";
+    color: var(--controlColorAlert);
+  }
+
+  .comment-respond__form:valid .comment-respond__fieldName::after  {
+    color: hsl(150, 61%, 44%);
+  }
+}
+
 .akismet_comment_form_privacy_notice {
   margin-left: .618rem;
   font-size: var(--smallerTextSize);
