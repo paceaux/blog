@@ -2303,6 +2303,8 @@ Firefox doesn't support :has so need to be more manual here. lame
     left: -2.5ex;
 }
  .topbar__searchContainer input[placeholder="Search"] {
+   --controlCornerSize: 0;
+   color: var(--controlColor);
    padding: 0.618em 1rem .618em 2ex;
    width: 1em;
    border: none;
@@ -2313,7 +2315,7 @@ Firefox doesn't support :has so need to be more manual here. lame
  
  .topbar__searchContainer input[placeholder="Search"]:focus {
      width: 10em;
-     border-bottom-color: var(--themeActiveLinkColor);
+     border-bottom-color: var(--controlColorInform);
      outline: none;
  }
 
@@ -2779,6 +2781,6 @@ Firefox doesn't support :has so need to be more manual here. lame
 }
  
 /* enlighter comments in dracula theme aren't accessible */
-.enlighter-t-dracula .enlighter-c1 {
+.enlighter-t-dracula.enlighter-t-dracula .enlighter-c1 {
   color: #a1abc9;
 }
