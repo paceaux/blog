@@ -30,6 +30,45 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 	<?php locate_template( array( 'misc/comments-error.php' ), true ); // Loads the misc/comments-error.php template. ?>
 
-	<?php comment_form(); // Loads the comment form. ?>
+
+  <?php
+    $comment_send = 'Send';
+    $comment_reply = 'Leave a Message';
+    $comment_reply_to = 'Reply';
+
+    $comment_author = 'Name';
+    $comment_email = 'E-Mail';
+    $comment_body = 'Comment';
+    $comment_url = 'Website';
+    $comment_cookies_1 = ' By commenting you accept the';
+    $comment_cookies_2 = ' Privacy Policy';
+
+    $comment_before = 'You don\'t have to register to leave a comment. And your email address won\'t be published.';
+    $comment_after = '';
+
+    $comment_cancel = 'Cancel Reply'; 
+    $comments_args = array(
+      'fields' => array(
+          //Author field
+          'author' => '<label class="comment-respond__field comment-respond__field--author"><span class="comment-respond__fieldName">' . $comment_author .'</span><input class="comment-respond__fieldInput" id="author" name="author" aria-required="true" required /></label>',
+          //Email Field
+          'email' => '<label class="comment-respond__field comment-respond__field--email"><span class="comment-respond__fieldName">' . $comment_email .'</span><input class="comment-respond__fieldInput" id="email" type="email" name="email" aria-required="true" required /></label>',
+          //URL Field
+          'url' => '<label class="comment-respond__field comment-respond__field--url"><span class="comment-respond__fieldName">' . $comment_url .'</span><input class="comment-respond__fieldInput" id="url" type="url" name="url" /></label>',
+        ),
+      'comment_field' => '<label class="comment-respond__field comment-respond__field--comment"><span class="comment-respond__fieldName">' . $comment_body .'</span><textarea id="comment" name="comment" aria-required="true" required rows="10"></textarea></label>',
+      'class_submit' => 'comment-respond',
+      'class_form' => 'comment-respond__form',
+      'class_submit' => 'comment-respond__submit',
+      'title_reply_before' => '<h3 id="reply-title" class="comment-respond__title">',
+      'title_reply_after' => '</h3>',
+      'comment_notes_before' => '<legend class="comment-respond__notes">' . $comment_before . '</legend>',
+      'comment_notes_after' =>  '',
+      'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
+      'submit_field' => '<fieldset class="comment-respond__submitFields">%1$s %2$s</fieldset>',
+      'format' => 'html5'
+    );
+
+    comment_form($comments_args); // Loads the comment form. ?>
 
 </section><!-- #comments-template -->

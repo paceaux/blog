@@ -842,11 +842,221 @@ tr:nth-child(even) {
    box-sizing: border-box;
  }
 
+/*==========
+#Form #Variables
+==========*/
+form {
+    /*=====
+        #Text #Size
+    =====*/
+	--formBiggestTextSize: var(--biggerTextSize, 1.2em);
+	--formBaseTextSize: var(--baseTextSize, 1em);
+	--formSmallestTextSize: var(--smallTextSize, .8em);
+
+    /*=====
+        #Title #Size
+    =====*/
+    --formBiggestTitleSize: var(--baseTitleSize, 1.5em);
+    --formBaseTitleSize: var(--formBiggestTextSize);
+    --formSmallestTitleSize: var(--formBaseTextSize);
+
+	--formControlSize: var(--formBaseTextSize);
+    --formLabelSize: var(--formBaseTextSize);
+    --formTitleSize: var(--formBaseTitleSize);
+
+    /*===== 
+        #LineHeight 
+    =====*/
+    --formBaseLineHeight: var(--smallLineHeight, 1.2);
+    --formSmallLineHeight: 1;
+
+	/*=====
+        #Font #FontFamilies #Typeface
+    =====*/
+    --formBaseFontFamily: var(--baseFontFamily,  'Georgia','Times New Roman', 'serif');
+    --formTitleFontFamily: var(--titleFontFamily, 'Helvetica', 'Arial', 'sans-serif');
+
+    /*=====
+        #Border
+    =====*/
+    --controlBorderStyle: solid;
+    --controlBorderWidth: 1px;
+    --controlCornerSize: 0.25rem;
+
+    --controlGroupBorderColor: var(--colorNeutral, rgb(165,165,165));
+    --controlGroupBorderStyle: var(--controlBorderStyle);
+    --controlGroupBorderWidth: var(--controlBorderWidth);
+    --controlGroupCornerSize: calc(var(--controlCornerSize) / 2);
+    --controlGroupBorder: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+    
+
+    /*=====
+        #Spacing
+    =====*/
+    --controlVertPadding: .375em;
+    --controlHorzPadding: .75rem;
+    --controlPadding: var(--controlVertPadding) var(--controlHorzPadding);
+    --controlGroupPadding: .618em .618rem;
+
+    
+    /*=====
+        #Colors
+    =====*/
+    --controlColor:  var(--colorNeutralDark, rgb(165,165,165));
+    --controlGroupColor: var(--colorNeutralDark, rgb(110,110,110));
+    --controlBackgroundColor: rgb(255, 255, 255);
+    --controlGroupBackgroundColor: transparent;
+    --controlBorderColor: var(--controlColor);
+
+    /*=====
+        #Colors #Hover #Focus
+    =====*/
+    --controlColorInterest: var(--colorNeutralDarker);
+    --controlBackgroundColorInterest: var(--controlBackgroundColor);
+    --controlBorderColorInterest: var(--controlColorInterest);
+    
+    /*=====
+        #Colors #Active
+    =====*/
+    --controlColorActive: var(--colorNeutralDarker);
+    --controlBackgroundColorActive: var(--controlBackgroundColor);
+    --controlBorderColorActive: var(--controlBorderColorActive);
+      
+    /*=====
+        #Colors #Deactivated
+    =====*/
+    --controlColorDeactivated: var(--controlColor);
+    --controlBackgroundColorDeactivated: var(--colorNeutralLighter);
+    --controlBorderColorDeactivated: var(--controlBackgroundColorDeactivated);
+
+    /*=====
+        #Colors #Inform
+    =====*/
+    --controlColorAlert: var(--colorWarmest, rgb(168, 62, 0));
+    --controlColorAttention: var(--colorWarmer, rgb(168, 118, 0));
+}
+
+form {
+    font-family: var(--formBaseFontFamily);
+}
+
+fieldset {
+	padding: var(--controlGroupPadding);
+	background-color: var(--controlGroupBackgroundColor);
+	border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+	border-radius: var(--controlCornerSize);
+	margin: .618em .618rem;
+}
+
+fieldset:disabled {
+	--controlGroupBorderColor: var(--colorNeutralLighter);
+	--controlGroupBackgroundColor: rgba(220,220,220, .3);
+}
+
+legend {
+	display: block;
+	color: var(--controlGroupColor);
+	font-family: var(--formTitleFontFamily);
+	font-weight: bold;
+	font-size: var(--formLabelSize);
+	line-height: 1.2;
+	padding: .35em .5rem;
+	margin: .618em 0;
+	border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+	border-radius: var(--controlGroupCornerSize);
+	background-color: var(--controlGroupBackgroundColor);
+}
+
+label {
+    color: var(--controlGroupColor);
+    font-size: var(--formBaseTextSize);
+}
+
+input,
+button,
+select,
+textarea {
+	color: var(--controlColor);
+	font-size: var(--formControlSize);
+	padding-top: var(--controlVertPadding);
+	padding-bottom: var(--controlVertPadding);
+	border-width: var(--controlBorderWidth);
+	border-style: var(--controlBorderStyle);
+	border-color: var(--controlBorderColor);
+	border-radius: var(--controlCornerSize);
+	background-color: var(--controlBackgroundColor);
+	transition: all 0.3s ease-in-out;
+	outline: none;
+}
+
+input,
+button,
+textarea,
+option,
+label {
+	padding-left: var(--controlHorzPadding);
+	padding-right: calc(var(--controlHorzPadding) / 2);
+}
+
+optgroup {
+	font-style: normal;
+}
+
+input:hover,
+input:focus,
+button:hover,
+button:focus,
+select:hover,
+select:focus,
+textarea:hover,
+textarea:focus {
+	color: var(--controlColorInterest);
+	background-color: var(--controlBackgroundColorInterest);
+	border-color: var(--controlBorderColorInterest);
+}
+
+input:active,
+button:active,
+select:active,
+textarea:active {
+	color: var(--controlColorActive);
+	background-color: var(--controlBackgroundColorActive);
+	border-color: var(--controlBorderColorActive);
+}
+
+button:focus-visible,
+[type="button"]:focus-visible,
+[type="submit"]:focus-visible,
+[type="reset"]:focus-visible {
+	outline: none;
+}
+
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+	border-color: var(--controlColorAlert);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+	color: var(--controlColorDeactivated);
+	background-color: var(--controlBackgroundColorDeactivated);
+	border-color: var(--controlBorderColorDeactivated);
+}
+
+[type="range"] {
+    vertical-align: bottom;
+}
+
+[type="radio"], [type="checkbox"] {
+    vertical-align: text-top;
+}
+
  /* ===============
      #FORMS 
   =============== */
  input {
-   padding: 0.75em 0.75rem;
    border: 1px solid rgb(var(--themeActivePltNHighest));
    color: #767676;
  }
@@ -872,13 +1082,7 @@ tr:nth-child(even) {
    background: #333;
  }
  
- textarea {
-   padding: 14px;
-   border: 1px solid #ddd;
- }
- 
  select {
-   padding: 9px 7px;
    border: 1px solid rgb(var(--themeActivePltNHighest));
    color: #999;
  }
@@ -1603,18 +1807,112 @@ tr:nth-child(even) {
   * Comments Template
   * --------------------------------------------------------------------------- */
  
- #comments-template.commentsTemplate{
-   margin: 3rem 0 1rem 0;
+ .commentsTemplate {
+   padding: .618em 0;
+   border-top: 6px solid var(--themeActiveAccentColor);
+   margin: 1rem 0 1rem 0;
  }
- 
+
+/* ====== RESPOND (COMMENT FORM) ====== */
+
+.comment-respond {
+  --fieldActiveColor: hsl(150, 61%, 44%);
+  padding: 0 .618rem;
+}
+
+.comment-respond__notes {
+  font-style: italic;
+  font-weight: normal;
+  font-size: var(--smallestTitleSize);
+  line-height: var(--smallLineHeight);
+  border: none;
+  margin: 0 0 .618em 0;
+}
+
+.comment-respond__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .618rem;
+}
+
+
+.comment-respond__fieldName {
+  text-decoration-color:transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+}
+
+.comment-respond__field:focus-within .comment-respond__fieldName {
+  text-decoration-color: var(--fieldActiveColor);
+}
+
+.comment-respond__fieldInput {
+  border-radius: 3px;
+}
+
+.comment-respond__submitFields {
+  padding: 0;
+  border: none;
+  margin-top: .618em;
+}
+
+.comment-respond__submit {
+  --controlColor: hsl(150, 10%, 44%);
+  --controlBorderColor: hsl(150, 10%, 44%);
+  --controlColorInterest: hsl(150, 61%, 44%);
+  --controlBorderColorInterest: hsl(150, 61%, 44%);
+  --controlBorderWidth: 4px;
+  font-size: var(--baseTextSize);
+  font-weight: bold;
+  padding: .618em;
+}
+
+.comment-respond__form:invalid .comment-respond__submit {
+    color: var(--controlColorDeactivated);
+    border-color: var(--controlBorderColorDeactivated);
+}
+
+
+.comment-respond__field:has([required]) .comment-respond__fieldName::after {
+  content: "*";
+  color: var(--controlColorAlert);
+}
+
+.comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
+  color: hsl(150, 61%, 44%);
+}
+
+.comment-respond__field:has(:invalid:not(:focus)) input {
+  color: var(--controlColorAlert);
+}
+
+/*
+Firefox doesn't support :has so need to be more manual here. lame
+*/
+@supports not selector(:has(a,b)) {
+  .comment-respond__field--comment .comment-respond__fieldName::after,
+  .comment-respond__field--author .comment-respond__fieldName::after,
+  .comment-respond__field--email .comment-respond__fieldName::after {
+    content: "*";
+    color: var(--controlColorAlert);
+  }
+
+  .comment-respond__form:valid .comment-respond__fieldName::after  {
+    color: hsl(150, 61%, 44%);
+  }
+}
+
+.akismet_comment_form_privacy_notice {
+  margin-left: .618rem;
+  font-size: var(--smallerTextSize);
+}
+
  /* ====== COMMENTS ======= */
  
  #comments-number {
    margin-bottom: 30px;
  }
-.akismet_comment_form_privacy_notice {
-    font-size: var(--smallerTextSize);
-}
+ 
  
  /* === Comment list === */
  
@@ -1665,39 +1963,6 @@ tr:nth-child(even) {
    display: none;
  }
  
- /* ====== RESPOND (COMMENT FORM) ====== */
- 
- #respond {
-   margin-top: 30px;
- }
- 
- #respond label {
-   display: block;
-   font-size: 0.9rem;
-   text-transform: uppercase;
- }
- 
- #respond input {
-   border-radius: 3px;
- }
- 
- #respond input[type="submit"] {
-   padding: 12px 19px 14px;
-   border: none;
-   border-radius: 3px;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   cursor: pointer;
- }
- 
- #respond input[type="submit"]:hover {
-   color: #fff;
-   background: #333;
- }
- 
- #respond textarea {
-   border-radius: 3px;
- }
  
  /* Media Queries * --------------------------------------------------------------------------- */
  
@@ -2256,12 +2521,6 @@ tr:nth-child(even) {
    width: 100%;
  }
  
- /**
-    * Comments Template
-    * --------------------------------------------------------------------------- */
- #comments-template {
-   margin: 30px 0;
- }
  
  /* ====== COMMENTS ======= */
  
@@ -2300,30 +2559,6 @@ tr:nth-child(even) {
  
  a.comment-permalink {
    display: none;
- }
- 
- /* ====== RESPOND (COMMENT FORM) ====== */
- #respond {
-   margin-top: 30px;
- }
- 
- #respond input {
-   border-radius: 3px;
- }
- 
- #respond input[type="submit"] {
-   padding: 12px 19px 14px;
-   border: none;
-   border-radius: 3px;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   background: var(--themeActiveTrimColor);
-   cursor: pointer;
- }
- 
- #respond input[type="submit"]:hover {
-   color: #fff;
-   background: rgb(var(--themeActivePltNLower));
  }
  
  
