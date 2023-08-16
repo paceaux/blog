@@ -903,30 +903,30 @@ form {
         #Colors
     =====*/
     --controlColor:  rgb(145, 145, 145);
-    --controlGroupColor: var(--colorNeutralDark, rgb(110,110,110));
-    --controlBackgroundColor: rgb(255, 255, 255);
+    --controlGroupColor: var(--themeActiveTextColor);
+    --controlBackgroundColor: var(--themeActiveTrimColor);
     --controlGroupBackgroundColor: transparent;
-    --controlBorderColor: var(--controlColor);
+    --controlBorderColor: var(--themeActivePltNLower);
 
     /*=====
         #Colors #Hover #Focus
     =====*/
-    --controlColorInterest: var(--colorNeutralDarker);
+    --controlColorInterest: var(--themeActivePltNLower);
     --controlBackgroundColorInterest: var(--controlBackgroundColor);
     --controlBorderColorInterest: var(--controlColorInterest);
     
     /*=====
         #Colors #Active
     =====*/
-    --controlColorActive: var(--colorNeutralDarker);
+    --controlColorActive: var(--themeActivePltNLow);
     --controlBackgroundColorActive: var(--controlBackgroundColor);
-    --controlBorderColorActive: var(--controlBorderColorActive);
+    --controlBorderColorActive: var(--controlColorActive);
       
     /*=====
         #Colors #Deactivated
     =====*/
     --controlColorDeactivated: var(--controlColor);
-    --controlBackgroundColorDeactivated: var(--colorNeutralLighter);
+    --controlBackgroundColorDeactivated: var(--themeActivePltNHighest);
     --controlBorderColorDeactivated: var(--controlBackgroundColorDeactivated);
 
     /*=====
@@ -1230,8 +1230,6 @@ textarea:disabled {
    flex-wrap: wrap;
    padding: 0;
    width: 100%;
-   background: #fff;
-   background: var(--themeActiveBGColor);
  }
  
  .pageContainer__content {
