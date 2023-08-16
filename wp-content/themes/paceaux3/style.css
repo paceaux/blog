@@ -1532,7 +1532,6 @@ input[type]:-internal-autofill-selected {
  
    .nav--primary .menu-item {
      position: relative;
-     background-color: var(--themeActiveBGColor);
    }
  
    .nav--primary .sub-menu {
@@ -2236,7 +2235,6 @@ Firefox doesn't support :has so need to be more manual here. lame
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: flex-start;
-   background-color: var(--themeActiveBGColor);
  }
  
  .g-header__branding {
