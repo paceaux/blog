@@ -41,10 +41,22 @@
    --linkColorHover: hsl(210deg, 61%, 36%); 
    --navigationColor: var(--linkColor);
    --navigationColorHover: var(--linkColorHover);
+
+   --colorNeutral: rgb(165, 165, 165);
+  --colorNeutralDarkest: rgb(55, 55, 55);
+  --colorNeutralDarker: rgb(55, 55, 55);
+  --colorNeutralDark: rgb(110, 110, 110);
+  --colorNeutral: rgb(165, 165, 165);
+  --colorNeutralLight: rgb(192.5, 192.5, 192.5);
+  --colorNeutralLighter: rgb(220, 220, 220);
+
    --baseFontFamily: "Frank Ruhl Libre", Helvetica, Arial, sans-serif;
    --titleFontFamily: Helvetica, Arial, sans-serif;
    --codeFontFamily: monospace;
- 
+
+  --baseTextLineColor: var(--baseTextColor);
+  --alertTextLineColor: rgb(255, 0, 0);
+  --baseQuoteBackgroundColor: 165, 165, 165, ;
    /* Line Heights */
    --baseLineHeight: 1.618;
    --smallLineHeight: 1.2;
@@ -70,6 +82,18 @@
    /* (16 x 1.618) x 1.618 */
    --bigTitleSize: 1.618em;
    --baseTitleSize: 1.5em;
+
+/*===== 
+    #Spacing #Text #Size
+    rem for left-right, for consistent alignment.
+    em for top/bottom, so the spacing is relative to font-size  
+=====*/
+  --bigSpacingHorizontal: 1.618rem;
+  --baseSpacingHorizontal: .618rem;
+
+  --bigSpacingVertical: 1.618em;
+  --baseSpacingVertical: .618em;
+
    --smallTitleSize: var(--biggestTextSize);
    --smallerTitleSize: var(--biggerTextSize);
    --smallestTitleSize: var(--bigTextSize);
@@ -85,6 +109,50 @@
    --themeActivePltNHigh: var(--themeLightPltNHigh);
    --themeActivePltNLow: var(--themeLightPltNLow);
    --themeActivePltNLower: var(--themeLightPltNLower);
+
+/*===== 
+    #Font #Weight
+    though font-weight ranges from 100 - 900, "normal" is 400 and the ends
+         are a difference of 300 .
+    So the "est" weights are the extremes, with room to add 
+        light, lighter, heavy, heavier. 
+    Recommend adding "ultra" if the weight is > 700
+=====*/
+    --lightestFontWeight: 100;
+    --baseFontWeight: 400;
+    --heaviestFontWeight: 700;
+
+/*===== 
+    #font #style
+    Oblique will use the existing font and put the glyphs at an angle
+    Alternate will look for a font labelled with an italic face
+    If the browser doesn't have a labelled italic font, it synthesizes oblique
+=====*/
+
+    --shiftedFontVoice: oblique 15deg;
+    --baseFontVoice: normal;
+    --alternateFontVoice: italic;
+
+/*===== 
+    #font #quotes #border
+    These are the default quotes for English. Change these quotes-as needed for other languages
+    "secondary" quotes are nested quotes. e.g. <blockquote><blockquote>
+    the CSS properties 'open-quote', 'close-quote' will use the primary open and primary close quotes listed here
+=====*/
+    --baseTextQuotes: "\201C""\201D""\2018""\2019"; /*Primary open, primary close, secondary open, secondary close*/
+    --baseQuoteBorder: 10px solid var(--colorNeutralLighter);
+    --smallQuoteBorder: 5px solid var(--colorNeutralLight);
+
+/*===== 
+    #font #text #interactions
+    Interactions could/should include
+        idle: not being used, but an indicator that it can be
+        interest: a user has shown desire to interact (e.g. hover or focus)
+        active: a user is currently interacting
+=====*/
+    --idleTextLineStyle: dotted;
+    --activeTextLineStyle: solid;
+    --idleTextDecoration: var(--idleTextLineStyle) underline 2px;
  }
  
  .theme--dark {
@@ -122,11 +190,8 @@
  html {
    /* Comment-B */
    font-size: calc(0.5vw + 1rem);
-   /* Comment-D */
-   line-height: 1.168;
    line-height: var(--baseLineHeight);
-   font-family: "Frank Ruhl Libre", Helvetica, Arial, sans-serif;
-   color: #373737;
+   font-family: var(--baseFontFamily);
    color: var(--themeActiveTextColor);
    scroll-behavior: smooth;
  }
@@ -150,11 +215,9 @@
  ol,
  dl,
  pre {
-   margin: 0 0.618rem;
-   line-height: 1.618;
-   line-height: var(--baseLineHeight);
-   color: var(--themeActiveTextColor);
-   /* Comment-A */
+  color: var(--themeActiveTextColor);
+  margin: 0 var(--baseSpacingHorizontal);
+  line-height: var(--baseLineHeight);
  }
  
  /* =====
@@ -166,14 +229,11 @@
  h4,
  h5,
  h6 {
-   margin-bottom: calc(1.618vmin - 1vmax + 0.35em);
-   line-height: 1.2;
-   line-height: var(--smallLineHeight);
-   font-family: Helvetica, Arial, sans-serif;
    font-family: var(--titleFontFamily);
-   color: #373737;
+   font-weight: var(--heaviestFontWeight);
+   line-height: var(--smallLineHeight);
    color: var(--themeActiveTextColor);
-   font-weight: bold;
+   margin-bottom: calc(1.618vmin - 1vmax + 0.35em);
    /* increases margin as screen width gets smaller */
  }
  
@@ -210,17 +270,22 @@
  /* =====
      #Lists
    ===== */
- li {
-   padding: 0;
-   margin: 0 0 0 0.618rem;
-   line-height: 1.618;
-   line-height: var(--baseLineHeight);
-   text-indent: -0.9em;
- }
- 
- li {
-   list-style-position: inside;
- }
+ul,
+ol,
+dl {
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+}
+
+li {
+    text-indent: -.9em; /*this brings the left text aligned with the text of a <dd> element*/
+    line-height: var(--baseLineHeight);
+    padding: 0;
+    margin: 0 0 0 var(--baseSpacingHorizontal);
+}
+
+li {
+    list-style-position: inside;
+}
  
  nav ul {
    padding: 0;
@@ -233,60 +298,74 @@
    text-indent: 0;
  }
  
- dt {
-   text-indent: -0.618rem;
- }
- 
- dd {
-   padding: 0 0.618rem;
-   margin: 0;
- }
+dt {
+    text-indent: calc(-1 * var(--baseSpacingHorizontal));
+}
+
+dd {
+    margin: 0;
+    padding: 0 var(--baseSpacingHorizontal);
+}
  
  /* =====
      #Paragraphs #Blocks
    ===== */
- hr {
-   margin: 1.618em 0.618rem;
-   border-width: 0.0625em;
-   border-style: solid;
-   color: #a5a5a5;
-   color: var(--colorNeutral);
- }
+hr {
+    color: var(--colorNeutral);
+    border-width: .0625em;
+    border-style: solid;
+    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
+}
  
  p,
  blockquote {
-   line-height: 1.618;
    line-height: var(--baseLineHeight);
  }
  
  p {
-   margin-bottom: 0.618em;
-   font-size: 1em;
    font-size: var(--baseTextSize);
+   margin-bottom: 0.618em;
  }
  
- /* Credit where it's due:
- https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
- */
- blockquote {
-   quotes: "\201C""\201D""\2018""\2019";
-   /* Comment-A */
-   padding: 0.618em 0.618rem;
-   margin: 1.618em 0.618rem;
-   border-left: 10px solid#dcdcdc;
-   border-left: 10px solid var(--colorNeutralLighter);
-   background: rgba(165, 165, 165, 0.15);
- }
- 
- blockquote::before {
-   content: open-quote;
-   margin-right: 0.25em;
-   font-size: 4em;
-   line-height: 0.1em;
-   color: #c1c1c1;
-   color: var(--colorNeutralLight);
-   vertical-align: -0.4em;
- }
+blockquote,
+q {
+    quotes: var(--baseTextQuotes);
+}
+
+blockquote::before,
+q::before {
+    content: open-quote;
+}
+
+/* Credit where it's due:
+    https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+*/
+blockquote {
+    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
+    border-left: var(--baseQuoteBorder);
+    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+}
+
+blockquote::before,
+blockquote::after {
+    color: var(--colorNeutralLight);
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.5em;
+}
+
+blockquote::before {
+    margin-right: var(--baseSpacingHorizontal);
+}
+
+blockquote::after {
+    content: no-close-quote;
+}
+
+q::after {
+    content: close-quote;
+}
  
  blockquote > * {
    margin-left: 1.168rem;
@@ -296,26 +375,27 @@
    #Content-Flow
  ===== */
  
- em,
- i,
- cite {
-   font-style: italic;
- }
- 
- strong,
- b {
-   font-weight: 700;
- }
+em,
+i,
+cite {
+    font-style: var(--alternateFontVoice);
+}
+
+strong,
+b {
+    font-weight: var(--heaviestFontWeight);
+}
  
  cite {
    display: block;
    text-align: right;
  }
  
- u {
-   border-bottom: 1px dotted red;
-   text-decoration: none;
- }
+/* U is for misspelled words. Invite user to make a correction */
+u {
+    text-decoration: var(--idleTextDecoration);
+    text-decoration-color: var(--alertTextLineColor);
+}
  
  small,
  sub,
@@ -340,7 +420,6 @@
  strike,
  del,
  ins {
-   color: #6e6e6e;
    color: var(--themeActiveEditorialTextColor);
    /* Comment-C */
  }
@@ -353,7 +432,6 @@
  
  ins,
  del {
-   background-color: rgba(220, 220, 220, 0.25);
    background-color: rgba(var(--themeActivePltNHighest), 0.25);
  }
  
@@ -361,38 +439,46 @@
    text-decoration: none;
  }
  
- /*
-   mark and selection should be different, so user knows which one they've selected.
-   
-   mark and selections:
-     saturation: 44%
-     lightness: 75%
-   Hue is different
-   */
- mark {
-   background-color: rgb(165, 220, 165);
-   background-color: rgba(165, 220, 165, 0.9);
- }
+/*
+mark and selection should be different so user knows which one they've selected.
+*/
+
+/* hue: 120, saturation: 44%, lightness: 75%  */
+mark {
+    background-color: rgba(165, 220, 165, 0.9);
+}
+
+/*hue: 180, saturation: 44%, lightness: 75%*/
+::selection {
+    background-color: rgba(165, 220, 220, 0.9);
+}
+
+/* Because mark and selection have same saturation and brightenss, a selected <mark> won't stand out
+    A hue between 120 and 180 seems to stand out the best in all colorblind tests, too
+    hue: 150, saturation: 44%, lightness: 65%
+ */
+mark::selection {
+    background-color: rgba(126, 205, 166, 0.9);
+}
+
+/* dfn and dt both do the same thing: denote a term to be defined */
+dfn,
+dt {
+    font-style: var(--shiftedFontVoice);
+    font-weight: var(--heaviestFontWeight);
+    text-transform: capitalize;
+}
  
- ::selection {
-   background-color: rgb(165, 220, 220);
-   background-color: rgba(165, 220, 220, 0.9);
- }
- 
- /* because mark and selection have same saturation, brightenss, mark won't easily stand out if it's selected */
- mark::selection {
-   background-color: rgb(165, 220, 110);
-   background-color: rgba(165, 220, 110, 0.9);
- }
- 
- /* dfn and dt both do the same thing: denote a term to be defined */
- dfn,
- dt {
-   font-weight: 700;
-   font-style: oblique;
-   text-transform: capitalize;
- }
- 
+abbr {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* an abbreviation with a title should invite a user to hover over it*/
+abbr[title] {
+    text-decoration: var(--idleTextDecoration);
+}
+
  /* =====
    #Content-flow #Code
    ===== */
@@ -401,24 +487,21 @@
  var,
  samp,
  data {
-   font-family: monospace;
    font-family: var(--codeFontFamily);
  }
  
- kbd,
- samp,
- data {
-   background-color: rgba(165, 165, 165, 0.2);
-   background-color: rgba(var(--themeActivePltNHigh), 0.2);
- }
+kbd,
+samp,
+data {
+    background-color: rgba(var(--baseQuoteBackgroundColor) 0.2);
+}
  
- kbd {
-   padding: 0.25ex 0.5ex;
-   border: 1px solid rgb(193, 193, 193);
-   border-color: rgb(var(--themeActivePltNHigher));
-   border-radius: 3px;
-   font-size: 0.75em;
- }
+kbd {
+    font-size: var(--smallerTextSize);
+    padding: .25ex .5ex;
+    border: 1px solid  var(--baseInlineBorderColor);
+    border-radius: 3px;
+}
  
  /* Treat samp like a mini blockquote. because basically you're quoting what the computer would do */
  samp,
@@ -426,29 +509,27 @@
    padding: 0 10px;
  }
  
- var,
- data {
-   font-style: italic;
- }
- 
- samp {
-   border-left: 5px solid rgb(193, 193, 193);
-   border-left-color: var(--themeActivePltNHigher);
- }
+var,
+data {
+    font-style: var(--alternateFontVoice);
+}
+
+samp {
+    border-left: var(--smallQuoteBorder);
+}
  
  data {
    padding: 0 10px;
  }
  
- pre {
-   overflow: scroll;
-   padding: 0.618em 0.618rem;
-   border: 1px solid rgb(193, 193, 193);
-   border-color: var(--themeActivePltNHigher);
-   border-radius: 2px;
-   font-size: 0.75em;
-   line-height: 1.2;
- }
+pre {
+    font-size: var(--smallerTextSize);
+    line-height: var(--smallLineHeight);
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+    border: 1px solid var(--themeActivePltNHigher);
+    border-radius: 2px;
+    overflow: scroll;
+}
  
  /* =====
      #Ruby
@@ -522,22 +603,21 @@
  }
  
  a {
-   border-bottom: 1px dotted transparent;
    color: #6ea5dc;
-   color: var(--linkColor);
    text-decoration: none;
+   border-bottom: 1px var(--idleTextLineStyle) transparent;
+   color: var(--linkColor);
  }
  
  a:hover,
  a:focus {
+   color: var(--linkColorHover);
    border-color: initial;
    outline: none;
-   color: #6ea5c1;
-   color: var(--linkColorHover);
  }
  
  a:active {
-   border-bottom-style: solid;
+   border-bottom-style: var(--activeTextLineStyle);
  }
  
  nav a:hover,
@@ -902,31 +982,31 @@ form {
     /*=====
         #Colors
     =====*/
-    --controlColor:  var(--colorNeutralDark, rgb(165,165,165));
-    --controlGroupColor: var(--colorNeutralDark, rgb(110,110,110));
-    --controlBackgroundColor: rgb(255, 255, 255);
+    --controlColor:  rgb(145, 145, 145);
+    --controlGroupColor: var(--themeActiveTextColor);
+    --controlBackgroundColor: var(--themeActiveTrimColor);
     --controlGroupBackgroundColor: transparent;
-    --controlBorderColor: var(--controlColor);
+    --controlBorderColor: var(--themeActivePltNLower);
 
     /*=====
         #Colors #Hover #Focus
     =====*/
-    --controlColorInterest: var(--colorNeutralDarker);
+    --controlColorInterest: var(--themeActivePltNLower);
     --controlBackgroundColorInterest: var(--controlBackgroundColor);
     --controlBorderColorInterest: var(--controlColorInterest);
     
     /*=====
         #Colors #Active
     =====*/
-    --controlColorActive: var(--colorNeutralDarker);
+    --controlColorActive: var(--themeActivePltNLow);
     --controlBackgroundColorActive: var(--controlBackgroundColor);
-    --controlBorderColorActive: var(--controlBorderColorActive);
+    --controlBorderColorActive: var(--controlColorActive);
       
     /*=====
         #Colors #Deactivated
     =====*/
     --controlColorDeactivated: var(--controlColor);
-    --controlBackgroundColorDeactivated: var(--colorNeutralLighter);
+    --controlBackgroundColorDeactivated: var(--themeActivePltNHighest);
     --controlBorderColorDeactivated: var(--controlBackgroundColorDeactivated);
 
     /*=====
@@ -934,6 +1014,8 @@ form {
     =====*/
     --controlColorAlert: var(--colorWarmest, rgb(168, 62, 0));
     --controlColorAttention: var(--colorWarmer, rgb(168, 118, 0));
+    --controlColorAffirm: rgb(44, 181, 112);
+    --controlColorInform: hsl(215, 61%, 44%);
 }
 
 form {
@@ -1043,6 +1125,10 @@ textarea:disabled {
 	color: var(--controlColorDeactivated);
 	background-color: var(--controlBackgroundColorDeactivated);
 	border-color: var(--controlBorderColorDeactivated);
+}
+
+input[type]:-internal-autofill-selected {
+  background-color: var(--controlBackgroundColor) !important;
 }
 
 [type="range"] {
@@ -1230,8 +1316,6 @@ textarea:disabled {
    flex-wrap: wrap;
    padding: 0;
    width: 100%;
-   background: #fff;
-   background: var(--themeActiveBGColor);
  }
  
  .pageContainer__content {
@@ -1859,8 +1943,10 @@ textarea:disabled {
 .comment-respond__submit {
   --controlColor: hsl(150, 10%, 44%);
   --controlBorderColor: hsl(150, 10%, 44%);
-  --controlColorInterest: hsl(150, 61%, 44%);
-  --controlBorderColorInterest: hsl(150, 61%, 44%);
+  --controlColorInterest: var(--controlColorAffirm);
+  --controlBorderColorInterest: var(--controlColorAffirm);
+  --controlBackgroundColor: transparent;
+  --controlBackgroundColorInterest: transparent;
   --controlBorderWidth: 4px;
   font-size: var(--baseTextSize);
   font-weight: bold;
@@ -1868,6 +1954,7 @@ textarea:disabled {
 }
 
 .comment-respond__form:invalid .comment-respond__submit {
+    font-weight: normal;  
     color: var(--controlColorDeactivated);
     border-color: var(--controlBorderColorDeactivated);
 }
@@ -1875,11 +1962,13 @@ textarea:disabled {
 
 .comment-respond__field:has([required]) .comment-respond__fieldName::after {
   content: "*";
+  font-weight: bold;
   color: var(--controlColorAlert);
 }
 
 .comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
-  color: hsl(150, 61%, 44%);
+  font-weight: normal;
+  color: var(--controlColorAffirm);
 }
 
 .comment-respond__field:has(:invalid:not(:focus)) input {
@@ -2285,6 +2374,8 @@ Firefox doesn't support :has so need to be more manual here. lame
     left: -2.5ex;
 }
  .topbar__searchContainer input[placeholder="Search"] {
+   --controlCornerSize: 0;
+   color: var(--colorNeutralDarker);
    padding: 0.618em 1rem .618em 2ex;
    width: 1em;
    border: none;
@@ -2295,7 +2386,7 @@ Firefox doesn't support :has so need to be more manual here. lame
  
  .topbar__searchContainer input[placeholder="Search"]:focus {
      width: 10em;
-     border-bottom-color: var(--themeActiveLinkColor);
+     border-bottom-color: var(--controlColorInform);
      outline: none;
  }
 
@@ -2760,4 +2851,7 @@ Firefox doesn't support :has so need to be more manual here. lame
 	padding: .5em;
 }
  
-/**test/
+/* enlighter comments in dracula theme aren't accessible */
+.enlighter-t-dracula.enlighter-t-dracula .enlighter-c1 {
+  color: #a1abc9;
+}
