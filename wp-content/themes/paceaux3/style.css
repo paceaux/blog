@@ -902,7 +902,7 @@ form {
     /*=====
         #Colors
     =====*/
-    --controlColor:  var(--colorNeutralDark, rgb(165,165,165));
+    --controlColor:  rgb(145, 145, 145);
     --controlGroupColor: var(--colorNeutralDark, rgb(110,110,110));
     --controlBackgroundColor: rgb(255, 255, 255);
     --controlGroupBackgroundColor: transparent;
@@ -2760,4 +2760,7 @@ Firefox doesn't support :has so need to be more manual here. lame
 	padding: .5em;
 }
  
-/**test/
+/* enlighter comments in dracula theme aren't accessible */
+.enlighter-t-dracula .enlighter-c1 {
+  color: #a1abc9;
+}
