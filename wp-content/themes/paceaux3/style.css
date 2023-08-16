@@ -41,6 +41,15 @@
    --linkColorHover: hsl(210deg, 61%, 36%); 
    --navigationColor: var(--linkColor);
    --navigationColorHover: var(--linkColorHover);
+
+   --colorNeutral: rgb(165, 165, 165);
+  --colorNeutralDarkest: rgb(55, 55, 55);
+  --colorNeutralDarker: rgb(55, 55, 55);
+  --colorNeutralDark: rgb(110, 110, 110);
+  --colorNeutral: rgb(165, 165, 165);
+  --colorNeutralLight: rgb(192.5, 192.5, 192.5);
+  --colorNeutralLighter: rgb(220, 220, 220);
+  
    --baseFontFamily: "Frank Ruhl Libre", Helvetica, Arial, sans-serif;
    --titleFontFamily: Helvetica, Arial, sans-serif;
    --codeFontFamily: monospace;
@@ -934,6 +943,8 @@ form {
     =====*/
     --controlColorAlert: var(--colorWarmest, rgb(168, 62, 0));
     --controlColorAttention: var(--colorWarmer, rgb(168, 118, 0));
+    --controlColorAffirm: rgb(44, 181, 112);
+    --controlColorInform: hsl(215, 61%, 44%);
 }
 
 form {
