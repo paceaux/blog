@@ -2304,7 +2304,7 @@ Firefox doesn't support :has so need to be more manual here. lame
 }
  .topbar__searchContainer input[placeholder="Search"] {
    --controlCornerSize: 0;
-   color: var(--controlColor);
+   color: var(--colorNeutralDarker);
    padding: 0.618em 1rem .618em 2ex;
    width: 1em;
    border: none;
