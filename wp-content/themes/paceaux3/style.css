@@ -49,7 +49,7 @@
   --colorNeutral: rgb(165, 165, 165);
   --colorNeutralLight: rgb(192.5, 192.5, 192.5);
   --colorNeutralLighter: rgb(220, 220, 220);
-  
+
    --baseFontFamily: "Frank Ruhl Libre", Helvetica, Arial, sans-serif;
    --titleFontFamily: Helvetica, Arial, sans-serif;
    --codeFontFamily: monospace;
@@ -1056,6 +1056,10 @@ textarea:disabled {
 	border-color: var(--controlBorderColorDeactivated);
 }
 
+input[type]:-internal-autofill-selected {
+  background-color: var(--controlBackgroundColor) !important;
+}
+
 [type="range"] {
     vertical-align: bottom;
 }
@@ -1868,8 +1872,10 @@ textarea:disabled {
 .comment-respond__submit {
   --controlColor: hsl(150, 10%, 44%);
   --controlBorderColor: hsl(150, 10%, 44%);
-  --controlColorInterest: hsl(150, 61%, 44%);
-  --controlBorderColorInterest: hsl(150, 61%, 44%);
+  --controlColorInterest: var(--controlColorAffirm);
+  --controlBorderColorInterest: var(--controlColorAffirm);
+  --controlBackgroundColor: transparent;
+  --controlBackgroundColorInterest: transparent;
   --controlBorderWidth: 4px;
   font-size: var(--baseTextSize);
   font-weight: bold;
@@ -1877,6 +1883,7 @@ textarea:disabled {
 }
 
 .comment-respond__form:invalid .comment-respond__submit {
+    font-weight: normal;  
     color: var(--controlColorDeactivated);
     border-color: var(--controlBorderColorDeactivated);
 }
@@ -1884,11 +1891,13 @@ textarea:disabled {
 
 .comment-respond__field:has([required]) .comment-respond__fieldName::after {
   content: "*";
+  font-weight: bold;
   color: var(--controlColorAlert);
 }
 
 .comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
-  color: hsl(150, 61%, 44%);
+  font-weight: normal;
+  color: var(--controlColorAffirm);
 }
 
 .comment-respond__field:has(:invalid:not(:focus)) input {
