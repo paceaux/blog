@@ -55,6 +55,10 @@ function hybrid_get_privacy_link() {
 	return sprintf( '<a class="wp-link" href="/privacy-policy">%s</a>', esc_html__('Privacy Policy', 'hybrid-core' ) );
 }
 
+function hybrid_privacy_link() {
+	echo hybrid_get_privacy_link();
+}
+
 /**
  * Returns a link to WordPress.org.
  *
