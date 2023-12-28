@@ -51,6 +51,21 @@ function hybrid_wp_link() {
  * @access public
  * @return string
  */
+function hybrid_get_privacy_link() {
+	return sprintf( '<a class="wp-link" href="/privacy-policy">%s</a>', esc_html__('Privacy Policy', 'hybrid-core' ) );
+}
+
+function hybrid_privacy_link() {
+	echo hybrid_get_privacy_link();
+}
+
+/**
+ * Returns a link to WordPress.org.
+ *
+ * @since  2.0.0
+ * @access public
+ * @return string
+ */
 function hybrid_get_wp_link() {
 	return sprintf( '<a class="wp-link" target="_blank" href="%s">%s</a>', esc_url( __( 'http://wordpress.org', 'hybrid-core' ) ), esc_html__( 'WordPress', 'hybrid-core' ) );
 }
