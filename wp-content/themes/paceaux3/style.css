@@ -2031,6 +2031,11 @@ Firefox doesn't support :has so need to be more manual here. lame
    font-size: 0.9rem;
  }
 
+.comment-author .url,
+.comment-reply-link {
+  font-weight: bold;
+}
+
 .comment-published {
     font-size: var(--smallerTextSize);
 }
