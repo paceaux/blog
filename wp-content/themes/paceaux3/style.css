@@ -1488,6 +1488,17 @@ input[type]:-internal-autofill-selected {
    border-left: var(--subMenuBorder);
    transition: max-height 0.3s ease-in;
  }
+
+ @media (max-width: 767px) {
+  .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu {
+   --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
+
+   max-height: 500px;
+   border-right: var(--subMenuBorder);
+   border-bottom: var(--subMenuBorder);
+   border-left: var(--subMenuBorder);
+  }
+ }
  
  .nav--primary .menu-item {
    list-style-type: none;
