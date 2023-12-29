@@ -1538,6 +1538,7 @@ input[type]:-internal-autofill-selected {
      position: absolute;
      z-index: 9;
      width: 100%;
+     background-color: var(--themeActiveBGColor);
    }
  
    .nav--primary .current-menu-parent .sub-menu {
