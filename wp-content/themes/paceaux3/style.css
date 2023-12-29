@@ -1144,7 +1144,7 @@ input[type]:-internal-autofill-selected {
   =============== */
  input {
    border: 1px solid rgb(var(--themeActivePltNHighest));
-   color: #767676;
+   color: #636363;
  }
  
  input[type="submit"] {
