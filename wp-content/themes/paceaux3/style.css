@@ -1144,7 +1144,7 @@ input[type]:-internal-autofill-selected {
   =============== */
  input {
    border: 1px solid rgb(var(--themeActivePltNHighest));
-   color: #767676;
+   color: #636363;
  }
  
  input[type="submit"] {
@@ -1488,6 +1488,18 @@ input[type]:-internal-autofill-selected {
    border-left: var(--subMenuBorder);
    transition: max-height 0.3s ease-in;
  }
+
+ @media (max-width: 767px) {
+  .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu,
+  .nav--primary .current-post-ancestor.menu-item-has-children > .sub-menu {
+   --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
+
+   max-height: 500px;
+   border-right: var(--subMenuBorder);
+   border-bottom: var(--subMenuBorder);
+   border-left: var(--subMenuBorder);
+  }
+ }
  
  .nav--primary .menu-item {
    list-style-type: none;
@@ -1538,6 +1550,7 @@ input[type]:-internal-autofill-selected {
      position: absolute;
      z-index: 9;
      width: 100%;
+     background-color: var(--themeActiveBGColor);
    }
  
    .nav--primary .current-menu-parent .sub-menu {
@@ -1757,6 +1770,7 @@ input[type]:-internal-autofill-selected {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    border-bottom-color: transparent;
 }
 
 .entry-content .wp-block-image a:hover,
@@ -1953,7 +1967,6 @@ input[type]:-internal-autofill-selected {
 }
 
 .comment-respond__form:invalid .comment-respond__submit {
-    font-weight: normal;  
     color: var(--controlColorDeactivated);
     border-color: var(--controlBorderColorDeactivated);
 }
@@ -2034,6 +2047,8 @@ Firefox doesn't support :has so need to be more manual here. lame
 .comment-author .url,
 .comment-reply-link {
   font-weight: bold;
+  color: var(--themeActiveTextColor);
+  border-bottom-color: var(--themeActiveTextColor);
 }
 
 .comment-published {
@@ -2855,6 +2870,7 @@ Firefox doesn't support :has so need to be more manual here. lame
 }
  
 /* enlighter comments in dracula theme aren't accessible */
-.enlighter-t-dracula.enlighter-t-dracula .enlighter-c1 {
+.enlighter-t-dracula.enlighter-t-dracula .enlighter-c1,
+.enlighter-t-dracula.enlighter-t-dracula .enlighter-c0 {
   color: #a1abc9;
 }
