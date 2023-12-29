@@ -1490,7 +1490,8 @@ input[type]:-internal-autofill-selected {
  }
 
  @media (max-width: 767px) {
-  .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu {
+  .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu,
+  .nav--primary .current-post-ancestor.menu-item-has-children > .sub-menu {
    --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
 
    max-height: 500px;
@@ -2046,6 +2047,8 @@ Firefox doesn't support :has so need to be more manual here. lame
 .comment-author .url,
 .comment-reply-link {
   font-weight: bold;
+  color: var(--themeActiveTextColor);
+  border-bottom-color: var(--themeActiveTextColor);
 }
 
 .comment-published {
