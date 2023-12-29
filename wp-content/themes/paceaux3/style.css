@@ -1770,6 +1770,7 @@ input[type]:-internal-autofill-selected {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    border-bottom-color: transparent;
 }
 
 .entry-content .wp-block-image a:hover,
@@ -1966,7 +1967,6 @@ input[type]:-internal-autofill-selected {
 }
 
 .comment-respond__form:invalid .comment-respond__submit {
-    font-weight: normal;  
     color: var(--controlColorDeactivated);
     border-color: var(--controlBorderColorDeactivated);
 }
