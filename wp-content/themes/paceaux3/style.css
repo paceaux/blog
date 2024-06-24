@@ -189,7 +189,7 @@
  
  html {
    /* Comment-B */
-   font-size: calc(0.5vw + 1rem);
+   font-size: calc(0.6vw + 0.7rem);
    line-height: var(--baseLineHeight);
    font-family: var(--baseFontFamily);
    color: var(--themeActiveTextColor);
