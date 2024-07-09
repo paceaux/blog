@@ -2873,3 +2873,98 @@ Firefox doesn't support :has so need to be more manual here. lame
 .enlighter-t-dracula.enlighter-t-dracula .enlighter-c0 {
   color: #a1abc9;
 }
+
+/* PRINT STYLES */
+.entry-title {
+     string-set: doctitle content(text);
+}
+
+@media print {
+	.topBar,
+	.nav--primary, 
+	.breadcrumbs__wrapper,
+	.sidebar-primary,
+	.comment-respond,
+	.entry-footer,
+	.loop-nav,
+	.akismet_comment_form_privacy_notice,
+	.g-footer {
+		display: none;
+	}
+	
+  /* set by JavaScript as inline style */
+	#bmc-wbtn,
+	#bmc-wbtn + div[style*="visibility"][style*="opacity"]{
+		display: none !important;
+	}
+	
+  /* H2s start off important sections. Let's make sure they aren't danglers */
+	.entry-content h2 {
+		page-break-before: page;
+		break-before: page;
+	}
+	
+  /* keep this stuff from splitting across multiple pages if we can help it */
+	.enlighter-default,
+	.wp-block-image.size-full,
+	ul,
+	ol,
+	table,
+	blockquote {
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+	
+  /* let's not leave these with a few lines hanging up */
+	p, ul, ol, dl {
+		orphans: 3;
+    widows: 2;
+	}
+	
+  /* Let's show link text, but also not have it take up too much space*/
+	.entry-content p a[href^=http]::after {
+	   content:" <" attr(href) "> ";
+		font-size: .7em;
+	}
+	
+	.entry-content .wp-block-image.size-full {
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	.entry-content::after {
+		content: "Copyright and all rights reserved by Frank M. Taylor";
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	
+	.comment__list {
+		page-break-inside: auto;
+	}
+	
+}
+@page :left {
+  margin-right: 20pt;
+}
+
+@page :right {
+  margin-left: 10pt;
+}
+
+@page {
+	size: 8.5in 11in;
+	
+	@top-right {
+		content: string(doctitle, first);
+		margin: 20pt 0 10pt 0;
+		font-size: 8pt;
+	}
+	
+	@bottom-right {
+		content: "Page " counter(pageNumber);
+	}
+	
+	@bottom-left {
+		content: "Copyright and all rights reserved by Frank M. Taylor";
+	}
+}
