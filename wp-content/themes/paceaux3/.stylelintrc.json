@@ -245,6 +245,6 @@
     "rule-empty-line-before": null,
     "selector-pseudo-element-colon-notation": null,
     "shorthand-property-no-redundant-values": null,
-    "unit-allowed-list": ["ch", "deg", "em", "ex", "fr", "ms", "rem", "%", "s", "px", "vw", "vh", "vmin", "vmax"]
+    "unit-allowed-list": ["ch", "deg", "em", "ex", "fr", "ms", "rem", "%", "s", "px", "vw", "vh", "vmin", "vmax", "pt", "in"]
   }
 }

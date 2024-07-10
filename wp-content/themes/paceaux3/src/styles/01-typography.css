@@ -1,3 +1,4 @@
+/* stylelint-disable color-function-notation */
 html {
    color: var(--themeActiveTextColor);
    font-family: var(--baseFontFamily);
@@ -354,6 +355,7 @@ pre {
  }
  
  rtc,
+ /* stylelint-disable-next-line selector-type-no-unknown */
  rbc {
    font-size: inherit;
    line-height: 1;
