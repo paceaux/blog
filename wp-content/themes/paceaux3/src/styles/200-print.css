@@ -45,8 +45,8 @@
     widows: 2;
 	}
 	
-  /* Let's show link text, but also not have it take up too much space*/
-	.entry-content p a[href^=http]::after {
+  /* Let's show link text, but also not have it take up too much space */
+	.entry-content p a[href^="http"]::after {
 	   content:" <" attr(href) "> ";
 		font-size: .7em;
 	}
@@ -58,8 +58,8 @@
 	
 	.entry-content::after {
 		content: "Copyright and all rights reserved by Frank M. Taylor";
-		font-size: 1.2rem;
 		text-align: center;
+		font-size: 1.2rem;
 	}
 	
 	.comment__list {
@@ -80,8 +80,8 @@
 	
 	@top-right {
 		content: string(doctitle, first);
-		margin: 20pt 0 10pt 0;
 		font-size: 8pt;
+		margin: 20pt 0 10pt 0;
 	}
 	
 	@bottom-right {

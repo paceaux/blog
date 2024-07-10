@@ -1,13 +1,13 @@
  .archive-title {
+   text-transform: uppercase;
+   letter-spacing: -2px;
    padding: .618em 0 0 0;
    margin-bottom: 0;
-   letter-spacing: -2px;
-   text-transform: uppercase;
  }
  
  .archive-description {
-   font-size: 0.8rem;
    font-style: italic;
+   font-size: 0.8rem;
  }
  
  #search-bar {

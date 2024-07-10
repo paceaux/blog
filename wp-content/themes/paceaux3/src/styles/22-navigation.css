@@ -22,8 +22,8 @@
  .nav--primary .sub-menu {
    list-style-type: none;
    display: flex;
-   margin: 0;
    text-align: center;
+   margin: 0;
  }
  
  .nav--primary .nav__list {
@@ -35,10 +35,10 @@
  
  .nav--primary .sub-menu {
    overflow: hidden;
-   flex-direction: column;
-   max-height: 0;
    font-size: 0.9em;
+   max-height: 0;
    transition: max-height 0.3s ease-out;
+   flex-direction: column;
  }
  
  .nav--primary .current-menu-parent .sub-menu,
@@ -56,7 +56,7 @@
    transition: max-height 0.3s ease-in;
  }
 
- @media (max-width: 767px) {
+ @media (width <= 767px) {
   .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu,
   .nav--primary .current-post-ancestor.menu-item-has-children > .sub-menu {
    --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
@@ -77,13 +77,13 @@
  
  .nav--primary a {
    display: block;
+   font-weight: normal;
+   text-align: center;
+   text-transform: capitalize;
+   letter-spacing: -1px;
    padding: 0.75em;
    border-bottom-style: dashed;
    border-bottom-color: transparent;
-   font-weight: normal;
-   text-align: center;
-   letter-spacing: -1px;
-   text-transform: capitalize;
  }
  
  .nav--primary .menu-item a {
@@ -103,7 +103,7 @@
    border-bottom-color: var(--themeActiveAccentColor);
  }
  
- @media only screen and (min-width: 768px) {
+ @media only screen and (width >= 768px) {
    .nav--primary .nav__list {
      flex-direction: row;
      justify-content: space-between;
@@ -129,14 +129,14 @@
    }
  }
  
- @media only screen and (max-width: 768px) {
+ @media only screen and (width <= 768px) {
    .menu-toggle {
      position: relative;
      display: inline-block;
-     margin: 0;
+     vertical-align: middle;
      font-size: 0.8125rem;
      line-height: 24px;
-     vertical-align: middle;
+     margin: 0;
      cursor: pointer;
    }
  
@@ -152,8 +152,8 @@
    .menu-item .menu-toggle button::before {
      content: "\f0c9";
      display: inline-block;
-     padding-top: 5px;
      font-size: 25px;
+     padding-top: 5px;
      -webkit-font-smoothing: antialiased;
    }
  
@@ -186,10 +186,10 @@
  
  .nav--secondary li a {
    display: block;
-   padding: 8px 10px;
    font-weight: bold;
-   letter-spacing: -1px;
    text-transform: uppercase;
+   letter-spacing: -1px;
+   padding: 8px 10px;
  }
  
  /* ====== Subsidiary Menu ====== */
@@ -200,9 +200,9 @@
  }
  
  #menu-subsidiary {
+   text-transform: uppercase;
    font-size: 0.8rem;
    font-size: var(--smallTextSize);
-   text-transform: uppercase;
  }
  
  #menu-subsidiary ul {
@@ -251,17 +251,17 @@
  
  #menu-secondary li a {
    display: block;
-   padding: 8px 10px;
    font-weight: bold;
-   letter-spacing: -1px;
    text-transform: uppercase;
+   letter-spacing: -1px;
+   padding: 8px 10px;
  }
  
  /* ====== Subsidiary Menu ====== */
  
  #menu-subsidiary {
-   font-size: 0.8rem;
    text-transform: uppercase;
+   font-size: 0.8rem;
  }
  
  #menu-subsidiary ul {

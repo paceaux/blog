@@ -1,9 +1,9 @@
 html {
+   color: var(--themeActiveTextColor);
+   font-family: var(--baseFontFamily);
    /* Comment-B */
    font-size: calc(0.6vw + 0.7rem);
    line-height: var(--baseLineHeight);
-   font-family: var(--baseFontFamily);
-   color: var(--themeActiveTextColor);
    scroll-behavior: smooth;
  }
  
@@ -27,8 +27,8 @@ html {
  dl,
  pre {
   color: var(--themeActiveTextColor);
-  margin: 0 var(--baseSpacingHorizontal);
   line-height: var(--baseLineHeight);
+  margin: 0 var(--baseSpacingHorizontal);
  }
  
  /* =====
@@ -40,10 +40,10 @@ html {
  h4,
  h5,
  h6 {
+   color: var(--themeActiveTextColor);
    font-family: var(--titleFontFamily);
    font-weight: var(--heaviestFontWeight);
    line-height: var(--smallLineHeight);
-   color: var(--themeActiveTextColor);
    margin-bottom: calc(1.618vmin - 1vmax + 0.35em);
    /* increases margin as screen width gets smaller */
  }
@@ -88,7 +88,7 @@ dl {
 }
 
 li {
-    text-indent: -.9em; /*this brings the left text aligned with the text of a <dd> element*/
+    text-indent: -.9em; /* this brings the left text aligned with the text of a <dd> element */
     line-height: var(--baseLineHeight);
     padding: 0;
     margin: 0 0 0 var(--baseSpacingHorizontal);
@@ -103,10 +103,10 @@ li {
  }
  
  nav li {
+   text-indent: 0;
+   line-height: 1;
    padding: 0;
    margin: 0;
-   line-height: 1;
-   text-indent: 0;
  }
  
 dt {
@@ -114,8 +114,8 @@ dt {
 }
 
 dd {
-    margin: 0;
     padding: 0 var(--baseSpacingHorizontal);
+    margin: 0;
 }
  
  /* =====
@@ -152,18 +152,18 @@ q::before {
     https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 */
 blockquote {
-    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
-    border-left: var(--baseQuoteBorder);
-    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
     padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+    border-left: var(--baseQuoteBorder);
+    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
+    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
 }
 
 blockquote::before,
 blockquote::after {
     color: var(--colorNeutralLight);
+    vertical-align: -0.5em;
     font-size: 4em;
     line-height: 0.1em;
-    vertical-align: -0.5em;
 }
 
 blockquote::before {
@@ -259,7 +259,7 @@ mark {
     background-color: rgba(165, 220, 165, 0.9);
 }
 
-/*hue: 180, saturation: 44%, lightness: 75%*/
+/* hue: 180, saturation: 44%, lightness: 75% */
 ::selection {
     background-color: rgba(165, 220, 220, 0.9);
 }
@@ -275,8 +275,8 @@ mark::selection {
 /* dfn and dt both do the same thing: denote a term to be defined */
 dfn,
 dt {
-    font-style: var(--shiftedFontVoice);
     font-weight: var(--heaviestFontWeight);
+    font-style: var(--shiftedFontVoice);
     text-transform: capitalize;
 }
  
@@ -285,7 +285,7 @@ abbr {
     text-decoration: none;
 }
 
-/* an abbreviation with a title should invite a user to hover over it*/
+/* an abbreviation with a title should invite a user to hover over it */
 abbr[title] {
     text-decoration: var(--idleTextDecoration);
 }
@@ -334,12 +334,12 @@ samp {
  }
  
 pre {
+    overflow: scroll;
     font-size: var(--smallerTextSize);
     line-height: var(--smallLineHeight);
     padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
     border: 1px solid var(--themeActivePltNHigher);
     border-radius: 2px;
-    overflow: scroll;
 }
  
  /* =====
@@ -379,9 +379,9 @@ pre {
  @supports (ruby-align: left) or (not (display: ruby-base-container)) {
    ruby {
      display: inline-flex;
-     flex-direction: column;
-     line-height: 1;
      vertical-align: 1em;
+     line-height: 1;
+     flex-direction: column;
    }
  
    rtc,
@@ -415,9 +415,9 @@ pre {
  
  a {
    color: #6ea5dc;
+   color: var(--linkColor);
    text-decoration: none;
    border-bottom: 1px var(--idleTextLineStyle) transparent;
-   color: var(--linkColor);
  }
  
  a:hover,
@@ -445,8 +445,8 @@ pre {
  
  figcaption {
    font-style: italic;
+   text-align: center;
    font-size: var(--smallerTextSize);
    border-top: 4px solid rgba(200, 220, 220, 0.3);
    border-top-color: rgba(var(--themeActivePltNHighest), 0.3);
-   text-align: center;
  }

@@ -123,15 +123,15 @@ tbody {
 #Table    
 ===== */
 table {
-    border-collapse: var(--tableBorderCollapse);
-    font-family: var(--tableBaseFontFamily);
     color: var(--tableBaseTextColor);
+    font-family: var(--tableBaseFontFamily);
+    border-collapse: var(--tableBorderCollapse);
 }
 
 caption {
-    font-size:  var(--tableSmallestTextSize);
     font-style: var(--tableCaptionFontStyle);
     text-transform: var(--tableCaptionTransform);
+    font-size:  var(--tableSmallestTextSize);
 }
 
 
@@ -140,12 +140,12 @@ caption {
 ===== */
 th,
 td {
+    text-align: var(--tableTextAlign);
+    vertical-align: var(--tableVertAlign);
+    line-height: var(--tableBaseLineHeight);
     padding: var(--tableCellVertPadding);
     border-style: var(--tableBorderStyle);
     border-color: var(--tableBorderColor);
-    line-height: var(--tableBaseLineHeight);
-    text-align: var(--tableTextAlign);
-    vertical-align: var(--tableVertAlign);
 }
 
 th:empty,
@@ -155,21 +155,21 @@ td:empty {
 }
 
 td {
-    border-width: var(--borderWidth);
     font-size: var(--tableCellSize);
+    border-width: var(--borderWidth);
 }
 
 th {
-    border-width: var(--tableHeaderBorderWidth);
-    font-size: var(--tableHeaderSize);
     font-family: var(--tableTitleFontFamily);
     font-weight: bold;
+    font-size: var(--tableHeaderSize);
+    border-width: var(--tableHeaderBorderWidth);
 }
 
 th[scope="rowgroup"] {
+    font-size: var(--tableBiggestTitleSize);
     padding: var(--tableCellVertPadding);
     border-width: 0;
-    font-size: var(--tableBiggestTitleSize);
 }
 
 thead th {
@@ -192,17 +192,17 @@ tr:nth-child(even) {
 }
 
  table {
-   border-spacing: 0;
+   font-size: 0.7em;
    border: 3px solid rgb(193, 193, 193);
    border-collapse: collapse;
    border-color: var(--themeActivePltNHigher);
-   font-size: 0.7em;
+   border-spacing: 0;
  }
  
  caption {
-   font-size: 1em;
    font-style: italic;
    text-transform: capitalize;
+   font-size: 1em;
  }
  
  tr {
@@ -221,15 +221,15 @@ tr:nth-child(even) {
  
  th,
  td {
+   text-align: left;
+   vertical-align: middle;
+   line-height: 1.2;
+   line-height: var(--smallLineHeight);
    padding: 0.4em 0.618rem;
    border-width: 0;
    border-style: solid;
    border-color: rgb(193, 193, 193);
    border-color: rgb(var(--themeActivePltNHigher));
-   line-height: 1.2;
-   line-height: var(--smallLineHeight);
-   text-align: left;
-   vertical-align: middle;
  }
  
  th,
@@ -238,10 +238,10 @@ tr:nth-child(even) {
  }
  
  th {
-   font-size: 1.3em;
-   font-size: var(--smallestTitleSize);
    font-family: Helvetica, Arial, sans-serif;
    font-weight: bold;
+   font-size: 1.3em;
+   font-size: var(--smallestTitleSize);
    /* treat th in a body as h4 */
  }
  

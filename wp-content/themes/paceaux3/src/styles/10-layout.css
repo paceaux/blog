@@ -14,7 +14,7 @@
     margin: 0;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     body {
       grid-template-columns: 10% 1fr 10%;
       grid-template-areas:
@@ -37,7 +37,7 @@
  }
  
  
- @media screen and (min-width: 768px) {
+ @media screen and (width >= 768px) {
    
   .layout-2c-l .pageContainer__contentWrapper {
      flex-basis: 74%;
@@ -55,7 +55,7 @@
    width: 71.666%;
  }
  
- @media screen and (min-width: 768px) {
+ @media screen and (width >= 768px) {
    .layout-2c-r .pageContainer__sidebar {
      float: left;
      padding-right: 1.5%;
@@ -80,8 +80,8 @@
  }
  
  .pageContainer__content {
-   margin: 0 20px 0 10px;
    border-bottom: 1px solid var(--themeActiveTrimColor);
+   margin: 0 20px 0 10px;
  }
 
 .pageContainer__content a {

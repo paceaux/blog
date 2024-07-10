@@ -26,7 +26,6 @@
    --linkColorHover: hsl(210deg, 61%, 36%); 
    --navigationColor: var(--linkColor);
    --navigationColorHover: var(--linkColorHover);
-
    --colorNeutral: rgb(165, 165, 165);
   --colorNeutralDarkest: rgb(55, 55, 55);
   --colorNeutralDarker: rgb(55, 55, 55);
@@ -34,11 +33,9 @@
   --colorNeutral: rgb(165, 165, 165);
   --colorNeutralLight: rgb(192.5, 192.5, 192.5);
   --colorNeutralLighter: rgb(220, 220, 220);
-
    --baseFontFamily: georgia, "Times New Roman", serif;
    --titleFontFamily: Helvetica, Arial, sans-serif;
    --codeFontFamily: monospace;
-
   --baseTextLineColor: var(--baseTextColor);
   --alertTextLineColor: rgb(255, 0, 0);
   --baseQuoteBackgroundColor: 165, 165, 165, ;
@@ -68,17 +65,15 @@
    --bigTitleSize: 1.618em;
    --baseTitleSize: 1.5em;
 
-/*===== 
+/* ===== 
     #Spacing #Text #Size
     rem for left-right, for consistent alignment.
     em for top/bottom, so the spacing is relative to font-size  
-=====*/
+===== */
   --bigSpacingHorizontal: 1.618rem;
   --baseSpacingHorizontal: .618rem;
-
   --bigSpacingVertical: 1.618em;
   --baseSpacingVertical: .618em;
-
    --smallTitleSize: var(--biggestTextSize);
    --smallerTitleSize: var(--biggerTextSize);
    --smallestTitleSize: var(--bigTextSize);
@@ -95,46 +90,46 @@
    --themeActivePltNLow: var(--themeLightPltNLow);
    --themeActivePltNLower: var(--themeLightPltNLower);
 
-/*===== 
+/* ===== 
     #Font #Weight
     though font-weight ranges from 100 - 900, "normal" is 400 and the ends
          are a difference of 300 .
     So the "est" weights are the extremes, with room to add 
         light, lighter, heavy, heavier. 
     Recommend adding "ultra" if the weight is > 700
-=====*/
+===== */
     --lightestFontWeight: 100;
     --baseFontWeight: 400;
     --heaviestFontWeight: 700;
 
-/*===== 
+/* ===== 
     #font #style
     Oblique will use the existing font and put the glyphs at an angle
     Alternate will look for a font labelled with an italic face
     If the browser doesn't have a labelled italic font, it synthesizes oblique
-=====*/
+===== */
 
     --shiftedFontVoice: oblique 15deg;
     --baseFontVoice: normal;
     --alternateFontVoice: italic;
 
-/*===== 
+/* ===== 
     #font #quotes #border
     These are the default quotes for English. Change these quotes-as needed for other languages
     "secondary" quotes are nested quotes. e.g. <blockquote><blockquote>
     the CSS properties 'open-quote', 'close-quote' will use the primary open and primary close quotes listed here
-=====*/
-    --baseTextQuotes: "\201C""\201D""\2018""\2019"; /*Primary open, primary close, secondary open, secondary close*/
+===== */
+    --baseTextQuotes: "\201C""\201D""\2018""\2019"; /* Primary open, primary close, secondary open, secondary close */
     --baseQuoteBorder: 10px solid var(--colorNeutralLighter);
     --smallQuoteBorder: 5px solid var(--colorNeutralLight);
 
-/*===== 
+/* ===== 
     #font #text #interactions
     Interactions could/should include
         idle: not being used, but an indicator that it can be
         interest: a user has shown desire to interact (e.g. hover or focus)
         active: a user is currently interacting
-=====*/
+===== */
     --idleTextLineStyle: dotted;
     --activeTextLineStyle: solid;
     --idleTextDecoration: var(--idleTextLineStyle) underline 2px;

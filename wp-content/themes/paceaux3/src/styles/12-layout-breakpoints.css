@@ -1,6 +1,6 @@
   /* Media Queries * --------------------------------------------------------------------------- */
  
- @media only screen and (max-width: 860px) {
+ @media only screen and (width <= 860px) {
    .layout-2c-l .pageContainer__contentWrapper,
    .pageContainer__contentWrapper {
      float: none;
@@ -64,19 +64,19 @@
  
    #menu-footer {
      float: none;
-     padding: 0.5em 0;
      text-align: center;
+     padding: 0.5em 0;
    }
  }
  
- @media only screen and (max-width: 768px) {
+ @media only screen and (width <= 768px) {
    .menu-toggle {
      position: relative;
      display: inline-block;
-     margin: 0;
+     vertical-align: middle;
      font-size: 0.8125rem;
      line-height: 24px;
-     vertical-align: middle;
+     margin: 0;
      cursor: pointer;
    }
  
@@ -104,7 +104,7 @@
    }
  }
  
- @media only screen and (max-width: 480px) {
+ @media only screen and (width <= 480px) {
    .quarter {
      float: left;
      width: 100%;
@@ -116,7 +116,7 @@
    }
  }
 
-  @media only screen and (max-width: 860px) {
+  @media only screen and (width <= 860px) {
    .topBar {
      width: 100%;
    }
@@ -186,18 +186,18 @@
  
    .g-footer__credit {
      float: none;
-     padding: 0.5em 0;
      text-align: center;
+     padding: 0.5em 0;
    }
  
    #menu-footer {
      float: none;
-     padding: 0.5em 0;
      text-align: center;
+     padding: 0.5em 0;
    }
  }
  
- @media only screen and (max-width: 480px) {
+ @media only screen and (width <= 480px) {
    .quarter {
      float: left;
      width: 100%;

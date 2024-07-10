@@ -7,11 +7,11 @@
  
  .breadcrumbs {
    float: left;
-   padding: 5px 10px;
-   font-size: 0.7rem;
    font-style: italic;
-   letter-spacing: -1px;
    text-transform: capitalize;
+   letter-spacing: -1px;
+   font-size: 0.7rem;
+   padding: 5px 10px;
  }
  
  .breadcrumbs__title {

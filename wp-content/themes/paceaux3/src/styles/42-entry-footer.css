@@ -3,16 +3,16 @@
   =============== */
  
  .entry-footer {
-   padding-bottom: 5px;
-   font-size: 0.8rem;
    color: var(--themeActiveTextColor);
    letter-spacing: -1px;
+   font-size: 0.8rem;
+   padding-bottom: 5px;
  }
 
   /* === Post Footer === */
  .entry-footer {
-   padding-bottom: 5px;
-   font-size: 0.8rem;
    color: var(--themeActiveTextColor);
    letter-spacing: -1px;
+   font-size: 0.8rem;
+   padding-bottom: 5px;
  }

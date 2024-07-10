@@ -4,14 +4,13 @@
  
  .widget-title {
    overflow: hidden;
-   padding-bottom: 7px;
-   margin-bottom: 12px;
-   margin-bottom: 7px;
-   border-bottom: 1px solid #dfdfdf;
-   font-size: 1.2rem;
    font-weight: thin;
-   letter-spacing: -1px;
    text-transform: uppercase;
+   letter-spacing: -1px;
+   font-size: 1.2rem;
+   padding-bottom: 7px;
+   border-bottom: 1px solid #dfdfdf;
+   margin-bottom: 7px;
  }
  
  .widget-title > span:after {
@@ -40,14 +39,13 @@
  
  .widget-title {
    overflow: hidden;
-   padding-bottom: 7px;
-   margin-bottom: 12px;
-   margin-bottom: 7px;
-   border-bottom: 1px solid #dfdfdf;
-   font-size: 1.2rem;
    font-weight: 200;
-   letter-spacing: -1px;
    text-transform: uppercase;
+   letter-spacing: -1px;
+   font-size: 1.2rem;
+   padding-bottom: 7px;
+   border-bottom: 1px solid #dfdfdf;
+   margin-bottom: 7px;
  }
  
 .widget ul {
@@ -55,12 +53,12 @@
 }
  .widget li {
    list-style-position: inside;
-   margin-bottom: 0.618em;
+   text-indent: 0;
    font-size: 0.8rem;
    font-size: var(--smallTextSize);
    line-height: 1.2;
    line-height: var(--smallLineHeight);
-   text-indent: 0;
+   margin-bottom: 0.618em;
  }
  
  .widget-title > span:after {

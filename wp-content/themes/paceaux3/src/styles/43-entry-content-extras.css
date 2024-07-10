@@ -6,21 +6,21 @@
  
  .more-link a {
    display: inline-block;
+   color: #fefefe;
+   text-align: center;
+   text-transform: capitalize;
+   letter-spacing: 1px;
+   font-size: var(--smallerTextSize);
    padding: 0.618em .618rem;
    border-bottom: none;
    border-radius: 2px;
-   font-size: var(--smallerTextSize);
-   color: #fefefe;
-   text-align: center;
-   letter-spacing: 1px;
-   text-transform: capitalize;
    background: var(--themeActiveLinkColor);
  }
  
  .more-link a:hover,
  .more-link a:focus {
-     border-bottom: none;
    color: #fefefe;
+     border-bottom: none;
    background: var(--themeActiveLinkColorHover);
  }
 
@@ -32,11 +32,11 @@
 
 
  .sources {
+   font-size: var(--smallestTextSize);
    padding: var(--entryBoxPadding);
+   border: var(--entryBoxBorderThickness) solid var(--themeActiveAccentColor);
     margin-top: var(--entryBoxMarginVertical);
     margin-bottom: var(--entryBoxMarginVertical);
-   border: var(--entryBoxBorderThickness) solid var(--themeActiveAccentColor);
-   font-size: var(--smallestTextSize);
  }
  
  .sources p {
@@ -44,11 +44,11 @@
  }
  
 .articleTOC {
-    padding: var(--entryBoxPadding);
-    margin-top: var(--entryBoxMarginVertical);
-    margin-bottom: var(--entryBoxMarginVertical);	
-   border: var(--entryBoxBorderThickness) solid var(--themeActiveAccentColor);
     font-size: var(--smallTextSize);
+    padding: var(--entryBoxPadding);	
+   border: var(--entryBoxBorderThickness) solid var(--themeActiveAccentColor);
+    margin-top: var(--entryBoxMarginVertical);
+    margin-bottom: var(--entryBoxMarginVertical);
 }
 
 .articleTOC__list {
@@ -66,22 +66,22 @@
 }
 
 .articleTOC__item--bigger {
-    margin-left: var(--tocItemIndent);
     font-size: var(--biggerTextSize);
+    margin-left: var(--tocItemIndent);
 }
 
 .articleTOC__item--big {
-    margin-left: calc(var(--tocItemIndent) * 2);
     font-size: var(--bigTextSize);
+    margin-left: calc(var(--tocItemIndent) * 2);
 }
 
 .articleTOC__item--base {
-    margin-left: calc(var(--tocItemIndent) * 3);
     font-size: var(--baseTextSize);
+    margin-left: calc(var(--tocItemIndent) * 3);
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
     .articleTOC {
         margin-right: 14vw;
         margin-left: -7vw;
@@ -93,14 +93,14 @@
   =============== */
 
 .rt-reading-time {
+    font-style: italic;
     font-size: var(--smallerTextSize);
     margin-bottom: .2em;
-    font-style: italic;
 }
 
 .disclaimer {
-	font-size: var(--smallTextSize);
 	font-style: oblique;
+	font-size: var(--smallTextSize);
 }
 
 .disclaimer p {

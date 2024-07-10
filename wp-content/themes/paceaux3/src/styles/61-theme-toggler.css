@@ -7,11 +7,11 @@
  .themeToggler__wrapper {
    top: 0;
    right: 0;
+   font-size: var(--smallTextSize);
    width: 2em;
    height: 2.6em;
-   margin: -7px 0.618rem 0 0.618rem;
    border: 1px solid var(--themeActiveAccentColor);
-   font-size: var(--smallTextSize);
+   margin: -7px 0.618rem 0 0.618rem;
  }
 
 .themeToggler__wrapper:focus-within {
@@ -20,15 +20,16 @@
 
 .theme--dark .themeToggler__wrapper {
     --themeIndicator: '\2600';
+
     border-color: transparent;
 }
  
  .themeToggler {
    display: block;
    overflow: hidden;
-   height: 2.6em;
-   font-family: inherit;
    color: transparent;
+   font-family: inherit;
+   height: 2.6em;
  }
 
 .themeToggler:hover::before,
@@ -42,8 +43,8 @@
  
 .themeToggler::before {
     content: var(--themeIndicator);
-    font-size: 2em;
     color: var(--themeIndicatorColor);
+    font-size: 2em;
 }
 
  .themeToggler__input {

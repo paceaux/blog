@@ -11,13 +11,14 @@
 /* ====== RESPOND (COMMENT FORM) ====== */
 
 .comment-respond {
-  --fieldActiveColor: hsl(150, 61%, 44%);
+  --fieldActiveColor: hsl(150deg, 61%, 44%);
+
   padding: 0 .618rem;
 }
 
 .comment-respond__notes {
-  font-style: italic;
   font-weight: normal;
+  font-style: italic;
   font-size: var(--smallestTitleSize);
   line-height: var(--smallLineHeight);
   border: none;
@@ -52,15 +53,16 @@
 }
 
 .comment-respond__submit {
-  --controlColor: hsl(150, 10%, 44%);
-  --controlBorderColor: hsl(150, 10%, 44%);
+  --controlColor: hsl(150deg, 10%, 44%);
+  --controlBorderColor: hsl(150deg, 10%, 44%);
   --controlColorInterest: var(--controlColorAffirm);
   --controlBorderColorInterest: var(--controlColorAffirm);
   --controlBackgroundColor: transparent;
   --controlBackgroundColorInterest: transparent;
   --controlBorderWidth: 4px;
-  font-size: var(--baseTextSize);
+
   font-weight: bold;
+  font-size: var(--baseTextSize);
   padding: .618em;
 }
 
@@ -72,13 +74,13 @@
 
 .comment-respond__field:has([required]) .comment-respond__fieldName::after {
   content: "*";
-  font-weight: bold;
   color: var(--controlColorAlert);
+  font-weight: bold;
 }
 
 .comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
-  font-weight: normal;
   color: var(--controlColorAffirm);
+  font-weight: normal;
 }
 
 .comment-respond__field:has(:invalid:not(:focus)) input {
@@ -97,13 +99,13 @@ Firefox doesn't support :has so need to be more manual here. lame
   }
 
   .comment-respond__form:valid .comment-respond__fieldName::after  {
-    color: hsl(150, 61%, 44%);
+    color: hsl(150deg, 61%, 44%);
   }
 }
 
 .akismet_comment_form_privacy_notice {
-  margin-left: .618rem;
   font-size: var(--smallerTextSize);
+  margin-left: .618rem;
 }
 
  /* ====== COMMENTS ======= */
@@ -135,17 +137,17 @@ Firefox doesn't support :has so need to be more manual here. lame
  
  .comment-meta {
    display: flex;
-   gap: .309em;
-   align-items: center;
+   font-size: 0.9rem;
    padding-bottom: .618em;
    border-bottom: 1px solid;
-   font-size: 0.9rem;
+   gap: .309em;
+   align-items: center;
  }
 
 .comment-author .url,
 .comment-reply-link {
-  font-weight: bold;
   color: var(--themeActiveTextColor);
+  font-weight: bold;
   border-bottom-color: var(--themeActiveTextColor);
 }
 
@@ -198,8 +200,8 @@ Firefox doesn't support :has so need to be more manual here. lame
  
  /* === Comment text/content === */
  .comment-content {
-   margin: 0 .618em;
    font-size: 0.9rem;
+   margin: 0 .618em;
  }
  
  /* === Reply link === */
@@ -210,9 +212,9 @@ Firefox doesn't support :has so need to be more manual here. lame
  
  
  .comment {
-   padding: 0.618rem;
-   margin: 0 0 1.618rem;
-   border-radius: 3px;
    text-indent: 0;
+   padding: 0.618rem;
+   border-radius: 3px;
    background: rgba(89, 162, 178, 0.1);
+   margin: 0 0 1.618rem;
  }

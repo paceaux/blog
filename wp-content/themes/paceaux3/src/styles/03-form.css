@@ -1,44 +1,42 @@
-/*==========
+/* ==========
 #Form #Variables
-==========*/
+========== */
 form {
-    /*=====
+    /* =====
         #Text #Size
-    =====*/
+    ===== */
 	--formBiggestTextSize: var(--biggerTextSize, 1.2em);
 	--formBaseTextSize: var(--baseTextSize, 1em);
 	--formSmallestTextSize: var(--smallTextSize, .8em);
 
-    /*=====
+    /* =====
         #Title #Size
-    =====*/
+    ===== */
     --formBiggestTitleSize: var(--baseTitleSize, 1.5em);
     --formBaseTitleSize: var(--formBiggestTextSize);
     --formSmallestTitleSize: var(--formBaseTextSize);
-
 	--formControlSize: var(--formBaseTextSize);
     --formLabelSize: var(--formBaseTextSize);
     --formTitleSize: var(--formBaseTitleSize);
 
-    /*===== 
+    /* ===== 
         #LineHeight 
-    =====*/
+    ===== */
     --formBaseLineHeight: var(--smallLineHeight, 1.2);
     --formSmallLineHeight: 1;
 
-	/*=====
+	/* =====
         #Font #FontFamilies #Typeface
-    =====*/
+    ===== */
     --formBaseFontFamily: var(--baseFontFamily,  'Georgia','Times New Roman', 'serif');
     --formTitleFontFamily: var(--titleFontFamily, 'Helvetica', 'Arial', 'sans-serif');
 
-    /*=====
+    /* =====
         #Border
-    =====*/
+    ===== */
     --controlBorderStyle: solid;
     --controlBorderWidth: 1px;
     --controlCornerSize: 0.25rem;
-
     --controlGroupBorderColor: var(--colorNeutral, rgb(165,165,165));
     --controlGroupBorderStyle: var(--controlBorderStyle);
     --controlGroupBorderWidth: var(--controlBorderWidth);
@@ -46,52 +44,52 @@ form {
     --controlGroupBorder: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
     
 
-    /*=====
+    /* =====
         #Spacing
-    =====*/
+    ===== */
     --controlVertPadding: .375em;
     --controlHorzPadding: .75rem;
     --controlPadding: var(--controlVertPadding) var(--controlHorzPadding);
     --controlGroupPadding: .618em .618rem;
 
     
-    /*=====
+    /* =====
         #Colors
-    =====*/
+    ===== */
     --controlColor:  rgb(145, 145, 145);
     --controlGroupColor: var(--themeActiveTextColor);
     --controlBackgroundColor: var(--themeActiveTrimColor);
     --controlGroupBackgroundColor: transparent;
     --controlBorderColor: var(--themeActivePltNLower);
 
-    /*=====
+    /* =====
         #Colors #Hover #Focus
-    =====*/
+    ===== */
     --controlColorInterest: var(--themeActivePltNLower);
     --controlBackgroundColorInterest: var(--controlBackgroundColor);
     --controlBorderColorInterest: var(--controlColorInterest);
     
-    /*=====
+    /* =====
         #Colors #Active
-    =====*/
+    ===== */
     --controlColorActive: var(--themeActivePltNLow);
     --controlBackgroundColorActive: var(--controlBackgroundColor);
     --controlBorderColorActive: var(--controlColorActive);
       
-    /*=====
+    /* =====
         #Colors #Deactivated
-    =====*/
+    ===== */
     --controlColorDeactivated: var(--controlColor);
     --controlBackgroundColorDeactivated: var(--themeActivePltNHighest);
     --controlBorderColorDeactivated: var(--controlBackgroundColorDeactivated);
 
-    /*=====
+    /* =====
         #Colors #Inform
-    =====*/
+    ===== */
     --controlColorAlert: var(--colorWarmest, rgb(168, 62, 0));
     --controlColorAttention: var(--colorWarmer, rgb(168, 118, 0));
     --controlColorAffirm: rgb(44, 181, 112);
-    --controlColorInform: hsl(215, 61%, 44%);
+    --controlColorInform: hsl(215deg, 61%, 44%);
 }
 
 form {
@@ -100,9 +98,9 @@ form {
 
 fieldset {
 	padding: var(--controlGroupPadding);
-	background-color: var(--controlGroupBackgroundColor);
 	border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
 	border-radius: var(--controlCornerSize);
+	background-color: var(--controlGroupBackgroundColor);
 	margin: .618em .618rem;
 }
 
@@ -119,10 +117,10 @@ legend {
 	font-size: var(--formLabelSize);
 	line-height: 1.2;
 	padding: .35em .5rem;
-	margin: .618em 0;
 	border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
 	border-radius: var(--controlGroupCornerSize);
 	background-color: var(--controlGroupBackgroundColor);
+	margin: .618em 0;
 }
 
 label {
@@ -143,8 +141,8 @@ textarea {
 	border-color: var(--controlBorderColor);
 	border-radius: var(--controlCornerSize);
 	background-color: var(--controlBackgroundColor);
-	transition: all 0.3s ease-in-out;
 	outline: none;
+	transition: all 0.3s ease-in-out;
 }
 
 input,
@@ -152,8 +150,8 @@ button,
 textarea,
 option,
 label {
-	padding-left: var(--controlHorzPadding);
 	padding-right: calc(var(--controlHorzPadding) / 2);
+	padding-left: var(--controlHorzPadding);
 }
 
 optgroup {
@@ -169,8 +167,8 @@ select:focus,
 textarea:hover,
 textarea:focus {
 	color: var(--controlColorInterest);
-	background-color: var(--controlBackgroundColorInterest);
 	border-color: var(--controlBorderColorInterest);
+	background-color: var(--controlBackgroundColorInterest);
 }
 
 input:active,
@@ -178,8 +176,8 @@ button:active,
 select:active,
 textarea:active {
 	color: var(--controlColorActive);
-	background-color: var(--controlBackgroundColorActive);
 	border-color: var(--controlBorderColorActive);
+	background-color: var(--controlBackgroundColorActive);
 }
 
 button:focus-visible,
@@ -199,8 +197,8 @@ input:disabled,
 select:disabled,
 textarea:disabled {
 	color: var(--controlColorDeactivated);
-	background-color: var(--controlBackgroundColorDeactivated);
 	border-color: var(--controlBorderColorDeactivated);
+	background-color: var(--controlBackgroundColorDeactivated);
 }
 
 input[type]:-internal-autofill-selected {
@@ -219,17 +217,17 @@ input[type]:-internal-autofill-selected {
      #FORMS 
   =============== */
  input {
-   border: 1px solid rgb(var(--themeActivePltNHighest));
    color: #636363;
+   border: 1px solid rgb(var(--themeActivePltNHighest));
  }
  
  input[type="submit"] {
+    color: var(--themeActiveTextColor);
+   text-transform: uppercase;
+   letter-spacing: 1px;
    padding: 10px 20px;
    border: none;
    border-radius: 3px;
-    color: var(--themeActiveTextColor);
-   letter-spacing: 1px;
-   text-transform: uppercase;
    background: var(--themeActiveTrimColor);
    cursor: pointer;
  }
@@ -245,7 +243,7 @@ input[type]:-internal-autofill-selected {
  }
  
  select {
-   border: 1px solid rgb(var(--themeActivePltNHighest));
    color: #999;
+   border: 1px solid rgb(var(--themeActivePltNHighest));
  }
  
