@@ -1,0 +1,19 @@
+ article.colum {
+   padding-bottom: 30px;
+     margin: .618em 0;
+     border-radius: 3px;
+     background-color: var(--themeActiveAccentColor);
+ }
+
+  /** Article **/
+ .colum {
+   display: flex;
+   flex-direction: column;
+   padding-bottom: 45px;
+ }
+ 
+ @media screen and (min-width: 768px) {
+   .colum {
+     flex-direction: column;
+   }
+ }

@@ -1,0 +1,218 @@
+ /**
+  * Comments Template
+  * --------------------------------------------------------------------------- */
+ 
+ .commentsTemplate {
+   padding: .618em 0;
+   border-top: 6px solid var(--themeActiveAccentColor);
+   margin: 1rem 0 1rem 0;
+ }
+
+/* ====== RESPOND (COMMENT FORM) ====== */
+
+.comment-respond {
+  --fieldActiveColor: hsl(150, 61%, 44%);
+  padding: 0 .618rem;
+}
+
+.comment-respond__notes {
+  font-style: italic;
+  font-weight: normal;
+  font-size: var(--smallestTitleSize);
+  line-height: var(--smallLineHeight);
+  border: none;
+  margin: 0 0 .618em 0;
+}
+
+.comment-respond__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .618rem;
+}
+
+
+.comment-respond__fieldName {
+  text-decoration-color:transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+}
+
+.comment-respond__field:focus-within .comment-respond__fieldName {
+  text-decoration-color: var(--fieldActiveColor);
+}
+
+.comment-respond__fieldInput {
+  border-radius: 3px;
+}
+
+.comment-respond__submitFields {
+  padding: 0;
+  border: none;
+  margin-top: .618em;
+}
+
+.comment-respond__submit {
+  --controlColor: hsl(150, 10%, 44%);
+  --controlBorderColor: hsl(150, 10%, 44%);
+  --controlColorInterest: var(--controlColorAffirm);
+  --controlBorderColorInterest: var(--controlColorAffirm);
+  --controlBackgroundColor: transparent;
+  --controlBackgroundColorInterest: transparent;
+  --controlBorderWidth: 4px;
+  font-size: var(--baseTextSize);
+  font-weight: bold;
+  padding: .618em;
+}
+
+.comment-respond__form:invalid .comment-respond__submit {
+    color: var(--controlColorDeactivated);
+    border-color: var(--controlBorderColorDeactivated);
+}
+
+
+.comment-respond__field:has([required]) .comment-respond__fieldName::after {
+  content: "*";
+  font-weight: bold;
+  color: var(--controlColorAlert);
+}
+
+.comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
+  font-weight: normal;
+  color: var(--controlColorAffirm);
+}
+
+.comment-respond__field:has(:invalid:not(:focus)) input {
+  color: var(--controlColorAlert);
+}
+
+/*
+Firefox doesn't support :has so need to be more manual here. lame
+*/
+@supports not selector(:has(a,b)) {
+  .comment-respond__field--comment .comment-respond__fieldName::after,
+  .comment-respond__field--author .comment-respond__fieldName::after,
+  .comment-respond__field--email .comment-respond__fieldName::after {
+    content: "*";
+    color: var(--controlColorAlert);
+  }
+
+  .comment-respond__form:valid .comment-respond__fieldName::after  {
+    color: hsl(150, 61%, 44%);
+  }
+}
+
+.akismet_comment_form_privacy_notice {
+  margin-left: .618rem;
+  font-size: var(--smallerTextSize);
+}
+
+ /* ====== COMMENTS ======= */
+ 
+ #comments-number {
+   margin-bottom: 30px;
+ }
+ 
+ 
+ /* === Comment list === */
+ 
+ ol.comment-list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ ol.comment-list ol.children {
+   list-style: none;
+ }
+ 
+ /* === Avatars === */
+ 
+ .comment-list .avatar {
+   border-radius: 50%;
+ }
+ 
+ /* === Meta === */
+ 
+ .comment-meta {
+   display: flex;
+   gap: .309em;
+   align-items: center;
+   padding-bottom: .618em;
+   border-bottom: 1px solid;
+   font-size: 0.9rem;
+ }
+
+.comment-author .url,
+.comment-reply-link {
+  font-weight: bold;
+  color: var(--themeActiveTextColor);
+  border-bottom-color: var(--themeActiveTextColor);
+}
+
+.comment-published {
+    font-size: var(--smallerTextSize);
+}
+
+.comment-reply-link {
+    margin-left: auto;
+}
+
+ /* === Comment text/content === */
+ 
+ .comment-content {
+   font-size: 0.9rem;
+ }
+ 
+ /* === Reply link === */
+ 
+ a.comment-permalink {
+   display: none;
+ }
+ 
+  /* ====== COMMENTS ======= */
+ 
+ #comments-number {
+   margin-bottom: 30px;
+ }
+ 
+ /* === Comment list === */
+ ol.comment-list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ ol.comment-list ol.children {
+   list-style: none;
+ }
+ 
+ /* === Avatars === */
+ .comment-list .avatar {
+   border-radius: 50%;
+ }
+ 
+ /* === Meta === */
+ .comment-meta {
+   font-size: 0.9rem;
+ }
+ 
+ /* === Comment text/content === */
+ .comment-content {
+   margin: 0 .618em;
+   font-size: 0.9rem;
+ }
+ 
+ /* === Reply link === */
+ 
+ a.comment-permalink {
+   display: none;
+ }
+ 
+ 
+ .comment {
+   padding: 0.618rem;
+   margin: 0 0 1.618rem;
+   border-radius: 3px;
+   text-indent: 0;
+   background: rgba(89, 162, 178, 0.1);
+ }

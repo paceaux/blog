@@ -1,0 +1,45 @@
+ /* ===============
+     #CONTENT #BREADCRUMBS 
+  =============== */
+ .breadcrumbs__wrapper {
+   padding: 2px 0;
+ }
+ 
+ .breadcrumbs {
+   float: left;
+   padding: 5px 10px;
+   font-size: 0.7rem;
+   font-style: italic;
+   letter-spacing: -1px;
+   text-transform: capitalize;
+ }
+ 
+ .breadcrumbs__title {
+   display: inline;
+   font-size: 0.7rem;
+ }
+ 
+ .breadcrumbs__list {
+   list-style: none;
+   display: inline;
+   margin: 0;
+ }
+ 
+ .breadcrumbs__listItem {
+   display: inline-block;
+   padding: 0 5px;
+ }
+ 
+ .breadcrumbs__listItem:after {
+   content: " >";
+ }
+ 
+ .breadcrumbs__listItem:last-child:after {
+   content: "";
+ }
+
+  /* ====== BREADCRUMBS ====== */
+ .breadcrumbs__wrapper {
+   padding: 2px 0;
+   width: 100%;
+ }
