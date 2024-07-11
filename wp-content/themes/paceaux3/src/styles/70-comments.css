@@ -113,7 +113,7 @@ Firefox doesn't support :has so need to be more manual here. lame
 #comments-number {
     margin-bottom: 30px;
 }
- 
+
  
 /* === Comment list === */
  
@@ -132,6 +132,7 @@ ol.comment-list ol.children {
 .comment-list .avatar {
     border-radius: 50%;
 }
+
  
 /* === Meta === */
  
@@ -161,44 +162,6 @@ ol.comment-list ol.children {
 
 /* === Comment text/content === */
  
-.comment-content {
-    font-size: 0.9rem;
-}
- 
-/* === Reply link === */
- 
-a.comment-permalink {
-    display: none;
-}
- 
-/* ====== COMMENTS ======= */
- 
-#comments-number {
-    margin-bottom: 30px;
-}
- 
-/* === Comment list === */
-ol.comment-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
- 
-ol.comment-list ol.children {
-    list-style: none;
-}
- 
-/* === Avatars === */
-.comment-list .avatar {
-    border-radius: 50%;
-}
- 
-/* === Meta === */
-.comment-meta {
-    font-size: 0.9rem;
-}
- 
-/* === Comment text/content === */
 .comment-content {
     font-size: 0.9rem;
     margin: 0 .618em;
