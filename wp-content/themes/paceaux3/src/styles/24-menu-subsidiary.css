@@ -1,0 +1,25 @@
+/* ====== Subsidiary Menu ====== */
+
+
+
+#menu-subsidiary {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-size: var(--smallTextSize);
+}
+
+
+#menu-subsidiary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-subsidiary ul ul {
+    display: none;
+}
+
+#menu-subsidiary li {
+    display: inline;
+    float: left;
+}
