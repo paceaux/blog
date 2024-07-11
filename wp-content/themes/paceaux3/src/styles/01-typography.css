@@ -354,9 +354,7 @@ pre {
    ruby-position: before;
  }
  
- rtc,
- /* stylelint-disable-next-line selector-type-no-unknown */
- rbc {
+ rtc {
    font-size: inherit;
    line-height: 1;
    ruby-align: start;
