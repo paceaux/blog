@@ -94,6 +94,7 @@ form {
     --controlColorInform: hsl(215deg, 61%, 44%);
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 form {
     font-family: var(--formBaseFontFamily);
 }
@@ -160,6 +161,10 @@ optgroup {
     font-style: normal;
 }
 
+input {
+    border: 1px solid rgb(var(--themeActivePltNHighest));
+}
+
 input:hover,
 input:focus,
 button:hover,
@@ -189,12 +194,6 @@ button:focus-visible,
     outline: none;
 }
 
-input:focus:invalid,
-select:focus:invalid,
-textarea:focus:invalid {
-    border-color: var(--controlColorAlert);
-}
-
 input:disabled,
 select:disabled,
 textarea:disabled {
@@ -202,6 +201,13 @@ textarea:disabled {
     border-color: var(--controlBorderColorDeactivated);
     background-color: var(--controlBackgroundColorDeactivated);
 }
+
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+    border-color: var(--controlColorAlert);
+}
+
 
 input[type]:-internal-autofill-selected {
     background-color: var(--controlBackgroundColor) !important;
@@ -218,10 +224,7 @@ input[type]:-internal-autofill-selected {
 /* ===============
      #FORMS 
   =============== */
-input {
-    color: #636363;
-    border: 1px solid rgb(var(--themeActivePltNHighest));
-}
+
  
 input[type='submit'] {
     color: var(--themeActiveTextColor);
@@ -237,11 +240,6 @@ input[type='submit'] {
 input.search-submit:hover {
     color: #fff;
     background: rgb(var(--themeActivePltNLower));
-}
- 
-input.search-submit:hover {
-    color: #fff;
-    background: #333;
 }
  
 select {

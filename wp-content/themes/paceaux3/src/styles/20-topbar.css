@@ -38,7 +38,7 @@
 .topbar__searchContainer input[placeholder='Search'] {
     --controlCornerSize: 0;
 
-    color: var(--colorNeutralDarker);
+    color: var(--themeActiveTextColor);
     font-size: var(--smallTextSize);
     padding: 0.618em 1rem .618em 2ex;
     width: 1em;
