@@ -2,9 +2,7 @@
     --themeIndicator: '\263E';
     --themeIndicatorColor: hsl(61deg, 61%, 36%);
     --themeIndicatorColorInterest: hsla(61deg, 61%, 36%, .5);
-}
 
-.themeToggler__wrapper {
     top: 0;
     right: 0;
     font-size: var(--smallTextSize);
@@ -32,19 +30,20 @@
     height: 2.6em;
 }
 
+.themeToggler::before {
+    content: var(--themeIndicator);
+    color: var(--themeIndicatorColor);
+    font-size: 2em;
+}
+
 .themeToggler:hover::before,
 .themeToggler:active::before {
     color: var(--themeIndicatorColorInterest);
 }
 
+
 .themetoggler:active::before {
     color: hsl(61deg, 61%, 72%);
-}
- 
-.themeToggler::before {
-    content: var(--themeIndicator);
-    color: var(--themeIndicatorColor);
-    font-size: 2em;
 }
 
 .themeToggler__input {

@@ -7,7 +7,8 @@
 .pagination {
     box-sizing: border-box;
     padding: 1rem;
-    margin: 0 1rem;
+    width: 100%;
+    margin: 0;
 }
  
 .page-numbers {
@@ -24,18 +25,19 @@
 a.page-numbers:hover,
 .page-numbers.current {
     color: white;
-    background: #333;
+    background: rgb(var(--themeActivePltNLower));
 }
  
 /* === Single post navigation (between different posts) === */
  
 .loop-nav {
     display: inline-flex;
-    font-size: 0.8rem;
+    font-size: 0.618rem;
     padding: 5px 0;
     width: 100%;
     gap: 1.168em;
     justify-content: space-between;
+    border-top: 1px solid var(--themeActiveTrimColor);
 }
  
 div.prev {
@@ -63,10 +65,6 @@ div.next {
  
 
 /* ====== PAGINATION ====== */
-.pagination {
-    width: 100%;
-    margin: 0;
-}
  
 .page-numbers,
 .prev,
@@ -81,15 +79,3 @@ div.next {
     margin: 0.25em 0;
 }
  
-a.page-numbers:hover,
-.page-numbers.current {
-    color: white;
-    background: rgb(var(--themeActivePltNLower));
-}
- 
-/* === Single post navigation (between different posts) === */
-.loop-nav {
-    font-size: 0.618rem;
-    padding: 5px 0;
-    border-top: 1px solid var(--themeActiveTrimColor);
-}
