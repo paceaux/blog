@@ -38,7 +38,6 @@
  
  
  @media screen and (width >= 768px) {
-   
   .layout-2c-l .pageContainer__contentWrapper {
      flex-basis: 74%;
    }
@@ -73,8 +72,7 @@
  .pageContainer {
    grid-area: main;
    display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+   flex-flow: row wrap;
    padding: 0;
    width: 100%;
  }
@@ -103,7 +101,7 @@
    margin: 0 20px 0 0;
  }
  
- .pageContainer__sidebar ul li:before,
+ .pageContainer__sidebar ul li::before,
  .pageContainer__sidebar[id][id] ul li a {
    color: var(--linkColor);
    font-weight: bold;

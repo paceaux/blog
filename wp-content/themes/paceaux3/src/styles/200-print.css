@@ -1,4 +1,5 @@
 /* stylelint-disable function-no-unknown */
+
 /* PRINT STYLES */
 .entry-title {
      string-set: doctitle content(text);

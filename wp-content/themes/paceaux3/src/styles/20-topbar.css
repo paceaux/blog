@@ -34,6 +34,7 @@
 .topbar__searchContainer:focus-within::before {
     left: -2.5ex;
 }
+
  .topbar__searchContainer input[placeholder="Search"] {
    --controlCornerSize: 0;
 

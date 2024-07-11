@@ -2,6 +2,7 @@
 html {
    color: var(--themeActiveTextColor);
    font-family: var(--baseFontFamily);
+
    /* Comment-B */
    font-size: calc(0.6vw + 0.7rem);
    line-height: var(--baseLineHeight);
@@ -46,6 +47,7 @@ html {
    font-weight: var(--heaviestFontWeight);
    line-height: var(--smallLineHeight);
    margin-bottom: calc(1.618vmin - 1vmax + 0.35em);
+
    /* increases margin as screen width gets smaller */
  }
  
@@ -233,6 +235,7 @@ u {
  del,
  ins {
    color: var(--themeActiveEditorialTextColor);
+
    /* Comment-C */
  }
  
@@ -375,6 +378,7 @@ pre {
  }
  
  /* complex ruby for chrome and Edge */
+
  /* only FF has "complete" ruby support */
  @supports (ruby-align: left) or (not (display: ruby-base-container)) {
    ruby {

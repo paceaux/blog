@@ -10,15 +10,20 @@
    --themeDarkPltNLow: 145, 145, 145;
    --themeDarkPltNLower: 200, 200, 200;
    --themeLightTextColor: rgb(55, 55, 55);
+
    /* 55,55,55 */
    --themeLightBGColor: rgb(255, 255, 255);
+
    /* 255,255,255 */
    --themeLightAccentColor: rgb(248, 248, 248);
+
    /* 248,248,248 */
    --themeLightTrimColor: rgb(238, 238, 238);
    --themeDarkTextColor: rgb(220, 220, 220);
+
    /* 220,220,220 */
    --themeDarkBGColor: rgb(23, 23, 23);
+
    /* 23,23,23 */
    --themeDarkAccentColor: rgb(55, 55, 55);
    --themeDarkTrimColor: rgb(40, 40, 40);
@@ -33,11 +38,12 @@
   --colorNeutralLight: rgb(192.5, 192.5, 192.5);
   --colorNeutralLighter: rgb(220, 220, 220);
    --baseFontFamily: georgia, "Times New Roman", serif;
-   --titleFontFamily: Helvetica, Arial, sans-serif;
+   --titleFontFamily: helvetica, arial, sans-serif;
    --codeFontFamily: monospace;
   --baseTextLineColor: var(--baseTextColor);
   --alertTextLineColor: rgb(255, 0, 0);
   --baseQuoteBackgroundColor: 165, 165, 165, ;
+
    /* Line Heights */
    --baseLineHeight: 1.618;
    --smallLineHeight: 1.2;
@@ -60,6 +66,7 @@
          They're here, though, so that, if desired, we can deviate and not have them overlap
  */
    --biggestTitleSize: 2.6179em;
+
    /* (16 x 1.618) x 1.618 */
    --bigTitleSize: 1.618em;
    --baseTitleSize: 1.5em;

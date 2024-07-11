@@ -30,11 +30,11 @@
    padding: 0 5px;
  }
  
- .breadcrumbs__listItem:after {
+ .breadcrumbs__listItem::after {
    content: " >";
  }
  
- .breadcrumbs__listItem:last-child:after {
+ .breadcrumbs__listItem:last-child::after {
    content: "";
  }
 

@@ -13,11 +13,11 @@
    margin-bottom: 7px;
  }
  
- .widget-title > span:after {
+ .widget-title > span::after {
    left: 100%;
  }
  
- .widget-title > span:before {
+ .widget-title > span::before {
    right: 100%;
  }
  
@@ -51,6 +51,7 @@
 .widget ul {
     list-style-type: none;
 }
+
  .widget li {
    list-style-position: inside;
    text-indent: 0;
@@ -61,11 +62,11 @@
    margin-bottom: 0.618em;
  }
  
- .widget-title > span:after {
+ .widget-title > span::after {
    left: 100%;
  }
  
- .widget-title > span:before {
+ .widget-title > span::before {
    right: 100%;
  }
  

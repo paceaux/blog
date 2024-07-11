@@ -1,4 +1,5 @@
 /* stylelint-disable color-function-notation */
+
 /* ==========
 #Table #Variables
 ========== */
@@ -27,8 +28,10 @@ table {
     
     /* assume for any column headers */
     --tableColHeaderSize: var(--tableBiggestTitleSize);
+
     /* assume for any row headers */
     --tableRowHeaderSize: var(--tableBaseTitleSize);
+
     /* used by th in the tbody, thead, tfoot */
     --tableHeaderSize: var(--tableRowHeaderSize);
 
@@ -243,6 +246,7 @@ tr:nth-child(even) {
    font-weight: bold;
    font-size: 1.3em;
    font-size: var(--smallestTitleSize);
+
    /* treat th in a body as h4 */
  }
  
@@ -250,6 +254,7 @@ tr:nth-child(even) {
  tfoot th {
    font-size: 1.5em;
    font-size: var(--baseTitleSize);
+
    /* treat th in header/footer as h3 */
  }
  
