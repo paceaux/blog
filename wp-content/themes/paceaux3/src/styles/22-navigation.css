@@ -194,10 +194,7 @@
  
 /* ====== Subsidiary Menu ====== */
  
-.nav--footer {
-    padding-top: 0.5rem;
-    margin: 0 auto;
-}
+
  
 #menu-subsidiary {
     text-transform: uppercase;
@@ -205,12 +202,13 @@
     font-size: var(--smallTextSize);
 }
  
+
 #menu-subsidiary ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
- 
+
 #menu-subsidiary ul ul {
     display: none;
 }
@@ -219,11 +217,17 @@
     display: inline;
     float: left;
 }
+
+.nav--footer {
+    padding-top: 0.5rem;
+    margin: 0 auto;
+}
  
 .nav--footer ul li a {
     padding: 0 15px;
     border-right: 1px solid #d8d8d8;
 }
+
 
 /* ====== Primary Menu ====== */
 .main-menu {
@@ -257,32 +261,6 @@
     padding: 8px 10px;
 }
  
-/* ====== Subsidiary Menu ====== */
- 
-#menu-subsidiary {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-}
- 
-#menu-subsidiary ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
- 
-#menu-subsidiary ul ul {
-    display: none;
-}
- 
-#menu-subsidiary li {
-    display: inline;
-    float: left;
-}
- 
-.nav--footer ul li a {
-    padding: 0 15px;
-    border-right: 1px solid #d8d8d8;
-}
 
 .nav-links {
     display: flex;
