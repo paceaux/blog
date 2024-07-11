@@ -18,14 +18,15 @@ body {
     }
 }
  
+.pageContainer__contentWrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
 .layout-1c .pageContainer__contentWrapper {
     width: 100%;
 }
- 
-.layout-1c .pageContainer__contentWrapper {
-    width: 100%;
-}
- 
+
 .layout-2c-l .pageContainer__contentWrapper {
     flex-grow: 1;
 }
@@ -57,11 +58,7 @@ body {
     }	
 }
  
- 
-.pageContainer__contentWrapper {
-    position: relative;
-    margin-bottom: 30px;
-}
+
  
 .pageContainer {
     grid-area: main;

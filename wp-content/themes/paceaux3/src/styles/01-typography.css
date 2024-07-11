@@ -91,16 +91,13 @@ dl {
 }
 
 li {
+    list-style-position: inside;
     text-indent: -.9em; /* this brings the left text aligned with the text of a <dd> element */
     line-height: var(--baseLineHeight);
     padding: 0;
     margin: 0 0 0 var(--baseSpacingHorizontal);
 }
 
-li {
-    list-style-position: inside;
-}
- 
 nav ul {
     padding: 0;
 }

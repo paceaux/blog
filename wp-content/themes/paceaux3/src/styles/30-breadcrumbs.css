@@ -3,6 +3,7 @@
   =============== */
 .breadcrumbs__wrapper {
     padding: 2px 0;
+    width: 100%;
 }
  
 .breadcrumbs {
@@ -38,8 +39,3 @@
     content: '';
 }
 
-/* ====== BREADCRUMBS ====== */
-.breadcrumbs__wrapper {
-    padding: 2px 0;
-    width: 100%;
-}

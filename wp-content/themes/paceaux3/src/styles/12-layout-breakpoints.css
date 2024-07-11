@@ -30,12 +30,12 @@
         width: 100%;
     }
  
-    .headerWidget .widget {
-        padding: 10px 0;
-    }
- 
     .widget {
         padding: 0 2rem;
+    }
+
+    .headerWidget .widget {
+        padding: 10px 0;
     }
  
     nav.nav--footer {
