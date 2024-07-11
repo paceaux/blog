@@ -28,3 +28,9 @@ jobs:
           **/.git*/**
           **/node_modules/** 
           **/src/**
+          .stylelintrc.json
+          .eslintrc.json
+          .gitignore
+          package.json
+          package-lock.json
+          postcss.config.js
