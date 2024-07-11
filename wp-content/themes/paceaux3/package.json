@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
-    "cssnano": "^7.0.1",
-    "postcss": "^8.4.38",
+    "cssnano": "^7.0.4",
+    "postcss": "^8.4.39",
     "postcss-cli": "^11.0.0",
     "postcss-cssnext": "^3.1.1",
     "postcss-import": "^16.1.0",
@@ -22,5 +22,8 @@
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4"
+  },
+  "dependencies": {
+    "@stylistic/stylelint-plugin": "^2.1.2"
   }
 }

@@ -1,291 +1,291 @@
- /* ===============
+/* ===============
      #MENUS 
   =============== */
  
- .nav {
-   font-family: Helvetica, Arial, sans-serif;
- }
+.nav {
+    font-family: Helvetica, Arial, sans-serif;
+}
  
- .nav:empty {
-   display: none;
- }
+.nav:empty {
+    display: none;
+}
  
- /* ===============
+/* ===============
      #MENU #PRIMARY 
      =============== */
  
- .nav--primary {
-   width: 100%;
- }
+.nav--primary {
+    width: 100%;
+}
  
- .nav--primary .nav__list,
- .nav--primary .sub-menu {
-   list-style-type: none;
-   display: flex;
-   text-align: center;
-   margin: 0;
- }
+.nav--primary .nav__list,
+.nav--primary .sub-menu {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    margin: 0;
+}
  
- .nav--primary .nav__list {
-   list-style-type: none;
-   position: relative;
-   flex-direction: column;
-   width: 100%;
- }
+.nav--primary .nav__list {
+    list-style-type: none;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+}
  
- .nav--primary .sub-menu {
-   overflow: hidden;
-   font-size: 0.9em;
-   max-height: 0;
-   transition: max-height 0.3s ease-out;
-   flex-direction: column;
- }
+.nav--primary .sub-menu {
+    overflow: hidden;
+    font-size: 0.9em;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    flex-direction: column;
+}
  
- .nav--primary .current-menu-parent .sub-menu,
- .nav--primary .menu-item:hover > .sub-menu,
- .nav--primary .menu-item a:hover ~ .sub-menu,
- .nav--primary .menu-item a:focus ~ .sub-menu,
- .nav--primary .menu-item:focus-within .sub-menu,
- .nav--primary .sub-menu:hover {
-   --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
+.nav--primary .current-menu-parent .sub-menu,
+.nav--primary .menu-item:hover > .sub-menu,
+.nav--primary .menu-item a:hover ~ .sub-menu,
+.nav--primary .menu-item a:focus ~ .sub-menu,
+.nav--primary .menu-item:focus-within .sub-menu,
+.nav--primary .sub-menu:hover {
+    --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
 
-   max-height: 500px;
-   border-right: var(--subMenuBorder);
-   border-bottom: var(--subMenuBorder);
-   border-left: var(--subMenuBorder);
-   transition: max-height 0.3s ease-in;
- }
+    max-height: 500px;
+    border-right: var(--subMenuBorder);
+    border-bottom: var(--subMenuBorder);
+    border-left: var(--subMenuBorder);
+    transition: max-height 0.3s ease-in;
+}
 
- @media (width <= 767px) {
-  .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu,
-  .nav--primary .current-post-ancestor.menu-item-has-children > .sub-menu {
-   --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
+@media (width <= 767px) {
+    .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu,
+    .nav--primary .current-post-ancestor.menu-item-has-children > .sub-menu {
+        --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
 
-   max-height: 500px;
-   border-right: var(--subMenuBorder);
-   border-bottom: var(--subMenuBorder);
-   border-left: var(--subMenuBorder);
-  }
- }
+        max-height: 500px;
+        border-right: var(--subMenuBorder);
+        border-bottom: var(--subMenuBorder);
+        border-left: var(--subMenuBorder);
+    }
+}
  
- .nav--primary .menu-item {
-   list-style-type: none;
-   position: relative;
-   display: inline-block;
-   min-width: 6em;
- }
+.nav--primary .menu-item {
+    list-style-type: none;
+    position: relative;
+    display: inline-block;
+    min-width: 6em;
+}
  
- .nav--primary a {
-   display: block;
-   font-weight: normal;
-   text-align: center;
-   text-transform: capitalize;
-   letter-spacing: -1px;
-   padding: 0.75em;
-   border-bottom-style: dashed;
-   border-bottom-color: transparent;
- }
+.nav--primary a {
+    display: block;
+    font-weight: normal;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    padding: 0.75em;
+    border-bottom-style: dashed;
+    border-bottom-color: transparent;
+}
  
- .nav--primary .menu-item a {
-   border-bottom-width: 2px;
- }
+.nav--primary .menu-item a {
+    border-bottom-width: 2px;
+}
  
- .nav--primary .sub-menu a {
-   border-bottom-width: 1px;
- }
+.nav--primary .sub-menu a {
+    border-bottom-width: 1px;
+}
  
- .nav--primary a:hover,
- .nav--primary a:focus {
-   border-bottom-color: var(--themeActiveLinkColorHover);
- }
+.nav--primary a:hover,
+.nav--primary a:focus {
+    border-bottom-color: var(--themeActiveLinkColorHover);
+}
  
- .nav--primary .current-menu-item > a {
-   border-bottom-color: var(--themeActiveAccentColor);
- }
+.nav--primary .current-menu-item > a {
+    border-bottom-color: var(--themeActiveAccentColor);
+}
  
- @media only screen and (width >= 768px) {
-   .nav--primary .nav__list {
-     flex-direction: row;
-     justify-content: space-between;
-   }
+@media only screen and (width >= 768px) {
+    .nav--primary .nav__list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
  
-   .nav--primary .menu-item {
-     position: relative;
-   }
+    .nav--primary .menu-item {
+        position: relative;
+    }
  
-   .nav--primary .sub-menu {
-     position: absolute;
-     z-index: 9;
-     width: 100%;
-     background-color: var(--themeActiveBGColor);
-   }
+    .nav--primary .sub-menu {
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        background-color: var(--themeActiveBGColor);
+    }
  
-   .nav--primary .current-menu-parent .sub-menu {
-     max-height: 0;
-   }
+    .nav--primary .current-menu-parent .sub-menu {
+        max-height: 0;
+    }
  
-   .nav--primary .current-menu-parent .menu-item:hover ~ .sub-menu {
-     max-height: 500px;
-   }
- }
+    .nav--primary .current-menu-parent .menu-item:hover ~ .sub-menu {
+        max-height: 500px;
+    }
+}
  
- @media only screen and (width <= 768px) {
-   .menu-toggle {
-     position: relative;
-     display: inline-block;
-     vertical-align: middle;
-     font-size: 0.8125rem;
-     line-height: 24px;
-     margin: 0;
-     cursor: pointer;
-   }
+@media only screen and (width <= 768px) {
+    .menu-toggle {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0.8125rem;
+        line-height: 24px;
+        margin: 0;
+        cursor: pointer;
+    }
  
-   .menu-toggle button {
-     position: relative;
-     top: 7px;
-     right: 0;
-     left: 15px;
-     border: none;
-     background: none;
-   }
+    .menu-toggle button {
+        position: relative;
+        top: 7px;
+        right: 0;
+        left: 15px;
+        border: none;
+        background: none;
+    }
  
-   .menu-item .menu-toggle button::before {
-     content: "\f0c9";
-     display: inline-block;
-     font-size: 25px;
-     padding-top: 5px;
-     -webkit-font-smoothing: antialiased;
-   }
+    .menu-item .menu-toggle button::before {
+        content: '\f0c9';
+        display: inline-block;
+        font-size: 25px;
+        padding-top: 5px;
+        -webkit-font-smoothing: antialiased;
+    }
  
-   .topbar__searchNav {
-     float: none;
-   }
- }
+    .topbar__searchNav {
+        float: none;
+    }
+}
  
- /* ===============
+/* ===============
      #MENU #SECONDARY 
   =============== */
  
- .nav--secondary {
-   font-size: 0.8rem;
-   font-size: var(--smallTextSize);
- }
+.nav--secondary {
+    font-size: 0.8rem;
+    font-size: var(--smallTextSize);
+}
  
- .nav--secondary ul {
-   list-style: none;
-   margin: 0;
- }
+.nav--secondary ul {
+    list-style: none;
+    margin: 0;
+}
  
- .nav--secondary ul ul {
-   display: none;
- }
+.nav--secondary ul ul {
+    display: none;
+}
  
- .nav--secondary li {
-   display: inline-block;
- }
+.nav--secondary li {
+    display: inline-block;
+}
  
- .nav--secondary li a {
-   display: block;
-   font-weight: bold;
-   text-transform: uppercase;
-   letter-spacing: -1px;
-   padding: 8px 10px;
- }
+.nav--secondary li a {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 8px 10px;
+}
  
- /* ====== Subsidiary Menu ====== */
+/* ====== Subsidiary Menu ====== */
  
- .nav--footer {
-   padding-top: 0.5rem;
-   margin: 0 auto;
- }
+.nav--footer {
+    padding-top: 0.5rem;
+    margin: 0 auto;
+}
  
- #menu-subsidiary {
-   text-transform: uppercase;
-   font-size: 0.8rem;
-   font-size: var(--smallTextSize);
- }
+#menu-subsidiary {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-size: var(--smallTextSize);
+}
  
- #menu-subsidiary ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
- }
+#menu-subsidiary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
  
- #menu-subsidiary ul ul {
-   display: none;
- }
+#menu-subsidiary ul ul {
+    display: none;
+}
  
- #menu-subsidiary li {
-   display: inline;
-   float: left;
- }
+#menu-subsidiary li {
+    display: inline;
+    float: left;
+}
  
- .nav--footer ul li a {
-   padding: 0 15px;
-   border-right: 1px solid #d8d8d8;
- }
+.nav--footer ul li a {
+    padding: 0 15px;
+    border-right: 1px solid #d8d8d8;
+}
 
-  /* ====== Primary Menu ====== */
- .main-menu {
-   position: relative;
- }
+/* ====== Primary Menu ====== */
+.main-menu {
+    position: relative;
+}
  
- /* ====== Secondary Menu ====== */
- #menu-secondary {
-   float: right;
-   font-size: 0.8rem;
- }
+/* ====== Secondary Menu ====== */
+#menu-secondary {
+    float: right;
+    font-size: 0.8rem;
+}
 
- #menu-secondary ul {
-   list-style: none;
-   margin: 0;
- }
+#menu-secondary ul {
+    list-style: none;
+    margin: 0;
+}
  
- #menu-secondary ul ul {
-   display: none;
- }
+#menu-secondary ul ul {
+    display: none;
+}
  
- #menu-secondary li {
-   display: inline-block;
- }
+#menu-secondary li {
+    display: inline-block;
+}
  
- #menu-secondary li a {
-   display: block;
-   font-weight: bold;
-   text-transform: uppercase;
-   letter-spacing: -1px;
-   padding: 8px 10px;
- }
+#menu-secondary li a {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 8px 10px;
+}
  
- /* ====== Subsidiary Menu ====== */
+/* ====== Subsidiary Menu ====== */
  
- #menu-subsidiary {
-   text-transform: uppercase;
-   font-size: 0.8rem;
- }
+#menu-subsidiary {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
  
- #menu-subsidiary ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
- }
+#menu-subsidiary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
  
- #menu-subsidiary ul ul {
-   display: none;
- }
+#menu-subsidiary ul ul {
+    display: none;
+}
  
- #menu-subsidiary li {
-   display: inline;
-   float: left;
- }
+#menu-subsidiary li {
+    display: inline;
+    float: left;
+}
  
- .nav--footer ul li a {
-   padding: 0 15px;
-   border-right: 1px solid #d8d8d8;
- }
+.nav--footer ul li a {
+    padding: 0 15px;
+    border-right: 1px solid #d8d8d8;
+}
 
-  .nav-links {
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
- }
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -1,19 +1,19 @@
- article.colum {
-   padding-bottom: 30px;
-     border-radius: 3px;
-     background-color: var(--themeActiveAccentColor);
-     margin: .618em 0;
- }
+article.colum {
+    padding-bottom: 30px;
+    border-radius: 3px;
+    background-color: var(--themeActiveAccentColor);
+    margin: .618em 0;
+}
 
-  /** Article **/
- .colum {
-   display: flex;
-   flex-direction: column;
-   padding-bottom: 45px;
- }
+/** Article **/
+.colum {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 45px;
+}
  
- @media screen and (width >= 768px) {
-   .colum {
-     flex-direction: column;
-   }
- }
+@media screen and (width >= 768px) {
+    .colum {
+        flex-direction: column;
+    }
+}

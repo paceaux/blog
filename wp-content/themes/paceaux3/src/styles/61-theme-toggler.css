@@ -1,18 +1,18 @@
 .themeToggler__wrapper {
-   --themeIndicator: '\263E';
-   --themeIndicatorColor: hsl(61deg, 61%, 36%);
-   --themeIndicatorColorInterest: hsla(61deg, 61%, 36%, .5);
- }
+    --themeIndicator: '\263E';
+    --themeIndicatorColor: hsl(61deg, 61%, 36%);
+    --themeIndicatorColorInterest: hsla(61deg, 61%, 36%, .5);
+}
 
- .themeToggler__wrapper {
-   top: 0;
-   right: 0;
-   font-size: var(--smallTextSize);
-   width: 2em;
-   height: 2.6em;
-   border: 1px solid var(--themeActiveAccentColor);
-   margin: -7px 0.618rem 0 0.618rem;
- }
+.themeToggler__wrapper {
+    top: 0;
+    right: 0;
+    font-size: var(--smallTextSize);
+    width: 2em;
+    height: 2.6em;
+    border: 1px solid var(--themeActiveAccentColor);
+    margin: -7px 0.618rem 0;
+}
 
 .themeToggler__wrapper:focus-within {
     border-color: hsl(61deg, 61%, 36%);
@@ -24,13 +24,13 @@
     border-color: transparent;
 }
  
- .themeToggler {
-   display: block;
-   overflow: hidden;
-   color: transparent;
-   font-family: inherit;
-   height: 2.6em;
- }
+.themeToggler {
+    display: block;
+    overflow: hidden;
+    color: transparent;
+    font-family: inherit;
+    height: 2.6em;
+}
 
 .themeToggler:hover::before,
 .themeToggler:active::before {
@@ -47,8 +47,8 @@
     font-size: 2em;
 }
 
- .themeToggler__input {
-   position: fixed;
-   left: -9999px;
-   visibility: hidden;
- }
+.themeToggler__input {
+    position: fixed;
+    left: -9999px;
+    visibility: hidden;
+}

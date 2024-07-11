@@ -1,45 +1,45 @@
- /* ===============
+/* ===============
      #CONTENT #BREADCRUMBS 
   =============== */
- .breadcrumbs__wrapper {
-   padding: 2px 0;
- }
+.breadcrumbs__wrapper {
+    padding: 2px 0;
+}
  
- .breadcrumbs {
-   float: left;
-   font-style: italic;
-   text-transform: capitalize;
-   letter-spacing: -1px;
-   font-size: 0.7rem;
-   padding: 5px 10px;
- }
+.breadcrumbs {
+    float: left;
+    font-style: italic;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+}
  
- .breadcrumbs__title {
-   display: inline;
-   font-size: 0.7rem;
- }
+.breadcrumbs__title {
+    display: inline;
+    font-size: 0.7rem;
+}
  
- .breadcrumbs__list {
-   list-style: none;
-   display: inline;
-   margin: 0;
- }
+.breadcrumbs__list {
+    list-style: none;
+    display: inline;
+    margin: 0;
+}
  
- .breadcrumbs__listItem {
-   display: inline-block;
-   padding: 0 5px;
- }
+.breadcrumbs__listItem {
+    display: inline-block;
+    padding: 0 5px;
+}
  
- .breadcrumbs__listItem::after {
-   content: " >";
- }
+.breadcrumbs__listItem::after {
+    content: ' >';
+}
  
- .breadcrumbs__listItem:last-child::after {
-   content: "";
- }
+.breadcrumbs__listItem:last-child::after {
+    content: '';
+}
 
-  /* ====== BREADCRUMBS ====== */
- .breadcrumbs__wrapper {
-   padding: 2px 0;
-   width: 100%;
- }
+/* ====== BREADCRUMBS ====== */
+.breadcrumbs__wrapper {
+    padding: 2px 0;
+    width: 100%;
+}

@@ -1,87 +1,87 @@
 /* stylelint-disable color-function-notation */
 html {
-   color: var(--themeActiveTextColor);
-   font-family: var(--baseFontFamily);
+    color: var(--themeActiveTextColor);
+    font-family: var(--baseFontFamily);
 
-   /* Comment-B */
-   font-size: calc(0.6vw + 0.7rem);
-   line-height: var(--baseLineHeight);
-   scroll-behavior: smooth;
- }
+    /* Comment-B */
+    font-size: calc(0.6vw + 0.7rem);
+    line-height: var(--baseLineHeight);
+    scroll-behavior: smooth;
+}
  
- body {
-   color: var(--themeActiveTextColor);
-   background: var(--themeActiveBGColor);
- }
+body {
+    color: var(--themeActiveTextColor);
+    background: var(--themeActiveBGColor);
+}
  
- /* =====
+/* =====
      #Everything
    ===== */
- h1,
- h2,
- h3,
- h4,
- h5,
- h6,
- p,
- ul,
- ol,
- dl,
- pre {
-  color: var(--themeActiveTextColor);
-  line-height: var(--baseLineHeight);
-  margin: 0 var(--baseSpacingHorizontal);
- }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+pre {
+    color: var(--themeActiveTextColor);
+    line-height: var(--baseLineHeight);
+    margin: 0 var(--baseSpacingHorizontal);
+}
  
- /* =====
+/* =====
      #Headings
    ===== */
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
-   color: var(--themeActiveTextColor);
-   font-family: var(--titleFontFamily);
-   font-weight: var(--heaviestFontWeight);
-   line-height: var(--smallLineHeight);
-   margin-bottom: calc(1.618vmin - 1vmax + 0.35em);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--themeActiveTextColor);
+    font-family: var(--titleFontFamily);
+    font-weight: var(--heaviestFontWeight);
+    line-height: var(--smallLineHeight);
+    margin-bottom: calc(1.618vmin - 1vmax + 0.35em);
 
-   /* increases margin as screen width gets smaller */
- }
+    /* increases margin as screen width gets smaller */
+}
  
- h1 {
-   font-size: 2.6179em;
-   font-size: var(--biggestTitleSize);
- }
+h1 {
+    font-size: 2.6179em;
+    font-size: var(--biggestTitleSize);
+}
  
- h2 {
-   font-size: 1.618em;
-   font-size: var(--bigTitleSize);
- }
+h2 {
+    font-size: 1.618em;
+    font-size: var(--bigTitleSize);
+}
  
- h3 {
-   font-size: 1.5em;
-   font-size: var(--baseTitleSize);
- }
+h3 {
+    font-size: 1.5em;
+    font-size: var(--baseTitleSize);
+}
  
- h4 {
-   font-size: 1.3em;
-   font-size: var(--smallTitleSize);
- }
+h4 {
+    font-size: 1.3em;
+    font-size: var(--smallTitleSize);
+}
  
- h5 {
-   font-size: 1.2em;
-   font-size: var(--smallerTitleSize);
- }
+h5 {
+    font-size: 1.2em;
+    font-size: var(--smallerTitleSize);
+}
  
- h6 {
-   font-size: 1.1em;
-   font-size: var(--smallestTitleSize);
- }
+h6 {
+    font-size: 1.1em;
+    font-size: var(--smallestTitleSize);
+}
  
- /* =====
+/* =====
      #Lists
    ===== */
 ul,
@@ -101,16 +101,16 @@ li {
     list-style-position: inside;
 }
  
- nav ul {
-   padding: 0;
- }
+nav ul {
+    padding: 0;
+}
  
- nav li {
-   text-indent: 0;
-   line-height: 1;
-   padding: 0;
-   margin: 0;
- }
+nav li {
+    text-indent: 0;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
  
 dt {
     text-indent: calc(-1 * var(--baseSpacingHorizontal));
@@ -121,7 +121,7 @@ dd {
     margin: 0;
 }
  
- /* =====
+/* =====
      #Paragraphs #Blocks
    ===== */
 hr {
@@ -131,15 +131,15 @@ hr {
     margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
 }
  
- p,
- blockquote {
-   line-height: var(--baseLineHeight);
- }
+p,
+blockquote {
+    line-height: var(--baseLineHeight);
+}
  
- p {
-   font-size: var(--baseTextSize);
-   margin-bottom: 0.618em;
- }
+p {
+    font-size: var(--baseTextSize);
+    margin-bottom: 0.618em;
+}
  
 blockquote,
 q {
@@ -181,11 +181,11 @@ q::after {
     content: close-quote;
 }
  
- blockquote > * {
-   margin-left: 1.168rem;
- }
+blockquote > * {
+    margin-left: 1.168rem;
+}
  
- /* =====
+/* =====
    #Content-Flow
  ===== */
  
@@ -200,10 +200,10 @@ b {
     font-weight: var(--heaviestFontWeight);
 }
  
- cite {
-   display: block;
-   text-align: right;
- }
+cite {
+    display: block;
+    text-align: right;
+}
  
 /* U is for misspelled words. Invite user to make a correction */
 u {
@@ -211,48 +211,48 @@ u {
     text-decoration-color: var(--alertTextLineColor);
 }
  
- small,
- sub,
- sup {
-   font-size: 0.618em;
-   font-size: var(--smallestTextSize);
-   line-height: 1;
- }
+small,
+sub,
+sup {
+    font-size: 0.618em;
+    font-size: var(--smallestTextSize);
+    line-height: 1;
+}
  
- sub {
-   vertical-align: sub;
- }
+sub {
+    vertical-align: sub;
+}
  
- sup {
-   vertical-align: super;
- }
+sup {
+    vertical-align: super;
+}
  
- /* =====
+/* =====
      #content-flow #editorial
    ===== */
- s,
- strike,
- del,
- ins {
-   color: var(--themeActiveEditorialTextColor);
+s,
+strike,
+del,
+ins {
+    color: var(--themeActiveEditorialTextColor);
 
-   /* Comment-C */
- }
+    /* Comment-C */
+}
  
- s,
- strike,
- del {
-   text-decoration: line-through;
- }
+s,
+strike,
+del {
+    text-decoration: line-through;
+}
  
- ins,
- del {
-   background-color: rgba(var(--themeActivePltNHighest), 0.25);
- }
+ins,
+del {
+    background-color: rgba(var(--themeActivePltNHighest), 0.25);
+}
  
- ins {
-   text-decoration: none;
- }
+ins {
+    text-decoration: none;
+}
  
 /*
 mark and selection should be different so user knows which one they've selected.
@@ -294,16 +294,16 @@ abbr[title] {
     text-decoration: var(--idleTextDecoration);
 }
 
- /* =====
+/* =====
    #Content-flow #Code
    ===== */
- pre,
- code,
- var,
- samp,
- data {
-   font-family: var(--codeFontFamily);
- }
+pre,
+code,
+var,
+samp,
+data {
+    font-family: var(--codeFontFamily);
+}
  
 kbd,
 samp,
@@ -318,11 +318,11 @@ kbd {
     border-radius: 3px;
 }
  
- /* Treat samp like a mini blockquote. because basically you're quoting what the computer would do */
- samp,
- data {
-   padding: 0 10px;
- }
+/* Treat samp like a mini blockquote. because basically you're quoting what the computer would do */
+samp,
+data {
+    padding: 0 10px;
+}
  
 var,
 data {
@@ -333,9 +333,9 @@ samp {
     border-left: var(--smallQuoteBorder);
 }
  
- data {
-   padding: 0 10px;
- }
+data {
+    padding: 0 10px;
+}
  
 pre {
     overflow: scroll;
@@ -346,111 +346,111 @@ pre {
     border-radius: 2px;
 }
  
- /* =====
+/* =====
      #Ruby
    ===== */
- ruby {
-   position: relative;
-   display: ruby;
-   margin: 0 0.5ex;
-   -webkit-ruby-position: before;
-   ruby-position: before;
- }
+ruby {
+    position: relative;
+    display: ruby;
+    margin: 0 0.5ex;
+    -webkit-ruby-position: before;
+    ruby-position: before;
+}
  
- rtc {
-   font-size: inherit;
-   line-height: 1;
-   ruby-align: start;
- }
+rtc {
+    font-size: inherit;
+    line-height: 1;
+    ruby-align: start;
+}
  
- rt {
-   display: ruby-text;
-   font-size: 0.7em;
- }
+rt {
+    display: ruby-text;
+    font-size: 0.7em;
+}
  
- rt + rt {
-   margin-left: 0.5ex;
- }
+rt + rt {
+    margin-left: 0.5ex;
+}
  
- rtc > bdo {
-   display: -webkit-ruby-text-container;
-   display: ruby-base-container;
- }
+rtc > bdo {
+    display: -webkit-ruby-text-container;
+    display: ruby-base-container;
+}
  
- /* complex ruby for chrome and Edge */
+/* complex ruby for chrome and Edge */
 
- /* only FF has "complete" ruby support */
- @supports (ruby-align: left) or (not (display: ruby-base-container)) {
-   ruby {
-     display: inline-flex;
-     vertical-align: 1em;
-     line-height: 1;
-     flex-direction: column;
-   }
+/* only FF has "complete" ruby support */
+@supports (ruby-align: left) or (not (display: ruby-base-container)) {
+    ruby {
+        display: inline-flex;
+        vertical-align: 1em;
+        line-height: 1;
+        flex-direction: column;
+    }
  
-   rtc,
-   rt {
-     order: -1;
-     flex-grow: 1;
-     flex-shrink: 0;
-   }
+    rtc,
+    rt {
+        order: -1;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
  
-   rtc {
-     display: inline-flex;
-   }
- }
+    rtc {
+        display: inline-flex;
+    }
+}
  
- /* Edge fixes */
- @supports ((ruby-align: left)) {
-   rtc {
-     justify-content: space-between;
-   }
+/* Edge fixes */
+@supports ((ruby-align: left)) {
+    rtc {
+        justify-content: space-between;
+    }
  
-   rt {
-     display: inline-flex;
-   }
- }
+    rt {
+        display: inline-flex;
+    }
+}
  
- :hover,
- :focus,
- :active {
-   transition: all 0.3s ease-in-out;
- }
+:hover,
+:focus,
+:active {
+    transition: all 0.3s ease-in-out;
+}
  
- a {
-   color: #6ea5dc;
-   color: var(--linkColor);
-   text-decoration: none;
-   border-bottom: 1px var(--idleTextLineStyle) transparent;
- }
+a {
+    color: #6ea5dc;
+    color: var(--linkColor);
+    text-decoration: none;
+    border-bottom: 1px var(--idleTextLineStyle) transparent;
+}
  
- a:hover,
- a:focus {
-   color: var(--linkColorHover);
-   border-color: initial;
-   outline: none;
- }
+a:hover,
+a:focus {
+    color: var(--linkColorHover);
+    border-color: initial;
+    outline: none;
+}
  
- a:active {
-   border-bottom-style: var(--activeTextLineStyle);
- }
+a:active {
+    border-bottom-style: var(--activeTextLineStyle);
+}
  
- nav a:hover,
- nav a:focus {
-   border-color: transparent;
- }
+nav a:hover,
+nav a:focus {
+    border-color: transparent;
+}
  
- figure {
-   padding: 0.618rem;
-   max-width: 100%;
-   background: rgba(200, 220, 220, 0.3);
-   background: rgba(var(--themeActivePltNHighest), 0.3);
- }
+figure {
+    padding: 0.618rem;
+    max-width: 100%;
+    background: rgba(200, 220, 220, 0.3);
+    background: rgba(var(--themeActivePltNHighest), 0.3);
+}
  
- figcaption {
-   font-style: italic;
-   text-align: center;
-   font-size: var(--smallerTextSize);
-   border-top: 4px solid rgba(200, 220, 220, 0.3);
-   border-top-color: rgba(var(--themeActivePltNHighest), 0.3);
- }
+figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: var(--smallerTextSize);
+    border-top: 4px solid rgba(200, 220, 220, 0.3);
+    border-top-color: rgba(var(--themeActivePltNHighest), 0.3);
+}

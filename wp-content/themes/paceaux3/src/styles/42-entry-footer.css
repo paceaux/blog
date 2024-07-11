@@ -1,18 +1,18 @@
- /* ===============
+/* ===============
      #CONTENT #ENTRY #FOOTER 
   =============== */
  
- .entry-footer {
-   color: var(--themeActiveTextColor);
-   letter-spacing: -1px;
-   font-size: 0.8rem;
-   padding-bottom: 5px;
- }
+.entry-footer {
+    color: var(--themeActiveTextColor);
+    letter-spacing: -1px;
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+}
 
-  /* === Post Footer === */
- .entry-footer {
-   color: var(--themeActiveTextColor);
-   letter-spacing: -1px;
-   font-size: 0.8rem;
-   padding-bottom: 5px;
- }
+/* === Post Footer === */
+.entry-footer {
+    color: var(--themeActiveTextColor);
+    letter-spacing: -1px;
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+}
