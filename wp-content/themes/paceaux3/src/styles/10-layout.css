@@ -83,7 +83,6 @@ body {
  
 .pageContainer__sidebar {
     padding-top: 10px;
-    background: #f8f8f8;
     background: var(--themeActiveAccentColor);
 }
  
