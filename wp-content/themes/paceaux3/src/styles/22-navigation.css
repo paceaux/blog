@@ -3,171 +3,81 @@
   =============== */
  
 .nav {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--titleFontFamily);
 }
  
+.nav ul {
+    list-style: none;
+}
+
+.nav ul ul {
+    margin: 0;
+}
+
+.nav li {
+    padding: 0;
+    margin: 0;
+}
+
+.nav__list,
+.sub-menu {
+    display: inline-flex;
+    flex-flow: row wrap;
+    column-gap: .618rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+}
+
+@media screen and (width >= 768px) {
+    .nav__list,
+    .sub-menu {
+        justify-content: flex-start;
+    }
+}
+
 .nav:empty {
     display: none;
 }
- 
+
 /* ===============
      #MENU #PRIMARY 
-     =============== */
- 
-.nav--primary {
-    width: 100%;
-}
- 
-.nav--primary .nav__list,
-.nav--primary .sub-menu {
-    list-style-type: none;
-    display: flex;
-    text-align: center;
-    margin: 0;
-}
- 
-.nav--primary .nav__list {
-    list-style-type: none;
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-}
- 
-.nav--primary .sub-menu {
-    overflow: hidden;
-    font-size: 0.9em;
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
-    flex-direction: column;
-}
- 
-.nav--primary .current-menu-parent .sub-menu,
-.nav--primary .menu-item:hover > .sub-menu,
-.nav--primary .menu-item a:hover ~ .sub-menu,
-.nav--primary .menu-item a:focus ~ .sub-menu,
-.nav--primary .menu-item:focus-within .sub-menu,
-.nav--primary .sub-menu:hover {
-    --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
+  =============== */
 
-    max-height: 500px;
-    border-right: var(--subMenuBorder);
-    border-bottom: var(--subMenuBorder);
-    border-left: var(--subMenuBorder);
-    transition: max-height 0.3s ease-in;
-}
-
-@media (width <= 767px) {
-    .nav--primary .menu-item.current-menu-item.menu-item-has-children > .sub-menu,
-    .nav--primary .current-post-ancestor.menu-item-has-children > .sub-menu {
-        --subMenuBorder: 1px solid var(--themeActiveLinkColorHover);
-
-        max-height: 500px;
-        border-right: var(--subMenuBorder);
-        border-bottom: var(--subMenuBorder);
-        border-left: var(--subMenuBorder);
-    }
-}
- 
-.nav--primary .menu-item {
-    list-style-type: none;
-    position: relative;
-    display: inline-block;
-    min-width: 6em;
-}
- 
 .nav--primary a {
-    display: block;
-    font-weight: normal;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: -1px;
-    padding: 0.75em;
-    border-bottom-style: dashed;
-    border-bottom-color: transparent;
+    display: inline-block;
+    padding: .381em;
+    border-radius: 5px;
+    margin: .381rem 0;
+    outline: 1px solid var(--themeActiveLinkColor);
 }
- 
-.nav--primary .menu-item a {
-    border-bottom-width: 2px;
-}
- 
-.nav--primary .sub-menu a {
-    border-bottom-width: 1px;
-}
- 
+
 .nav--primary a:hover,
 .nav--primary a:focus {
-    border-bottom-color: var(--themeActiveLinkColorHover);
+    background-color: var(--themeActiveAccentColor);
+    outline-color: var(--themeActiveLinkColorHover);
 }
- 
+
+.menu-item-has-children:is(.menu-item-object-category, .menu-item-object-page) > a {
+    margin-right: .381rem;
+}
+
+/* hide sub menu items if they aren't in the current category*/
+.sub-menu:not(.current-menu-item .sub-menu, .current-menu-parent .sub-menu) {
+    display: none;
+}
+
+/* visual indicator of where the user is */
 .nav--primary .current-menu-item > a {
-    border-bottom-color: var(--themeActiveAccentColor);
+    font-weight: bold;
+    outline-width: 2px;
 }
- 
-@media only screen and (width >= 768px) {
-    .nav--primary .nav__list {
-        flex-direction: row;
-        justify-content: space-between;
-    }
- 
-    .nav--primary .menu-item {
-        position: relative;
-    }
- 
-    .nav--primary .sub-menu {
-        position: absolute;
-        z-index: 9;
-        width: 100%;
-        background-color: var(--themeActiveBGColor);
-    }
- 
-    .nav--primary .current-menu-parent .sub-menu {
-        max-height: 0;
-    }
- 
-    .nav--primary .current-menu-parent .menu-item:hover ~ .sub-menu {
-        max-height: 500px;
-    }
-}
- 
-@media only screen and (width <= 768px) {
-    .menu-toggle {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 0.8125rem;
-        line-height: 24px;
-        margin: 0;
-        cursor: pointer;
-    }
- 
-    .menu-toggle button {
-        position: relative;
-        top: 7px;
-        right: 0;
-        left: 15px;
-        border: none;
-        background: none;
-    }
- 
-    .menu-item .menu-toggle button::before {
-        content: '\f0c9';
-        display: inline-block;
-        font-size: 25px;
-        padding-top: 5px;
-        -webkit-font-smoothing: antialiased;
-    }
- 
-    .topbar__searchNav {
-        float: none;
-    }
-}
- 
+
 /* ===============
      #MENU #SECONDARY 
   =============== */
  
 .nav--secondary {
-    font-size: 0.8rem;
     font-size: var(--smallTextSize);
 }
  
