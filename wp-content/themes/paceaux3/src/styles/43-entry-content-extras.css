@@ -58,7 +58,7 @@
 }
 
 .articleTOC__item {
-    line-height: var(--smallLineHeight);
+    line-height: var(--baseLineHeight);
 }
 
 .articleTOC__item--biggest {

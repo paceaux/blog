@@ -4,7 +4,7 @@ html {
     font-family: var(--baseFontFamily);
 
     /* Comment-B */
-    font-size: calc(0.6vw + 0.7rem);
+    font-size: clamp(1.2rem, calc(.6vw + .7rem), 22px);
     line-height: var(--baseLineHeight);
     scroll-behavior: smooth;
 }
