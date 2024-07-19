@@ -9,7 +9,7 @@
     "clean": "rm -rf public/*",
     "styles:lint": "stylelint src/styles/**/*.css",
     "styles:lint:fix": "stylelint src/styles/**/*.css --fix",
-    "styles:build": "postcss src/styles/main.css -o style.new.css"
+    "styles:build": "postcss src/styles/main.css -o style.css"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
