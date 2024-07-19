@@ -15,6 +15,11 @@
     margin-top: 0.618em;
 }
 
+.entry-content li {
+    list-style-position: outside;
+    text-indent: 0;
+}
+
 .entry-content__featuredImage figure {
     width: 100%;
 }
