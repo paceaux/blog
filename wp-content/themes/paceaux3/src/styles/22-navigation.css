@@ -63,14 +63,23 @@
 }
 
 /* hide sub menu items if they aren't in the current category*/
-.sub-menu:not(.current-menu-item .sub-menu, .current-menu-parent .sub-menu) {
+.menu-item > .sub-menu {
     display: none;
 }
 
+.menu-item:is(.current-menu-item, .current-post-ancestor, .current-menu-ancestor) > .sub-menu {
+    display: inline-flex;
+}
+
 /* visual indicator of where the user is */
-.nav--primary .current-menu-item > a {
+.nav--primary .menu-item:is(.current-menu-item, .current-post-ancestor, .current-menu-ancestor) > a {
     font-weight: bold;
     outline-width: 2px;
+}
+
+.nav--primary .current-post-ancestor:has(.current-menu-parent) > a {
+    font-weight: normal;
+    outline-width: 1px;
 }
 
 /* ===============
