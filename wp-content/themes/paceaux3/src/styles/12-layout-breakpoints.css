@@ -70,6 +70,10 @@
 }
  
 @media only screen and (width <= 768px) {
+    .layout-1c .pageContainer {
+        width: 100vw;
+    }
+
     .menu-toggle {
         position: relative;
         display: inline-block;
@@ -103,7 +107,7 @@
         float: none;
     }
 }
- 
+
 @media only screen and (width <= 480px) {
     .quarter {
         float: left;

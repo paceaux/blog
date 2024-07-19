@@ -23,10 +23,6 @@ body {
     margin-bottom: 30px;
 }
 
-.layout-1c .pageContainer__contentWrapper {
-    width: 100%;
-}
-
 .layout-2c-l .pageContainer__contentWrapper {
     flex-grow: 1;
 }
@@ -68,10 +64,6 @@ body {
     width: 100%;
 }
 
-.layout-1c .pageContainer {
-    width: 100vw;
-}
- 
 .pageContainer__content {
     border-bottom: 1px solid var(--themeActiveTrimColor);
     margin: 0 20px 0 10px;

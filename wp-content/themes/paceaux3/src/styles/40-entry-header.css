@@ -37,7 +37,8 @@
 
 span.entry-terms {
     display: inline-block;
-    margin: .618em 0;
+    margin: 0;
+    line-height: 2.5;
 }
  
 .entry-header-archive a {
