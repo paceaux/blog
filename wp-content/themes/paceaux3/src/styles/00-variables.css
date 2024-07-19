@@ -1,0 +1,142 @@
+:root {
+    --themeLightPltNHighest: 220, 220, 220;
+    --themeLightPltNHigher: 193, 193, 193;
+    --themeLightPltNHigh: 165, 165, 165;
+    --themeLightPltNLow: 110, 110, 110;
+    --themeLightPltNLower: 55, 55, 55;
+    --themeDarkPltNHighest: 25, 25, 25;
+    --themeDarkPltNHigher: 62, 62, 62;
+    --themeDarkPltNHigh: 90, 90, 90;
+    --themeDarkPltNLow: 145, 145, 145;
+    --themeDarkPltNLower: 200, 200, 200;
+    --themeLightTextColor: rgb(55, 55, 55);
+
+    /* 55,55,55 */
+    --themeLightBGColor: rgb(255, 255, 255);
+
+    /* 255,255,255 */
+    --themeLightAccentColor: rgb(249, 248, 248);
+
+    /* 248,248,248 */
+    --themeLightTrimColor: rgb(238, 238, 238);
+    --themeDarkTextColor: rgb(220, 220, 220);
+
+    /* 220,220,220 */
+    --themeDarkBGColor: rgb(23, 23, 23);
+
+    /* 23,23,23 */
+    --themeDarkAccentColor: rgb(55, 55, 55);
+    --themeDarkTrimColor: rgb(40, 40, 40);
+    --linkColor: hsl(210deg, 61%, 46%);
+    --linkColorHover: hsl(210deg, 61%, 36%); 
+    --navigationColor: var(--linkColor);
+    --navigationColorHover: var(--linkColorHover);
+    --colorNeutral: rgb(165, 165, 165);
+    --colorNeutralDarkest: rgb(55, 55, 55);
+    --colorNeutralDarker: rgb(55, 55, 55);
+    --colorNeutralDark: rgb(110, 110, 110);
+    --colorNeutralLight: rgb(192.5, 192.5, 192.5);
+    --colorNeutralLighter: rgb(220, 220, 220);
+    --baseFontFamily: georgia, 'Times New Roman', serif;
+    --titleFontFamily: helvetica, arial, sans-serif;
+    --codeFontFamily: monospace;
+    --baseTextLineColor: var(--baseTextColor);
+    --alertTextLineColor: rgb(255, 0, 0);
+    --baseQuoteBackgroundColor: 165, 165, 165, ;
+
+    /* Line Heights */
+    --baseLineHeight: 1.618;
+    --smallLineHeight: 1.2;
+ 
+    /* text (body copy) */
+    --biggestTextSize: 1.3em;
+    --biggerTextSize: 1.2em;
+    --bigTextSize: 1.1em;
+    --baseTextSize: 1em;
+    --smallTextSize: 0.8em;
+    --smallerTextSize: 0.75em;
+    --smallestTextSize: 0.618em;
+    --thickestTextBorder: 5px;
+    --thickerTextBorder: 3px;
+    --thickTextBorder: 2px;
+    --textBorder: 1px;
+ 
+    /* text (titles)
+         The small title sizes use the big text sizes; so they overlap
+         They're here, though, so that, if desired, we can deviate and not have them overlap
+ */
+    --biggestTitleSize: 2.6179em;
+
+    /* (16 x 1.618) x 1.618 */
+    --bigTitleSize: 1.618em;
+    --baseTitleSize: 1.5em;
+
+    /* ===== 
+    #Spacing #Text #Size
+    rem for left-right, for consistent alignment.
+    em for top/bottom, so the spacing is relative to font-size  
+===== */
+    --bigSpacingHorizontal: 1.618rem;
+    --baseSpacingHorizontal: .618rem;
+    --bigSpacingVertical: 1.618em;
+    --baseSpacingVertical: .618em;
+    --smallTitleSize: var(--biggestTextSize);
+    --smallerTitleSize: var(--biggerTextSize);
+    --smallestTitleSize: var(--bigTextSize);
+    --themeActiveLinkColor: var(--linkColor);
+    --themeActiveLinkColorHover: var(--linkColorHover);
+    --themeActiveTextColor: var(--themeLightTextColor);
+    --themeActiveEditorialTextColor: var(--themeLightPltNLow);
+    --themeActiveBGColor: var(--themeLightBGColor);
+    --themeActiveAccentColor: var(--themeLightAccentColor);
+    --themeActiveTrimColor: var(--themeLightTrimColor);
+    --themeActivePltNHighest: var(--themeLightPltNHighest);
+    --themeActivePltNHigher: var(--themeLightPltNHigher);
+    --themeActivePltNHigh: var(--themeLightPltNHigh);
+    --themeActivePltNLow: var(--themeLightPltNLow);
+    --themeActivePltNLower: var(--themeLightPltNLower);
+
+    /* ===== 
+    #Font #Weight
+    though font-weight ranges from 100 - 900, "normal" is 400 and the ends
+         are a difference of 300 .
+    So the "est" weights are the extremes, with room to add 
+        light, lighter, heavy, heavier. 
+    Recommend adding "ultra" if the weight is > 700
+===== */
+    --lightestFontWeight: 100;
+    --baseFontWeight: 400;
+    --heaviestFontWeight: 700;
+
+    /* ===== 
+    #font #style
+    Oblique will use the existing font and put the glyphs at an angle
+    Alternate will look for a font labelled with an italic face
+    If the browser doesn't have a labelled italic font, it synthesizes oblique
+===== */
+
+    --shiftedFontVoice: oblique 15deg;
+    --baseFontVoice: normal;
+    --alternateFontVoice: italic;
+
+    /* ===== 
+    #font #quotes #border
+    These are the default quotes for English. Change these quotes-as needed for other languages
+    "secondary" quotes are nested quotes. e.g. <blockquote><blockquote>
+    the CSS properties 'open-quote', 'close-quote' will use the primary open and primary close quotes listed here
+===== */
+    --baseTextQuotes: '\201C''\201D''\2018''\2019'; /* Primary open, primary close, secondary open, secondary close */
+    --baseQuoteBorder: 10px solid var(--colorNeutralLighter);
+    --smallQuoteBorder: 5px solid var(--colorNeutralLight);
+
+    /* ===== 
+    #font #text #interactions
+    Interactions could/should include
+        idle: not being used, but an indicator that it can be
+        interest: a user has shown desire to interact (e.g. hover or focus)
+        active: a user is currently interacting
+===== */
+    --idleTextLineStyle: dotted;
+    --activeTextLineStyle: solid;
+    --idleTextDecoration: var(--idleTextLineStyle) underline 2px;
+}

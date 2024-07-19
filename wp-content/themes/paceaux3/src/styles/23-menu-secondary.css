@@ -1,0 +1,26 @@
+/* ====== Secondary Menu ====== */
+#menu-secondary {
+    float: right;
+    font-size: 0.8rem;
+}
+
+#menu-secondary ul {
+    list-style: none;
+    margin: 0;
+}
+
+#menu-secondary ul ul {
+    display: none;
+}
+
+#menu-secondary li {
+    display: inline-block;
+}
+
+#menu-secondary li a {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 8px 10px;
+}

@@ -1,0 +1,41 @@
+/* ===============
+     #CONTENT #BREADCRUMBS 
+  =============== */
+.breadcrumbs__wrapper {
+    width: 100%;
+    margin-top: .618em;
+}
+ 
+.breadcrumbs {
+    float: left;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: var(--smallerTextSize);
+}
+ 
+.breadcrumbs__title {
+    display: inline;
+    font-size: var(--baseTextSize);
+    margin-left: 0;
+
+}
+ 
+.breadcrumbs__list {
+    list-style: none;
+    display: inline;
+    margin: 0;
+}
+ 
+.breadcrumbs__listItem {
+    display: inline-block;
+    padding: 0 .5ex
+}
+ 
+.breadcrumbs__listItem::after {
+    content: ' >';
+}
+ 
+.breadcrumbs__listItem:last-child::after {
+    content: '';
+}
+

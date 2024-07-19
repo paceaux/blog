@@ -1,0 +1,29 @@
+{
+  "name": "paceaux3",
+  "version": "1.0.0",
+  "description": "Paceaux3 theme",
+  "browserslist": [
+    "> 5%"
+  ],
+  "scripts": {
+    "clean": "rm -rf public/*",
+    "styles:lint": "stylelint src/styles/**/*.css",
+    "styles:lint:fix": "stylelint src/styles/**/*.css --fix",
+    "styles:build": "postcss src/styles/main.css -o style.css"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "cssnano": "^7.0.4",
+    "postcss": "^8.4.39",
+    "postcss-cli": "^11.0.0",
+    "postcss-cssnext": "^3.1.1",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^9.6.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-order": "^6.0.4"
+  },
+  "dependencies": {
+    "@stylistic/stylelint-plugin": "^2.1.2"
+  }
+}

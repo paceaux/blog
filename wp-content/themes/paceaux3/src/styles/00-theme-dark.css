@@ -1,0 +1,31 @@
+.theme--dark {
+    --themeActiveTextColor: var(--themeDarkTextColor);
+    --themeActiveEditorialTextColor: var(--themeDarkPltNLow);
+    --themeActiveBGColor: var(--themeDarkBGColor);
+    --themeActiveAccentColor: var(--themeDarkAccentColor);
+    --themeActiveTrimColor: var(--themeDarkTrimColor);
+    --themeActivePltNHighest: var(--themeDarkPltNHighest);
+    --themeActivePltNHigher: var(--themeDarkPltNHigher);
+    --themeActivePltNHigh: var(--themeDarkPltNHigh);
+    --themeActivePltNLow: var(--themeDarkPltNLow);
+    --themeActivePltNLower: var(--themeDarkPltNLower);
+    --linkColor: hsl(210deg, 61%, 52%);
+    --linkColorHover: hsl(210deg, 61%, 62%); 
+    --navigationColor: var(--linkColor);
+    --navigationColorHover: var(--linkColorHover);
+    --themeActiveLinkColor: var(--linkColor);
+    --themeActiveLinkColorHover: var(--linkColorHover);
+}
+ 
+@media (prefers-color-scheme: dark) {
+    --themeActiveTextColor: var(--themeDarkTextColor);
+    --themeActiveEditorialTextColor: var(--themeDarkPltNLow);
+    --themeActiveBGColor: var(--themeDarkBGColor);
+    --themeActiveAccentColor: var(--themeDarkAccentColor);
+    --themeActiveTrimColor: var(--themeDarkTrimColor);
+    --themeActivePltNHighest: var(--themeDarkPltNHighest);
+    --themeActivePltNHigher: var(--themeDarkPltNHigher);
+    --themeActivePltNHigh: var(--themeDarkPltNHigh);
+    --themeActivePltNLow: var(--themeDarkPltNLow);
+    --themeActivePltNLower: var(--themeDarkPltNLower);
+}

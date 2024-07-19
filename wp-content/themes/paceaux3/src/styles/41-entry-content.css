@@ -1,0 +1,71 @@
+/* ===============
+     #CONTENT #ENTRY #BODY 
+  =============== */
+.entry-content {
+    --entryBoxBorderThickness: 4px;
+    --entryBoxPadding: 0.618rem;
+    --entryBoxMarginVertical: 1.618em;
+}
+
+.entry-content h2 {
+    border-bottom: var(--thickTextBorder) solid;
+}
+
+.entry-content h2 + h3 {
+    margin-top: 0.618em;
+}
+
+.entry-content__featuredImage figure {
+    width: 100%;
+}
+
+
+.entry-content__featuredImage a {
+    display: block;
+    width: 100%;
+}
+
+.entry-content__featuredImage a:hover,
+.entry-content__featuredImage a:focus {
+    border-color: transparent;
+}
+
+.entry-content__featuredImage img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.entry-content .wp-block-image a {
+    display: flex;
+    border-bottom-color: transparent;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.entry-content .wp-block-image a:hover,
+.entry-content .wp-block-image a:focus {
+    border-bottom-color: transparent;
+}
+
+.wp-block-image img {
+    width: auto;
+    height: auto;
+}
+ 
+.enlighter-v-standard {
+    max-width: 92vw;
+}
+
+.entry-summary {
+    padding-left: 1rem;
+    width: 100%;
+}
+ 
+.entry-content .aside,
+.entry-content aside {
+    font-style: italic;
+    text-shadow: 0 1px 1px rgba(220, 220, 220, 0.8);
+    font-size: 0.6em;
+    padding: 0.618em 1.618rem;
+    background-color: rgba(220, 220, 220, 0.2);
+}

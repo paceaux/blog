@@ -1,0 +1,97 @@
+/* ===============
+     #MENUS 
+  =============== */
+ 
+.nav {
+    font-family: var(--titleFontFamily);
+}
+ 
+.nav ul {
+    list-style: none;
+}
+
+.nav ul ul {
+    margin: 0;
+}
+
+.nav li {
+    padding: 0;
+    margin: 0;
+}
+
+.nav__list,
+.sub-menu {
+    display: inline-flex;
+    flex-flow: row wrap;
+    column-gap: .618rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+}
+
+@media screen and (width >= 768px) {
+    .nav__list,
+    .sub-menu {
+        justify-content: flex-start;
+    }
+}
+
+.nav:empty {
+    display: none;
+}
+
+/* ===============
+     #MENU #PRIMARY 
+  =============== */
+
+.nav--primary a {
+    display: inline-block;
+    padding: .381em;
+    border-radius: 5px;
+    margin: .381rem 0;
+    outline: 1px solid var(--themeActiveLinkColor);
+}
+
+.nav--primary a:hover,
+.nav--primary a:focus {
+    background-color: var(--themeActiveAccentColor);
+    outline-color: var(--themeActiveLinkColorHover);
+}
+
+.menu-item-has-children:is(.menu-item-object-category, .menu-item-object-page) > a {
+    margin-right: .381rem;
+}
+
+/* hide sub menu items if they aren't in the current category*/
+.menu-item > .sub-menu {
+    display: none;
+}
+
+.menu-item:is(.current-menu-item, .current-post-ancestor, .current-menu-ancestor) > .sub-menu {
+    display: inline-flex;
+}
+
+/* visual indicator of where the user is */
+.nav--primary .menu-item:is(.current-menu-item, .current-post-ancestor, .current-menu-ancestor) > a {
+    font-weight: bold;
+    outline-width: 2px;
+}
+
+.nav--primary .current-post-ancestor:has(.current-menu-parent) > a {
+    font-weight: normal;
+    outline-width: 1px;
+}
+
+
+/* ====== Primary Menu ====== */
+.main-menu {
+    position: relative;
+}
+ 
+ 
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

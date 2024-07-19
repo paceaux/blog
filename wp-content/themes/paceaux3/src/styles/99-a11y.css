@@ -1,0 +1,18 @@
+/* ===============
+     #Accessibility stuffs 
+  =============== */
+.skip-link,
+.screen-reader-text {
+    position: fixed;
+    left: -9999px;
+}
+
+.enlighter-code {
+    padding: .5em;
+}
+ 
+/* enlighter comments in dracula theme aren't accessible */
+.enlighter-t-dracula.enlighter-t-dracula .enlighter-c1,
+.enlighter-t-dracula.enlighter-t-dracula .enlighter-c0 {
+    color: #a1abc9;
+}

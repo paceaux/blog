@@ -1,0 +1,249 @@
+/* stylelint-disable color-function-notation */
+
+/* ==========
+#Form #Variables
+========== */
+form {
+    /* =====
+        #Text #Size
+    ===== */
+    --formBiggestTextSize: var(--biggerTextSize, 1.2em);
+    --formBaseTextSize: var(--baseTextSize, 1em);
+    --formSmallestTextSize: var(--smallTextSize, .8em);
+
+    /* =====
+        #Title #Size
+    ===== */
+    --formBiggestTitleSize: var(--baseTitleSize, 1.5em);
+    --formBaseTitleSize: var(--formBiggestTextSize);
+    --formSmallestTitleSize: var(--formBaseTextSize);
+    --formControlSize: var(--formBaseTextSize);
+    --formLabelSize: var(--formBaseTextSize);
+    --formTitleSize: var(--formBaseTitleSize);
+
+    /* ===== 
+        #LineHeight 
+    ===== */
+    --formBaseLineHeight: var(--smallLineHeight, 1.2);
+    --formSmallLineHeight: 1;
+
+    /* =====
+        #Font #FontFamilies #Typeface
+    ===== */
+    --formBaseFontFamily: var(--baseFontFamily,  'Georgia','Times New Roman', 'serif');
+    --formTitleFontFamily: var(--titleFontFamily, 'Helvetica', 'Arial', 'sans-serif');
+
+    /* =====
+        #Border
+    ===== */
+    --controlBorderStyle: solid;
+    --controlBorderWidth: 1px;
+    --controlCornerSize: 0.25rem;
+    --controlGroupBorderColor: var(--colorNeutral, rgb(165,165,165));
+    --controlGroupBorderStyle: var(--controlBorderStyle);
+    --controlGroupBorderWidth: var(--controlBorderWidth);
+    --controlGroupCornerSize: calc(var(--controlCornerSize) / 2);
+    --controlGroupBorder: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+    
+
+    /* =====
+        #Spacing
+    ===== */
+    --controlVertPadding: .375em;
+    --controlHorzPadding: .75rem;
+    --controlPadding: var(--controlVertPadding) var(--controlHorzPadding);
+    --controlGroupPadding: .618em .618rem;
+
+    
+    /* =====
+        #Colors
+    ===== */
+    --controlColor:  rgb(118, 118, 118);
+    --controlGroupColor: var(--themeActiveTextColor);
+    --controlBackgroundColor: var(--themeActiveTrimColor);
+    --controlGroupBackgroundColor: transparent;
+    --controlBorderColor: var(--themeActivePltNLower);
+
+    /* =====
+        #Colors #Hover #Focus
+    ===== */
+    --controlColorInterest: var(--themeActivePltNLower);
+    --controlBackgroundColorInterest: var(--controlBackgroundColor);
+    --controlBorderColorInterest: var(--controlColorInterest);
+    
+    /* =====
+        #Colors #Active
+    ===== */
+    --controlColorActive: var(--themeActivePltNLow);
+    --controlBackgroundColorActive: var(--controlBackgroundColor);
+    --controlBorderColorActive: var(--controlColorActive);
+      
+    /* =====
+        #Colors #Deactivated
+    ===== */
+    --controlColorDeactivated: var(--controlColor);
+    --controlBackgroundColorDeactivated: var(--themeActivePltNHighest);
+    --controlBorderColorDeactivated: var(--controlBackgroundColorDeactivated);
+
+    /* =====
+        #Colors #Inform
+    ===== */
+    --controlColorAlert: var(--colorWarmest, rgb(168, 62, 0));
+    --controlColorAttention: var(--colorWarmer, rgb(168, 118, 0));
+    --controlColorAffirm: rgb(44, 181, 112);
+    --controlColorInform: hsl(215deg, 61%, 44%);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+form {
+    font-family: var(--formBaseFontFamily);
+}
+
+fieldset {
+    padding: var(--controlGroupPadding);
+    border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+    border-radius: var(--controlCornerSize);
+    background-color: var(--controlGroupBackgroundColor);
+    margin: .618em .618rem;
+}
+
+fieldset:disabled {
+    --controlGroupBorderColor: var(--colorNeutralLighter);
+    --controlGroupBackgroundColor: rgba(220,220,220, .3);
+}
+
+legend {
+    display: block;
+    color: var(--controlGroupColor);
+    font-family: var(--formTitleFontFamily);
+    font-weight: bold;
+    font-size: var(--formLabelSize);
+    line-height: 1.2;
+    padding: .35em .5rem;
+    border: var(--controlGroupBorderWidth) var(--controlGroupBorderStyle) var(--controlGroupBorderColor);
+    border-radius: var(--controlGroupCornerSize);
+    background-color: var(--controlGroupBackgroundColor);
+    margin: .618em 0;
+}
+
+label {
+    color: var(--controlGroupColor);
+    font-size: var(--formBaseTextSize);
+}
+
+input,
+button,
+select,
+textarea {
+    color: var(--controlColor);
+    font-size: var(--formControlSize);
+    padding-top: var(--controlVertPadding);
+    padding-bottom: var(--controlVertPadding);
+    border-width: var(--controlBorderWidth);
+    border-style: var(--controlBorderStyle);
+    border-color: var(--controlBorderColor);
+    border-radius: var(--controlCornerSize);
+    background-color: var(--controlBackgroundColor);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input,
+button,
+textarea,
+option,
+label {
+    padding-right: calc(var(--controlHorzPadding) / 2);
+    padding-left: var(--controlHorzPadding);
+}
+
+optgroup {
+    font-style: normal;
+}
+
+input {
+    border: 1px solid rgb(var(--themeActivePltNHighest));
+}
+
+input:hover,
+input:focus,
+button:hover,
+button:focus,
+select:hover,
+select:focus,
+textarea:hover,
+textarea:focus {
+    color: var(--controlColorInterest);
+    border-color: var(--controlBorderColorInterest);
+    background-color: var(--controlBackgroundColorInterest);
+}
+
+input:active,
+button:active,
+select:active,
+textarea:active {
+    color: var(--controlColorActive);
+    border-color: var(--controlBorderColorActive);
+    background-color: var(--controlBackgroundColorActive);
+}
+
+button:focus-visible,
+[type='button']:focus-visible,
+[type='submit']:focus-visible,
+[type='reset']:focus-visible {
+    outline: none;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    color: var(--controlColorDeactivated);
+    border-color: var(--controlBorderColorDeactivated);
+    background-color: var(--controlBackgroundColorDeactivated);
+}
+
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+    border-color: var(--controlColorAlert);
+}
+
+
+input[type]:-internal-autofill-selected {
+    background-color: var(--controlBackgroundColor) !important;
+}
+
+[type='range'] {
+    vertical-align: bottom;
+}
+
+[type='radio'], [type='checkbox'] {
+    vertical-align: text-top;
+}
+
+/* ===============
+     #FORMS 
+  =============== */
+
+ 
+input[type='submit'] {
+    color: var(--themeActiveTextColor);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background: var(--themeActiveTrimColor);
+    cursor: pointer;
+}
+ 
+input.search-submit:hover {
+    color: #fff;
+    background: rgb(var(--themeActivePltNLower));
+}
+ 
+select {
+    color: #999;
+    border: 1px solid rgb(var(--themeActivePltNHighest));
+}
+ 
