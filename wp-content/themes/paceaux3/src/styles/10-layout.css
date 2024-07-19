@@ -67,6 +67,10 @@ body {
     padding: 0;
     width: 100%;
 }
+
+.layout-1c .pageContainer {
+    width: 100vw;
+}
  
 .pageContainer__content {
     border-bottom: 1px solid var(--themeActiveTrimColor);
