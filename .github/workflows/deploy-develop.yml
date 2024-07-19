@@ -23,7 +23,7 @@ jobs:
 
     - name: Build Theme
       run: |
-        npm ci
+        npm install
         npm run styles:build
 
     - name: Upload the files
