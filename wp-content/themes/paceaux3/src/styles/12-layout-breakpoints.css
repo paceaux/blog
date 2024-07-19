@@ -103,7 +103,7 @@
         float: none;
     }
 }
- 
+
 @media only screen and (width <= 480px) {
     .quarter {
         float: left;
