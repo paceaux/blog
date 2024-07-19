@@ -2,22 +2,22 @@
      #CONTENT #BREADCRUMBS 
   =============== */
 .breadcrumbs__wrapper {
-    padding: 2px 0;
     width: 100%;
+    margin-top: .618em;
 }
  
 .breadcrumbs {
     float: left;
     font-style: italic;
     text-transform: capitalize;
-    letter-spacing: -1px;
-    font-size: 0.7rem;
-    padding: 5px 10px;
+    font-size: var(--smallerTextSize);
 }
  
 .breadcrumbs__title {
     display: inline;
-    font-size: 0.7rem;
+    font-size: var(--baseTextSize);
+    margin-left: 0;
+
 }
  
 .breadcrumbs__list {
@@ -28,7 +28,7 @@
  
 .breadcrumbs__listItem {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 .5ex
 }
  
 .breadcrumbs__listItem::after {
