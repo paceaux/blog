@@ -15,7 +15,18 @@ jobs:
     steps:
     - name: Get Latest code
       uses: actions/checkout@v2
-    
+
+    - name: Use Node 20
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Build Theme
+      working-directory: ./wp-content/themes/paceaux3
+      run: |
+        npm install
+        npm run styles:build
+
     - name: Upload the files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
