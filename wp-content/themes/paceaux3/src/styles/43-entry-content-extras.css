@@ -59,6 +59,7 @@
 
 .articleTOC__item {
     line-height: var(--baseLineHeight);
+    margin-bottom: .25ex;
 }
 
 .articleTOC__item--biggest {
