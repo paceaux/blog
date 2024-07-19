@@ -44,6 +44,10 @@
      #MENU #PRIMARY 
   =============== */
 
+.nav--primary {
+    width: 100%;
+}
+
 .nav--primary a {
     display: inline-block;
     padding: .381em;
