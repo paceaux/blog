@@ -82,46 +82,6 @@
     outline-width: 1px;
 }
 
-/* ===============
-     #MENU #SECONDARY 
-  =============== */
- 
-.nav--secondary {
-    font-size: var(--smallTextSize);
-}
- 
-.nav--secondary ul {
-    list-style: none;
-    margin: 0;
-}
- 
-.nav--secondary ul ul {
-    display: none;
-}
- 
-.nav--secondary li {
-    display: inline-block;
-}
- 
-.nav--secondary li a {
-    display: block;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding: 8px 10px;
-}
-
-
-.nav--footer {
-    padding-top: 0.5rem;
-    margin: 0 auto;
-}
- 
-.nav--footer ul li a {
-    padding: 0 15px;
-    border-right: 1px solid #d8d8d8;
-}
-
 
 /* ====== Primary Menu ====== */
 .main-menu {
