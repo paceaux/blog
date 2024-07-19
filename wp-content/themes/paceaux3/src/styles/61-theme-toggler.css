@@ -1,0 +1,53 @@
+.themeToggler__wrapper {
+    --themeIndicator: '\263E';
+    --themeIndicatorColor: hsl(61deg, 61%, 36%);
+    --themeIndicatorColorInterest: hsla(61deg, 61%, 36%, .5);
+
+    top: 0;
+    right: 0;
+    font-size: var(--smallTextSize);
+    width: 2em;
+    height: 2.6em;
+    border: 1px solid var(--themeActiveAccentColor);
+    margin: -7px 0.618rem 0;
+}
+
+.themeToggler__wrapper:focus-within {
+    border-color: hsl(61deg, 61%, 36%);
+}
+
+.theme--dark .themeToggler__wrapper {
+    --themeIndicator: '\2600';
+
+    border-color: transparent;
+}
+ 
+.themeToggler {
+    display: block;
+    overflow: hidden;
+    color: transparent;
+    font-family: inherit;
+    height: 2.6em;
+}
+
+.themeToggler::before {
+    content: var(--themeIndicator);
+    color: var(--themeIndicatorColor);
+    font-size: 2em;
+}
+
+.themeToggler:hover::before,
+.themeToggler:active::before {
+    color: var(--themeIndicatorColorInterest);
+}
+
+
+.themetoggler:active::before {
+    color: hsl(61deg, 61%, 72%);
+}
+
+.themeToggler__input {
+    position: fixed;
+    left: -9999px;
+    visibility: hidden;
+}

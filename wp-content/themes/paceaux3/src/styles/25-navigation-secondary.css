@@ -1,0 +1,25 @@
+/*===============#MENU #SECONDARY===============*/ 
+.nav--secondary {
+    font-size: var(--smallTextSize);
+}
+
+.nav--secondary ul {
+    list-style: none;
+    margin: 0;
+}
+
+.nav--secondary ul ul {
+    display: none;
+}
+
+.nav--secondary li {
+    display: inline-block;
+}
+
+.nav--secondary li a {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding: 8px 10px;
+}

@@ -1,0 +1,108 @@
+/* === Post content and excerpts === */
+ 
+.more-link {
+    margin-top: .618em;
+}
+ 
+.more-link a {
+    display: inline-block;
+    color: #fefefe;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: var(--smallerTextSize);
+    padding: 0.618em .618rem;
+    border-bottom: none;
+    border-radius: 2px;
+    background: var(--themeActiveLinkColor);
+}
+ 
+.more-link a:hover,
+.more-link a:focus {
+    color: #fefefe;
+    border-bottom: none;
+    background: var(--themeActiveLinkColorHover);
+}
+
+.entry-content ul,
+.wp-block-heading {
+    margin-bottom: .618em;
+}
+
+
+
+.sources {
+    font-size: var(--smallestTextSize);
+    padding: var(--entryBoxPadding);
+    border: var(--entryBoxBorderThickness) solid var(--themeActiveAccentColor);
+    margin-top: var(--entryBoxMarginVertical);
+    margin-bottom: var(--entryBoxMarginVertical);
+}
+ 
+.sources p {
+    margin: 0 0.618rem;
+}
+ 
+.articleTOC {
+    font-size: var(--smallTextSize);
+    padding: var(--entryBoxPadding);	
+    border: var(--entryBoxBorderThickness) solid var(--themeActiveAccentColor);
+    margin-top: var(--entryBoxMarginVertical);
+    margin-bottom: var(--entryBoxMarginVertical);
+}
+
+.articleTOC__list {
+    --tocItemIndent: 1.618em;
+
+    list-style: none;
+}
+
+.articleTOC__item {
+    line-height: var(--baseLineHeight);
+}
+
+.articleTOC__item--biggest {
+    font-size: var(--biggestTextSize);
+}
+
+.articleTOC__item--bigger {
+    font-size: var(--biggerTextSize);
+    margin-left: var(--tocItemIndent);
+}
+
+.articleTOC__item--big {
+    font-size: var(--bigTextSize);
+    margin-left: calc(var(--tocItemIndent) * 2);
+}
+
+.articleTOC__item--base {
+    font-size: var(--baseTextSize);
+    margin-left: calc(var(--tocItemIndent) * 3);
+
+}
+
+@media screen and (width >= 768px) {
+    .articleTOC {
+        margin-right: 14vw;
+        margin-left: -7vw;
+    }
+}
+
+/* ===============
+     #Reading time
+  =============== */
+
+.rt-reading-time {
+    font-style: italic;
+    font-size: var(--smallerTextSize);
+    margin-bottom: .2em;
+}
+
+.disclaimer {
+    font-style: oblique;
+    font-size: var(--smallTextSize);
+}
+
+.disclaimer p {
+    line-height: var(--smallLineHeight);
+}

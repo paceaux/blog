@@ -1,0 +1,453 @@
+/* stylelint-disable color-function-notation */
+html {
+    color: var(--themeActiveTextColor);
+    font-family: var(--baseFontFamily);
+
+    /* Comment-B */
+    font-size: clamp(1.2rem, calc(.6vw + .7rem), 22px);
+    line-height: var(--baseLineHeight);
+    scroll-behavior: smooth;
+}
+ 
+body {
+    color: var(--themeActiveTextColor);
+    background: var(--themeActiveBGColor);
+}
+ 
+/* =====
+     #Everything
+   ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+pre {
+    color: var(--themeActiveTextColor);
+    line-height: var(--baseLineHeight);
+    margin: 0 var(--baseSpacingHorizontal);
+}
+ 
+/* =====
+     #Headings
+   ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--themeActiveTextColor);
+    font-family: var(--titleFontFamily);
+    font-weight: var(--heaviestFontWeight);
+    line-height: var(--smallLineHeight);
+    margin-bottom: calc(1.618vmin - 1vmax + 0.35em);
+
+    /* increases margin as screen width gets smaller */
+}
+ 
+h1 {
+    font-size: 2.6179em;
+    font-size: var(--biggestTitleSize);
+}
+ 
+h2 {
+    font-size: 1.618em;
+    font-size: var(--bigTitleSize);
+}
+ 
+h3 {
+    font-size: 1.5em;
+    font-size: var(--baseTitleSize);
+}
+ 
+h4 {
+    font-size: 1.3em;
+    font-size: var(--smallTitleSize);
+}
+ 
+h5 {
+    font-size: 1.2em;
+    font-size: var(--smallerTitleSize);
+}
+ 
+h6 {
+    font-size: 1.1em;
+    font-size: var(--smallestTitleSize);
+}
+ 
+/* =====
+     #Lists
+   ===== */
+ul,
+ol,
+dl {
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+}
+
+li {
+    list-style-position: inside;
+    text-indent: -.9em; /* this brings the left text aligned with the text of a <dd> element */
+    line-height: var(--baseLineHeight);
+    padding: 0;
+    margin: 0 0 0 var(--baseSpacingHorizontal);
+}
+
+nav ul {
+    padding: 0;
+}
+ 
+nav li {
+    text-indent: 0;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+ 
+dt {
+    text-indent: calc(-1 * var(--baseSpacingHorizontal));
+}
+
+dd {
+    padding: 0 var(--baseSpacingHorizontal);
+    margin: 0;
+}
+ 
+/* =====
+     #Paragraphs #Blocks
+   ===== */
+hr {
+    color: var(--colorNeutral);
+    border-width: .0625em;
+    border-style: solid;
+    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
+}
+ 
+p,
+blockquote {
+    line-height: var(--baseLineHeight);
+}
+ 
+p {
+    font-size: var(--baseTextSize);
+    margin-bottom: 0.618em;
+}
+ 
+blockquote,
+q {
+    quotes: var(--baseTextQuotes);
+}
+
+blockquote::before,
+q::before {
+    content: open-quote;
+}
+
+/* Credit where it's due:
+    https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+*/
+blockquote {
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+    border-left: var(--baseQuoteBorder);
+    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
+    margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
+}
+
+blockquote::before,
+blockquote::after {
+    color: var(--colorNeutralLight);
+    vertical-align: -0.5em;
+    font-size: 4em;
+    line-height: 0.1em;
+}
+
+blockquote::before {
+    margin-right: var(--baseSpacingHorizontal);
+}
+
+blockquote::after {
+    content: no-close-quote;
+}
+
+q::after {
+    content: close-quote;
+}
+ 
+blockquote > * {
+    margin-left: 1.168rem;
+}
+ 
+/* =====
+   #Content-Flow
+ ===== */
+ 
+em,
+i,
+cite {
+    font-style: var(--alternateFontVoice);
+}
+
+strong,
+b {
+    font-weight: var(--heaviestFontWeight);
+}
+ 
+cite {
+    display: block;
+    text-align: right;
+}
+ 
+/* U is for misspelled words. Invite user to make a correction */
+u {
+    text-decoration: var(--idleTextDecoration);
+    text-decoration-color: var(--alertTextLineColor);
+}
+ 
+small,
+sub,
+sup {
+    font-size: 0.618em;
+    font-size: var(--smallestTextSize);
+    line-height: 1;
+}
+ 
+sub {
+    vertical-align: sub;
+}
+ 
+sup {
+    vertical-align: super;
+}
+ 
+/* =====
+     #content-flow #editorial
+   ===== */
+s,
+strike,
+del,
+ins {
+    color: var(--themeActiveEditorialTextColor);
+
+    /* Comment-C */
+}
+ 
+s,
+strike,
+del {
+    text-decoration: line-through;
+}
+ 
+ins,
+del {
+    background-color: rgba(var(--themeActivePltNHighest), 0.25);
+}
+ 
+ins {
+    text-decoration: none;
+}
+ 
+/*
+mark and selection should be different so user knows which one they've selected.
+*/
+
+/* hue: 120, saturation: 44%, lightness: 75%  */
+mark {
+    background-color: rgba(165, 220, 165, 0.9);
+}
+
+/* hue: 180, saturation: 44%, lightness: 75% */
+::selection {
+    background-color: rgba(165, 220, 220, 0.9);
+}
+
+/* Because mark and selection have same saturation and brightenss, a selected <mark> won't stand out
+    A hue between 120 and 180 seems to stand out the best in all colorblind tests, too
+    hue: 150, saturation: 44%, lightness: 65%
+ */
+mark::selection {
+    background-color: rgba(126, 205, 166, 0.9);
+}
+
+/* dfn and dt both do the same thing: denote a term to be defined */
+dfn,
+dt {
+    font-weight: var(--heaviestFontWeight);
+    font-style: var(--shiftedFontVoice);
+    text-transform: capitalize;
+}
+ 
+abbr {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* an abbreviation with a title should invite a user to hover over it */
+abbr[title] {
+    text-decoration: var(--idleTextDecoration);
+}
+
+/* =====
+   #Content-flow #Code
+   ===== */
+pre,
+code,
+var,
+samp,
+data {
+    font-family: var(--codeFontFamily);
+}
+ 
+kbd,
+samp,
+data {
+    background-color: rgba(var(--baseQuoteBackgroundColor) 0.2);
+}
+ 
+kbd {
+    font-size: var(--smallerTextSize);
+    padding: .25ex .5ex;
+    border: 1px solid  var(--baseInlineBorderColor);
+    border-radius: 3px;
+}
+ 
+/* Treat samp like a mini blockquote. because basically you're quoting what the computer would do */
+samp,
+data {
+    padding: 0 10px;
+}
+ 
+var,
+data {
+    font-style: var(--alternateFontVoice);
+}
+
+samp {
+    border-left: var(--smallQuoteBorder);
+}
+ 
+data {
+    padding: 0 10px;
+}
+ 
+pre {
+    overflow: scroll;
+    font-size: var(--smallerTextSize);
+    line-height: var(--smallLineHeight);
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+    border: 1px solid var(--themeActivePltNHigher);
+    border-radius: 2px;
+}
+ 
+/* =====
+     #Ruby
+   ===== */
+ruby {
+    position: relative;
+    display: ruby;
+    margin: 0 0.5ex;
+    -webkit-ruby-position: before;
+    ruby-position: before;
+}
+ 
+rtc {
+    font-size: inherit;
+    line-height: 1;
+    ruby-align: start;
+}
+ 
+rt {
+    display: ruby-text;
+    font-size: 0.7em;
+}
+ 
+rt + rt {
+    margin-left: 0.5ex;
+}
+ 
+rtc > bdo {
+    display: -webkit-ruby-text-container;
+    display: ruby-base-container;
+}
+ 
+/* complex ruby for chrome and Edge */
+
+/* only FF has "complete" ruby support */
+@supports (ruby-align: left) or (not (display: ruby-base-container)) {
+    ruby {
+        display: inline-flex;
+        vertical-align: 1em;
+        line-height: 1;
+        flex-direction: column;
+    }
+ 
+    rtc,
+    rt {
+        order: -1;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+ 
+    rtc {
+        display: inline-flex;
+    }
+}
+ 
+/* Edge fixes */
+@supports ((ruby-align: left)) {
+    rtc {
+        justify-content: space-between;
+    }
+ 
+    rt {
+        display: inline-flex;
+    }
+}
+ 
+:hover,
+:focus,
+:active {
+    transition: all 0.3s ease-in-out;
+}
+ 
+a {
+    color: #6ea5dc;
+    color: var(--linkColor);
+    text-decoration: none;
+    border-bottom: 1px var(--idleTextLineStyle) transparent;
+}
+ 
+a:hover,
+a:focus {
+    color: var(--linkColorHover);
+    border-color: initial;
+    outline: none;
+}
+ 
+a:active {
+    border-bottom-style: var(--activeTextLineStyle);
+}
+ 
+nav a:hover,
+nav a:focus {
+    border-color: transparent;
+}
+ 
+figure {
+    padding: 0.618rem;
+    max-width: 100%;
+    background: rgba(200, 220, 220, 0.3);
+    background: rgba(var(--themeActivePltNHighest), 0.3);
+}
+ 
+figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: var(--smallerTextSize);
+    border-top: 4px solid rgba(200, 220, 220, 0.3);
+    border-top-color: rgba(var(--themeActivePltNHighest), 0.3);
+}
