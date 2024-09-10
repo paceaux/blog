@@ -74,3 +74,11 @@
     padding: 0.618em 1.618rem;
     background-color: rgba(220, 220, 220, 0.2);
 }
+
+.entry-content p q:only-child {
+    display: inline-block;
+    font-size: var(--biggerTextSize);
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+    border-left: var(--baseQuoteBorder);
+    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
+}
