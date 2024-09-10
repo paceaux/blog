@@ -18,8 +18,7 @@
     }
  
     .pageContainer__sidebar {
-        float: none;
-        padding: 0;
+        padding: .618em .618rem;
         width: 100%;
         max-width: 100%;
     }

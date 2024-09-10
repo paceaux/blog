@@ -35,7 +35,8 @@ body {
 
     .layout-2c-l .pageContainer__sidebar {
         flex-basis: 26%;
-        flex-grow:1
+        flex-grow:1;
+        margin-top: 0.3rem; /*gets the title of sidebar to align with title of blog post */
     }
 
 }
@@ -79,7 +80,6 @@ body {
  
 .pageContainer__sidebar {
     padding-top: 10px;
-    background: var(--themeActiveAccentColor);
 }
  
 .pageContainer__sidebar ul {
