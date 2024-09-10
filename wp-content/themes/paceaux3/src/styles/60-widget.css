@@ -1,5 +1,8 @@
 .widget {
-    margin-bottom: 2rem;
+    padding-block-start: .618em;
+    border: 2px solid var(--themeActiveTrimColor);
+    border-radius: 5px;
+    margin-block-end: 1.618em;
 }
 
 .widget-title {
