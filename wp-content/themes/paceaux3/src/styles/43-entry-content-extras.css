@@ -39,6 +39,10 @@
     margin-bottom: var(--entryBoxMarginVertical);
 }
  
+.sources li {
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+}
+
 .sources p {
     margin: 0 0.618rem;
 }
@@ -46,6 +50,11 @@
 .sources cite {
     display: inline;
     text-align: left;
+}
+
+.sources :target {
+    border-radius: 3px;
+    background-color: rgba(89, 162, 178, 0.1);
 }
 
 .articleTOC {
