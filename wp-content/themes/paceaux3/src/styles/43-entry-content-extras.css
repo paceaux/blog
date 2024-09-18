@@ -29,25 +29,6 @@
     margin-bottom: .618em;
 }
 
-
-
-.sources {
-    font-size: var(--smallestTextSize);
-    padding: var(--entryBoxPadding);
-    border: var(--entryBoxBorderThickness) solid var(--themeActiveAccentColor);
-    margin-top: var(--entryBoxMarginVertical);
-    margin-bottom: var(--entryBoxMarginVertical);
-}
- 
-.sources p {
-    margin: 0 0.618rem;
-}
-
-.sources cite {
-    display: inline;
-    text-align: left;
-}
-
 .articleTOC {
     font-size: var(--smallTextSize);
     padding: var(--entryBoxPadding);	
