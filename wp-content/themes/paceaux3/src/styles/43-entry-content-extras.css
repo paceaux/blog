@@ -39,12 +39,15 @@
     margin-bottom: var(--entryBoxMarginVertical);
 }
  
-.sources li {
+.sources li,
+.sources p {
     padding: .25em var(--baseSpacingHorizontal);
 }
 
-.sources p {
-    margin: 0 0.618rem;
+.sources p small {
+    display: inline-block;
+    text-indent: -1em;
+    font-size: var(--baseTextSize);
 }
 
 .sources cite {
@@ -57,7 +60,8 @@
     background-color: rgba(89, 162, 178, 0.1);
 }
 
-.sources li:target {
+.sources li:target,
+.sources p:target {
     padding-top: var(--baseSpacingVertical);
     padding-bottom: var(--baseSpacingVertical);
 }
@@ -123,6 +127,8 @@
     font-size: var(--smallTextSize);
 }
 
+/* I need to move sources/citations to its own thing later */
+/* stylelint-disable no-descending-specificity */
 .disclaimer p {
     line-height: var(--smallLineHeight);
 }
