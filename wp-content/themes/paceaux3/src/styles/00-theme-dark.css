@@ -16,6 +16,10 @@
     --themeActiveLinkColor: var(--linkColor);
     --themeActiveLinkColorHover: var(--linkColorHover);
 }
+
+.theme--dark ::selection {
+    background-color: rgba(77, 122, 122, .9);
+}
  
 @media (prefers-color-scheme: dark) {
     --themeActiveTextColor: var(--themeDarkTextColor);
@@ -28,4 +32,10 @@
     --themeActivePltNHigh: var(--themeDarkPltNHigh);
     --themeActivePltNLow: var(--themeDarkPltNLow);
     --themeActivePltNLower: var(--themeDarkPltNLower);
+}
+
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        background-color: rgba(77, 122, 122, .9);
+    }
 }
