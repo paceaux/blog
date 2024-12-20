@@ -12,14 +12,15 @@
 }
  
 .page-numbers {
-    display: block;
-    float: left;
+    display: inline-flex;
+    float: none;
     color: var(--themeActiveTextColor);
     font-weight: bold;
-    font-size: 0.7rem;
-    padding: 6px 15px;
+    font-size: var(--smallTextSize);
+    padding: 0.5em 0.9375rem;
+    border-radius: 3px;
     background: var(--themeActiveLinkColor);
-    margin-right: 5px;
+    margin: 0.25em 0;
 }
  
 a.page-numbers:hover,
@@ -62,21 +63,5 @@ div.next {
     background: none;
     flex-basis: 33%;
     flex-grow: 1;
-}
- 
-
-/* ====== PAGINATION ====== */
- 
-.page-numbers,
-.prev,
-.next {
-    display: inline-flex;
-    float: none;
-    color: rgb(var(--themeActivePltNLower));
-    font-weight: bold;
-    font-size: 0.7rem;
-    padding: 0.5em 0.9375em;
-    background: #e3e3e3;
-    margin: 0.25em 0;
 }
  
