@@ -41,8 +41,9 @@
     --titleFontFamily: helvetica, arial, sans-serif;
     --codeFontFamily: monospace;
     --baseTextLineColor: var(--baseTextColor);
-    --alertTextLineColor: rgb(255, 0, 0);
+    --alertTextLineColor: hsl(0deg, 100%, 50%);
     --baseQuoteBackgroundColor: 165, 165, 165, ;
+    --baseHighlightColor: hsl(120deg, 44%, 75%);
 
     /* Line Heights */
     --baseLineHeight: 1.618;
