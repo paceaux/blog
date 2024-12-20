@@ -42,7 +42,7 @@
     }
     
     ::selection {
-        background-color: rgba(77, 122, 122, .9);
+        background-color: hsla(180deg, 23%, 39%, 0.9);
     }
 
     table {
@@ -50,4 +50,28 @@
         --tableBodyAlternatingBgColor: var(--tableAlternatingBgColor);
         --tableBaseTextColor: var(--themeActiveTextColor);
     }
+
+    .theme--dark {
+        --themeActiveTextColor: var(--themeLightTextColor);
+        --themeActiveEditorialTextColor: var(--themeLightPltNLow);
+        --themeActiveBGColor: var(--themeLightBGColor);
+        --themeActiveAccentColor: var(--themeLightAccentColor);
+        --themeActiveTrimColor: var(--themeLightTrimColor);
+        --themeActivePltNHighest: var(--themeLightPltNHighest);
+        --themeActivePltNHigher: var(--themeLightPltNHigher);
+        --themeActivePltNHigh: var(--themeLightPltNHigh);
+        --themeActivePltNLow: var(--themeLightPltNLow);
+        --themeActivePltNLower: var(--themeLightPltNLower);
+        --linkColor: hsl(210deg, 61%, 52%);
+        --linkColorHover: hsl(210deg, 61%, 62%);
+        --navigationColor: var(--linkColor);
+        --navigationColorHover: var(--linkColorHover);
+        --themeActiveLinkColor: var(--linkColor);
+        --themeActiveLinkColorHover: var(--linkColorHover);
+    }
+
+    .theme--dark ::selection {
+        background-color: hsl(from var(--baseHighlightColor) h s l / .9);
+    }
+
 }
