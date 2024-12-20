@@ -14,18 +14,19 @@
 .page-numbers {
     display: block;
     float: left;
-    color: #333;
+    color: var(--themeActiveTextColor);
     font-weight: bold;
     font-size: 0.7rem;
     padding: 6px 15px;
-    background: #e3e3e3;
+    background: var(--themeActiveLinkColor);
     margin-right: 5px;
 }
  
 a.page-numbers:hover,
+a.page-numbers:focus,
 .page-numbers.current {
-    color: white;
-    background: rgb(var(--themeActivePltNLower));
+    color: var(--themeActiveTextColor);
+    background: var(--themeActiveLinkColorHover);
 }
  
 /* === Single post navigation (between different posts) === */
