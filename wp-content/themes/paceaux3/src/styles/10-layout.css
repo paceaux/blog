@@ -74,8 +74,8 @@ body {
     border-bottom-color: var(--linkColor);
 }
 
-.pageContainer__content a:focus {
-    border-bottom-style: solid;
+.pageContainer__content a:is(:hover, :focus) {
+    border-bottom-style: var(--activeTextLineStyle);
 }
  
 .pageContainer__sidebar {
