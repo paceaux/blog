@@ -14,7 +14,7 @@
 .page-numbers {
     display: inline-flex;
     float: none;
-    color: var(--themeActiveTrimColor);
+    color: var(--themeLightTrimColor);
     font-weight: bold;
     font-size: var(--smallTextSize);
     padding: 0.5em 0.9375rem;
