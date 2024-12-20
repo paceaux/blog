@@ -257,12 +257,12 @@ mark and selection should be different so user knows which one they've selected.
 
 /* hue: 120, saturation: 44%, lightness: 75%  */
 mark {
-    background-color: rgba(165, 220, 165, 0.9);
+    background-color: hsl(from var(--baseHighlightColor) h s l / .9);
 }
 
 /* hue: 180, saturation: 44%, lightness: 75% */
 ::selection {
-    background-color: rgba(165, 220, 220, 0.9);
+    background-color: hsl(from var(--baseHighlightColor) 180 s l / .9);
 }
 
 /* Because mark and selection have same saturation and brightenss, a selected <mark> won't stand out
@@ -270,7 +270,7 @@ mark {
     hue: 150, saturation: 44%, lightness: 65%
  */
 mark::selection {
-    background-color: rgba(126, 205, 166, 0.9);
+    background-color: hsl(from var(--baseHighlightColor) 150 s 65% / .9)
 }
 
 /* dfn and dt both do the same thing: denote a term to be defined */

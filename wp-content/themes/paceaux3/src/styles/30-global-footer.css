@@ -5,8 +5,8 @@
 .g-footer {
     display: flex;
     padding-top: 0.5rem;
-    border-top: 1px solid #d8d8d8;
-    margin: 0.5rem auto 0;
+    border-top: 1px solid var(--themeActiveTrimColor);
+    margin: 0.5rem 0 0;
     grid-area: footer;
     flex-direction: column;
     align-items: center;

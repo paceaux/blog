@@ -12,20 +12,22 @@
 }
  
 .page-numbers {
-    display: block;
-    float: left;
-    color: #333;
+    display: inline-flex;
+    float: none;
+    color: var(--themeLightTrimColor);
     font-weight: bold;
-    font-size: 0.7rem;
-    padding: 6px 15px;
-    background: #e3e3e3;
-    margin-right: 5px;
+    font-size: var(--smallTextSize);
+    padding: 0.5em 0.9375rem;
+    border-radius: 3px;
+    background: var(--themeActiveLinkColor);
+    margin: 0.25em 0;
 }
  
 a.page-numbers:hover,
+a.page-numbers:focus,
 .page-numbers.current {
-    color: white;
-    background: rgb(var(--themeActivePltNLower));
+    color: var(--themeActiveTrimColor);
+    background: var(--themeActiveLinkColorHover);
 }
  
 /* === Single post navigation (between different posts) === */
@@ -61,21 +63,5 @@ div.next {
     background: none;
     flex-basis: 33%;
     flex-grow: 1;
-}
- 
-
-/* ====== PAGINATION ====== */
- 
-.page-numbers,
-.prev,
-.next {
-    display: inline-flex;
-    float: none;
-    color: rgb(var(--themeActivePltNLower));
-    font-weight: bold;
-    font-size: 0.7rem;
-    padding: 0.5em 0.9375em;
-    background: #e3e3e3;
-    margin: 0.25em 0;
 }
  

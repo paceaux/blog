@@ -20,22 +20,58 @@
 .theme--dark ::selection {
     background-color: rgba(77, 122, 122, .9);
 }
+
+.theme--dark table {
+    --tableAlternatingBgColor: hsl(191deg, 45%, 43%);
+    --tableBodyAlternatingBgColor: var(--tableAlternatingBgColor);
+    --tableBaseTextColor: var(--themeActiveTextColor);
+}
  
 @media (prefers-color-scheme: dark) {
-    --themeActiveTextColor: var(--themeDarkTextColor);
-    --themeActiveEditorialTextColor: var(--themeDarkPltNLow);
-    --themeActiveBGColor: var(--themeDarkBGColor);
-    --themeActiveAccentColor: var(--themeDarkAccentColor);
-    --themeActiveTrimColor: var(--themeDarkTrimColor);
-    --themeActivePltNHighest: var(--themeDarkPltNHighest);
-    --themeActivePltNHigher: var(--themeDarkPltNHigher);
-    --themeActivePltNHigh: var(--themeDarkPltNHigh);
-    --themeActivePltNLow: var(--themeDarkPltNLow);
-    --themeActivePltNLower: var(--themeDarkPltNLower);
-}
-
-@media (prefers-color-scheme: dark) {
-    ::selection {
-        background-color: rgba(77, 122, 122, .9);
+    body {
+        --themeActiveTextColor: var(--themeDarkTextColor);
+        --themeActiveEditorialTextColor: var(--themeDarkPltNLow);
+        --themeActiveBGColor: var(--themeDarkBGColor);
+        --themeActiveAccentColor: var(--themeDarkAccentColor);
+        --themeActiveTrimColor: var(--themeDarkTrimColor);
+        --themeActivePltNHighest: var(--themeDarkPltNHighest);
+        --themeActivePltNHigher: var(--themeDarkPltNHigher);
+        --themeActivePltNHigh: var(--themeDarkPltNHigh);
+        --themeActivePltNLow: var(--themeDarkPltNLow);
+        --themeActivePltNLower: var(--themeDarkPltNLower);
     }
+    
+    ::selection {
+        background-color: hsla(180deg, 23%, 39%, 0.9);
+    }
+
+    table {
+        --tableAlternatingBgColor: hsl(191deg, 45%, 43%);
+        --tableBodyAlternatingBgColor: var(--tableAlternatingBgColor);
+        --tableBaseTextColor: var(--themeActiveTextColor);
+    }
+
+    .theme--dark {
+        --themeActiveTextColor: var(--themeLightTextColor);
+        --themeActiveEditorialTextColor: var(--themeLightPltNLow);
+        --themeActiveBGColor: var(--themeLightBGColor);
+        --themeActiveAccentColor: var(--themeLightAccentColor);
+        --themeActiveTrimColor: var(--themeLightTrimColor);
+        --themeActivePltNHighest: var(--themeLightPltNHighest);
+        --themeActivePltNHigher: var(--themeLightPltNHigher);
+        --themeActivePltNHigh: var(--themeLightPltNHigh);
+        --themeActivePltNLow: var(--themeLightPltNLow);
+        --themeActivePltNLower: var(--themeLightPltNLower);
+        --linkColor: hsl(210deg, 61%, 52%);
+        --linkColorHover: hsl(210deg, 61%, 62%);
+        --navigationColor: var(--linkColor);
+        --navigationColorHover: var(--linkColorHover);
+        --themeActiveLinkColor: var(--linkColor);
+        --themeActiveLinkColorHover: var(--linkColorHover);
+    }
+
+    .theme--dark ::selection {
+        background-color: hsl(from var(--baseHighlightColor) h s l / .9);
+    }
+
 }
