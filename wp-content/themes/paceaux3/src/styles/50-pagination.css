@@ -14,7 +14,7 @@
 .page-numbers {
     display: inline-flex;
     float: none;
-    color: var(--themeActiveTextColor);
+    color: var(--themeActiveTrimColor);
     font-weight: bold;
     font-size: var(--smallTextSize);
     padding: 0.5em 0.9375rem;
@@ -26,7 +26,7 @@
 a.page-numbers:hover,
 a.page-numbers:focus,
 .page-numbers.current {
-    color: var(--themeActiveTextColor);
+    color: var(--themeActiveTrimColor);
     background: var(--themeActiveLinkColorHover);
 }
  
