@@ -93,3 +93,71 @@
 .disclaimer p {
     line-height: var(--smallLineHeight);
 }
+
+
+/* CODE DEMOS 
+This is only for creating small demos of editable code
+uses <figure class="demo">
+*/
+.code-demo {
+    padding: var(--baseSpacingHorizontal);
+    width: 75%;
+    background-color: rgba(var(--themeActivePltNHighest), .3);
+    border: var(--thickTextBorder) solid currentColor;
+    border-radius: 3px;
+    margin: var(--baseSpacingVertical) auto;
+}
+
+.code-demo style[contenteditable] {
+    position: relative;
+    font-family: "Source Code Pro", "Liberation Mono", "Courier New", Courier, monospace;
+    font-size: var(--smallerTextSize);
+    line-height: 1.35;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 0 .75rem;
+    background-color: var(--themeActiveTrimColor);
+    outline: 1px solid hsla(from var(--baseHighlightColor) h s l / .2);
+    border-radius: 1px;
+    caret-color: var(--baseHighlightColor);
+}
+
+.code-demo style[contenteditable]:hover {
+    color: var(--themeActivePltNLower);
+    background-color: var(--themeActiveTrimColor);
+    outline-color: hsla(from var(--baseHighlightColor) h s l/ .7);
+}
+
+.code-demo style[contenteditable]:is(:focus, :active) {
+    color: var(--themeActivePltNLow);
+    background-color: var(--themeActivePltNLow);
+    outline-color: hsla(from var(--baseHighlightColor) h s l / 1);
+}
+
+.code-demo style[contenteditable]::before,
+.code-demo style[contenteditable]::after {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    font-size: var(--smallestTextSize);
+    font-family: var(--baseFontFamily);
+    text-align: center;
+    padding: .618em;
+    width: 3.75em;
+    background-color: var(--themeActiveBGColor);
+}
+
+.code-demo style[contenteditable]::before {
+    content: 'Styles';
+    left: 0;
+}
+
+.code-demo style[contenteditable]::after {
+    content: 'Editable';
+    right: 0;
+}
+
+.code-demo style[contenteditable]:is(:focus, :active)::after {
+    content: 'editing';
+
+}
