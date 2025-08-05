@@ -29,6 +29,12 @@
     margin-bottom: .618em;
 }
 
+.entry-content ul ul {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .articleTOC {
     font-size: var(--smallTextSize);
     padding: var(--entryBoxPadding);	
