@@ -192,6 +192,11 @@ td:empty {
     --tableCellBgColor: transparent;
 }
 
+tbody th:only-child {
+    padding-top: calc(var(--tableCellVertPadding) * 3);
+    padding-left: 0;
+}
+
 /*=====
 #Table #Rows
 =====*/
