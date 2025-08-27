@@ -82,3 +82,11 @@
     border-left: var(--baseQuoteBorder);
     background: rgba(var(--baseQuoteBackgroundColor) 0.15);
 }
+
+.entry-content .wp-block-pullquote {
+    padding: var(--baseSpacingVertical) 0;
+}
+
+.entry-content figure.wp-block-pullquote {
+    background-color: transparent;
+}
