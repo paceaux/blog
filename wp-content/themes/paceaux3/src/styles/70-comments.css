@@ -78,12 +78,12 @@
     font-weight: bold;
 }
 
-.comment-respond__field:has([required]:valid) .comment-respond__fieldName::after {
+.comment-respond__field:has([required]:user-valid) .comment-respond__fieldName::after {
     color: var(--controlColorAffirm);
     font-weight: normal;
 }
 
-.comment-respond__field:has(:invalid:not(:focus)) input {
+.comment-respond__field:has(:user-invalid:not(:focus)) input {
     color: var(--controlColorAlert);
 }
 
