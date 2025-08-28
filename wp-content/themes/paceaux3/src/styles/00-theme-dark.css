@@ -39,6 +39,10 @@
         --themeActivePltNHigh: var(--themeDarkPltNHigh);
         --themeActivePltNLow: var(--themeDarkPltNLow);
         --themeActivePltNLower: var(--themeDarkPltNLower);
+        --linkColor: hsl(210deg, 61%, 52%);
+        --linkColorHover: hsl(210deg, 61%, 62%);
+        --themeActiveLinkColor: var(--linkColor);
+        --themeActiveLinkColorHover: var(--linkColorHover);
     }
     
     ::selection {
@@ -62,8 +66,8 @@
         --themeActivePltNHigh: var(--themeLightPltNHigh);
         --themeActivePltNLow: var(--themeLightPltNLow);
         --themeActivePltNLower: var(--themeLightPltNLower);
-        --linkColor: hsl(210deg, 61%, 52%);
-        --linkColorHover: hsl(210deg, 61%, 62%);
+        --linkColor: hsl(210deg, 61%, 46%);
+        --linkColorHover: hsl(210deg, 61%, 36%);
         --navigationColor: var(--linkColor);
         --navigationColorHover: var(--linkColorHover);
         --themeActiveLinkColor: var(--linkColor);
