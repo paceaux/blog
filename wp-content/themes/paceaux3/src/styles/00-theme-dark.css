@@ -39,6 +39,10 @@
         --themeActivePltNHigh: var(--themeDarkPltNHigh);
         --themeActivePltNLow: var(--themeDarkPltNLow);
         --themeActivePltNLower: var(--themeDarkPltNLower);
+        --linkColor: hsl(210deg, 61%, 52%);
+        --linkColorHover: hsl(210deg, 61%, 62%);
+        --themeActiveLinkColor: var(--linkColor);
+        --themeActiveLinkColorHover: var(--linkColorHover);
     }
     
     ::selection {
