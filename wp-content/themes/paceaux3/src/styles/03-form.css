@@ -58,7 +58,7 @@ form {
     /* =====
         #Colors
     ===== */
-    --controlColor:  rgb(118, 118, 118);
+    --controlColor:  rgb(105, 105, 105);
     --controlGroupColor: var(--themeActiveTextColor);
     --controlBackgroundColor: var(--themeActiveTrimColor);
     --controlGroupBackgroundColor: transparent;
@@ -100,7 +100,7 @@ form {
     }
 
     .theme--dark form {
-        --controlColor: rgb(118,118,118);
+        --controlColor: rgb(105,105,105);
     }
 }
 
