@@ -167,3 +167,17 @@ uses <figure class="demo">
     content: 'editing';
 
 }
+
+.entry-content table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry-content .wp-block-group table {
+    margin-left: var(--baseSpacingHorizontal);
+    margin-right: var(--baseSpacingHorizontal);
+}
+
+.entry-content .wp-block-group:has(table) {
+    justify-content: center;
+}

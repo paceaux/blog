@@ -134,6 +134,7 @@ table {
     color: var(--tableBaseTextColor);
     font-family: var(--tableBaseFontFamily);
     border-collapse: var(--tableBorderCollapse);
+    margin-bottom: var(--bigSpacingVertical);
 }
 
 /* stylelint-enable no-duplicate-selectors */
@@ -217,4 +218,8 @@ tr {
 
 tr:nth-child(even) {
     --tableCellBgColor: var(--tableAlternatingBgColor);
+}
+
+table:has(:where(th, td):nth-child(n+4)) {
+    font-size: var(--smallestTextSize);
 }
