@@ -119,7 +119,7 @@ fieldset {
 
 fieldset:disabled {
     --controlGroupBorderColor: var(--colorNeutralLighter);
-    --controlGroupBackgroundColor: rgba(220,220,220, .3);
+    --controlGroupBackgroundColor: rgb(220,220,220, .3);
 }
 
 legend {
@@ -172,6 +172,11 @@ optgroup {
 }
 
 input {
+    border: 1px solid rgb(var(--themeActivePltNHighest));
+}
+
+select {
+    color: #999;
     border: 1px solid rgb(var(--themeActivePltNHighest));
 }
 
@@ -252,8 +257,4 @@ input.search-submit:hover {
     background: rgb(var(--themeActivePltNLower));
 }
  
-select {
-    color: #999;
-    border: 1px solid rgb(var(--themeActivePltNHighest));
-}
  

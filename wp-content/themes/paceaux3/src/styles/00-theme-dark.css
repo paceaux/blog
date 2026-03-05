@@ -18,7 +18,7 @@
 }
 
 .theme--dark ::selection {
-    background-color: rgba(77, 122, 122, .9);
+    background-color: rgb(77, 122, 122, .9);
 }
 
 .theme--dark table {
@@ -46,7 +46,7 @@
     }
     
     ::selection {
-        background-color: hsla(180deg, 23%, 39%, 0.9);
+        background-color: hsl(180deg, 23%, 39%, 0.9);
     }
 
     table {
@@ -79,7 +79,7 @@
     }
 
     .theme--dark table {
-        --tableAlternatingBgColor: rgba(165, 165, 165, .3);
+        --tableAlternatingBgColor: rgb(165, 165, 165, .3);
         --tableBodyAlternatingBgColor: var(--tableAlternatingBgColor);
         --tableBaseTextColor: var(--themeActiveTextColor);
     }

@@ -1,6 +1,6 @@
 .addtoany_share_save_container {
     padding: 0.618rem;
-    border: 3px solid rgba(var(--themeActivePltNHighest), 0.3);
+    border: 3px solid rgb(var(--themeActivePltNHighest), 0.3);
 }
  
 .addtoany_list.addtoany_list {
