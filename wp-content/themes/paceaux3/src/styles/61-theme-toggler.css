@@ -1,7 +1,7 @@
 .themeToggler__wrapper {
     --themeIndicator: '\263E';
     --themeIndicatorColor: hsl(61deg, 61%, 36%);
-    --themeIndicatorColorInterest: hsla(61deg, 61%, 36%, .5);
+    --themeIndicatorColorInterest: hsl(61deg, 61%, 36%, .5);
 
     top: 0;
     right: 0;

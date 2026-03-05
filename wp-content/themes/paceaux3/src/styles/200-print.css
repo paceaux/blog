@@ -26,7 +26,6 @@
 	
     /* H2s start off important sections. Let's make sure they aren't danglers */
     .entry-content h2 {
-        page-break-before: page;
         break-before: page;
     }
 	
@@ -37,7 +36,6 @@
     ol,
     table,
     blockquote {
-        page-break-inside: avoid;
         break-inside: avoid;
     }
 	
@@ -65,7 +63,7 @@
     }
 	
     .comment__list {
-        page-break-inside: auto;
+        break-inside: auto;
     }
 	
 }

@@ -30,9 +30,9 @@
 }
 
 .entry-content ul ul {
-    margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .articleTOC {
@@ -108,46 +108,46 @@ uses <figure class="demo">
 .code-demo {
     padding: var(--baseSpacingHorizontal);
     width: 75%;
-    background-color: rgba(var(--themeActivePltNHighest), .3);
-    border: var(--thickTextBorder) solid currentColor;
+    border: var(--thickTextBorder) solid currentcolor;
     border-radius: 3px;
+    background-color: rgb(var(--themeActivePltNHighest), .3);
     margin: var(--baseSpacingVertical) auto;
 }
 
 .code-demo style[contenteditable] {
     position: relative;
     font-family: "Source Code Pro", "Liberation Mono", "Courier New", Courier, monospace;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
     font-size: var(--smallerTextSize);
     line-height: 1.35;
-    white-space: pre-wrap;
-    word-wrap: break-word;
     padding: 0 .75rem;
-    background-color: var(--themeActiveTrimColor);
-    outline: 1px solid hsla(from var(--baseHighlightColor) h s l / .2);
     border-radius: 1px;
+    background-color: var(--themeActiveTrimColor);
+    outline: 1px solid hsl(from var(--baseHighlightColor) h s l / .2);
     caret-color: var(--baseHighlightColor);
 }
 
 .code-demo style[contenteditable]:hover {
     color: var(--themeActivePltNLower);
     background-color: var(--themeActiveTrimColor);
-    outline-color: hsla(from var(--baseHighlightColor) h s l/ .7);
+    outline-color: hsl(from var(--baseHighlightColor) h s l/ .7);
 }
 
 .code-demo style[contenteditable]:is(:focus, :active) {
     color: var(--themeActivePltNLow);
     background-color: var(--themeActivePltNLow);
-    outline-color: hsla(from var(--baseHighlightColor) h s l / 1);
+    outline-color: hsl(from var(--baseHighlightColor) h s l / 1);
 }
 
 .code-demo style[contenteditable]::before,
 .code-demo style[contenteditable]::after {
-    display: inline-block;
     position: absolute;
     top: 0;
-    font-size: var(--smallestTextSize);
+    display: inline-block;
     font-family: var(--baseFontFamily);
     text-align: center;
+    font-size: var(--smallestTextSize);
     padding: .618em;
     width: 3.75em;
     background-color: var(--themeActiveBGColor);
@@ -169,13 +169,13 @@ uses <figure class="demo">
 }
 
 .entry-content table {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
 
 .entry-content .wp-block-group table {
-    margin-left: var(--baseSpacingHorizontal);
     margin-right: var(--baseSpacingHorizontal);
+    margin-left: var(--baseSpacingHorizontal);
 }
 
 .entry-content .wp-block-group:has(table) {

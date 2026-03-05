@@ -154,7 +154,7 @@ q::before {
 blockquote {
     padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
     border-left: var(--baseQuoteBorder);
-    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
+    background: rgb(var(--baseQuoteBackgroundColor) 0.15);
     margin: var(--bigSpacingVertical) var(--baseSpacingHorizontal);
 }
 
@@ -244,7 +244,7 @@ del {
  
 ins,
 del {
-    background-color: rgba(var(--themeActivePltNHighest), 0.25);
+    background-color: rgb(var(--themeActivePltNHighest), 0.25);
 }
  
 ins {
@@ -262,7 +262,7 @@ mark {
 
 /* hue: 180, saturation: 44%, lightness: 75% */
 ::selection {
-    background-color: hsl(from var(--baseHighlightColor) 180 s l / .9);
+    background-color: hsl(from var(--baseHighlightColor) 180deg s l / .9);
 }
 
 /* Because mark and selection have same saturation and brightenss, a selected <mark> won't stand out
@@ -270,7 +270,7 @@ mark {
     hue: 150, saturation: 44%, lightness: 65%
  */
 mark::selection {
-    background-color: hsl(from var(--baseHighlightColor) 150 s 65% / .9)
+    background-color: hsl(from var(--baseHighlightColor) 150deg s 65% / .9)
 }
 
 /* dfn and dt both do the same thing: denote a term to be defined */
@@ -305,7 +305,7 @@ data {
 kbd,
 samp,
 data {
-    background-color: rgba(var(--baseQuoteBackgroundColor) 0.2);
+    background-color: rgb(var(--baseQuoteBackgroundColor) 0.2);
 }
  
 kbd {
@@ -440,14 +440,14 @@ nav a:focus {
 figure {
     padding: 0.618rem;
     max-width: 100%;
-    background: rgba(200, 220, 220, 0.3);
-    background: rgba(var(--themeActivePltNHighest), 0.3);
+    background: rgb(200, 220, 220, 0.3);
+    background: rgb(var(--themeActivePltNHighest), 0.3);
 }
  
 figcaption {
     font-style: italic;
     text-align: center;
     font-size: var(--smallerTextSize);
-    border-top: 4px solid rgba(200, 220, 220, 0.3);
-    border-top-color: rgba(var(--themeActivePltNHighest), 0.3);
+    border-top: 4px solid rgb(200, 220, 220, 0.3);
+    border-top-color: rgb(var(--themeActivePltNHighest), 0.3);
 }
