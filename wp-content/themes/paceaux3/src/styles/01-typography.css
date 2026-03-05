@@ -350,8 +350,8 @@ ruby {
     position: relative;
     display: ruby;
     margin: 0 0.5ex;
-    -webkit-ruby-position: before;
-    ruby-position: before;
+    -webkit-ruby-position: over;
+    ruby-position: over;
 }
  
 rtc {
@@ -370,7 +370,6 @@ rt + rt {
 }
  
 rtc > bdo {
-    display: -webkit-ruby-text-container;
     display: ruby-base-container;
 }
  

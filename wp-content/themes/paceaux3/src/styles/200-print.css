@@ -2,6 +2,7 @@
 
 /* PRINT STYLES */
 .entry-title {
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
     string-set: doctitle content(text);
 }
 
