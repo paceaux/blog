@@ -69,10 +69,10 @@
 .entry-content .aside,
 .entry-content aside {
     font-style: italic;
-    text-shadow: 0 1px 1px rgba(220, 220, 220, 0.8);
+    text-shadow: 0 1px 1px rgb(220, 220, 220, 0.8);
     font-size: 0.6em;
     padding: 0.618em 1.618rem;
-    background-color: rgba(220, 220, 220, 0.2);
+    background-color: rgb(220, 220, 220, 0.2);
 }
 
 .entry-content p q:only-child {
@@ -80,7 +80,7 @@
     font-size: var(--biggerTextSize);
     padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
     border-left: var(--baseQuoteBorder);
-    background: rgba(var(--baseQuoteBackgroundColor) 0.15);
+    background: rgb(var(--baseQuoteBackgroundColor) 0.15);
 }
 
 .entry-content .wp-block-pullquote {

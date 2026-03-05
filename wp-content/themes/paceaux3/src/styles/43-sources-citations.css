@@ -30,7 +30,7 @@
 
 .sources :target {
     border-radius: 3px;
-    background-color: rgba(89, 162, 178, 0.1);
+    background-color: rgb(89, 162, 178, 0.1);
 }
 
 .sources li:target,
