@@ -181,3 +181,10 @@ uses <figure class="demo">
 .entry-content .wp-block-group:has(table) {
     justify-content: center;
 }
+
+@container blog-post (width < 800px) {
+    .table-wrapper {
+        overflow-y: auto;
+        width: 98vw;
+    }
+}
