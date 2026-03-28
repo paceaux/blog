@@ -6,7 +6,7 @@
     --entryBoxPadding: 0.618rem;
     --entryBoxMarginVertical: 1.618em;
 
-    container-type: size;
+    container-type: inline-size;
     container-name: blog-post;
 }
 
