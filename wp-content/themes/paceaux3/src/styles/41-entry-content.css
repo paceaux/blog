@@ -5,6 +5,9 @@
     --entryBoxBorderThickness: 4px;
     --entryBoxPadding: 0.618rem;
     --entryBoxMarginVertical: 1.618em;
+
+    container-type: size;
+    container-name: blog-post;
 }
 
 .entry-content h2 {
