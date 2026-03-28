@@ -187,4 +187,8 @@ uses <figure class="demo">
         overflow-y: auto;
         width: 98vw;
     }
+
+    .entry-content .wp-block-group:has(table) {
+        flex-direction: column;
+    }
 }
