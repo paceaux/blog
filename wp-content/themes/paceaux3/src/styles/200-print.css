@@ -27,12 +27,13 @@
 	
     /* H2s start off important sections. Let's make sure they aren't danglers */
     .entry-content h2 {
-        break-before: page;
+        break-before: auto;
     }
 	
     /* keep this stuff from splitting across multiple pages if we can help it */
     .enlighter-default,
     .wp-block-image.size-full,
+    p,
     ul,
     ol,
     table,
@@ -44,6 +45,12 @@
     p, ul, ol, dl {
         orphans: 3;
         widows: 2;
+    }
+
+    .enlighter-default, .enlighter {
+        break-inside: avoid;
+        orphans: 4;
+        widows: 3;
     }
 	
     /* Let's show link text, but also not have it take up too much space */
