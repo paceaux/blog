@@ -173,6 +173,18 @@ uses <figure class="demo">
     margin-left: auto;
 }
 
+.entry-content .wp-block-group {
+    margin-bottom: var(--baseSpacingVertical);
+
+    @media screen and (width <= 768px) {
+        display: block;
+    }
+}
+
+.entry-content .wp-block-group ~ :where(h1, h2, h3, h4, h5, h6) {
+    margin-top: calc(var(--baseSpacingVertical) * 2);
+}
+
 .entry-content .wp-block-group table {
     margin-right: var(--baseSpacingHorizontal);
     margin-left: var(--baseSpacingHorizontal);
