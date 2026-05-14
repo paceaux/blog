@@ -3,7 +3,7 @@
 /* ==========
 #Form #Variables
 ========== */
-form {
+:root {
     /* =====
         #Text #Size
     ===== */
@@ -58,7 +58,7 @@ form {
     /* =====
         #Colors
     ===== */
-    --controlColor:  rgb(105, 105, 105);
+    --controlColor:  var(--themeActiveTextColor);
     --controlGroupColor: var(--themeActiveTextColor);
     --controlBackgroundColor: var(--themeActiveTrimColor);
     --controlGroupBackgroundColor: transparent;
@@ -67,8 +67,8 @@ form {
     /* =====
         #Colors #Hover #Focus
     ===== */
-    --controlColorInterest: var(--themeActivePltNLower);
-    --controlBackgroundColorInterest: var(--controlBackgroundColor);
+    --controlColorInterest: var(--themeActiveTextColor);
+    --controlBackgroundColorInterest: hsl(210deg 40% 95% / .9);
     --controlBorderColorInterest: var(--controlColorInterest);
     
     /* =====
@@ -176,7 +176,6 @@ input {
 }
 
 select {
-    color: #999;
     border: 1px solid rgb(var(--themeActivePltNHighest));
 }
 
